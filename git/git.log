@@ -1,0 +1,29 @@
+commit 5aabf5d9045ce815f8b55d716113bcefa1c3e518
+Author: Cole Sulak <nicole12sulak@gmail.com>
+Date:   Tue Jan 25 18:03:24 2022 -0600
+
+    changed h1 tag to h2 tag
+
+commit 4aee671eb06336134c53b9d7cddaca368be56f26
+Author: Cole Sulak <nicole12sulak@gmail.com>
+Date:   Tue Jan 25 17:55:29 2022 -0600
+
+    Updating title in html doc
+
+commit 6b69c4c39b2b69aa6dee53d4617600c6c7b12f89
+Author: Cole Sulak <nicole12sulak@gmail.com>
+Date:   Tue Jan 25 13:21:45 2022 -0600
+
+    Added body text 'Simple HTML Example' to html doc
+
+commit 9409a7978a3be15615b67a790f58256e72da00d6
+Author: Cole Sulak <nicole12sulak@gmail.com>
+Date:   Tue Jan 25 13:17:17 2022 -0600
+
+    Created new html doc with title 'Simple HTML'
+
+commit 922436cec74966f273c83b3e2b598388836864e6
+Author: Cole Sulak <97049435+c0l3yni@users.noreply.github.com>
+Date:   Tue Jan 25 13:01:25 2022 -0600
+
+    Initial commit
