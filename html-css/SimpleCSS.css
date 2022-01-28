@@ -88,28 +88,33 @@
     border: 1px var(--p-color);
     }
 
-#box-1 {
-  background: var(--bright-orange);
-  padding: 44px;
-  margin-top: 60px;
+.flex-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.box {
+  padding: 40px;
   margin-left: 18px;
   margin-right: 18px;
+}
+
+#box-1 {
+  background: var(--bright-orange);
+  margin-top: 60px;
+  
   border-top-right-radius: 10px;
   border-top-left-radius: 10px;
   }
 
 #box-2 {
   background: var(--dark-cyan);
-  padding: 50px;
-  margin-left: 18px;
-  margin-right: 18px;
 }
 
 #box-3 {
   background: var(--very-dark-cyan);
-  padding:50px;
-  margin-left: 18px;
-  margin-right: 18px;
   margin-bottom: 50px;
   border-bottom-right-radius: 10px;
   border-bottom-left-radius: 10px;
