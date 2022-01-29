@@ -95,24 +95,29 @@
     }
 
 .flex-container {
-  display: flex;
-  width: 355px;
-  height: 500px;
+  display: flex; 
+  width: 319px;
+  margin-left: 18px;
+  margin-right: 18px;
+  margin-top: 36px;
+  margin-bottom: 36px;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  flex-flow: wrap;
+  justify-content: left;
+}
+
+@media screen and (min-width: 426px) {
+  .flex-container {
+    flex-direction: row;
+  }
 }
 
 .box {
-  padding: 4px;
-  
+  height: 476px;
 }
 
 #box-1 {
   background: var(--bright-orange);
-  
-  
   border-top-right-radius: 10px;
   border-top-left-radius: 10px;
   }
@@ -123,7 +128,6 @@
 
 #box-3 {
   background: var(--very-dark-cyan);
-  
   border-bottom-right-radius: 10px;
   border-bottom-left-radius: 10px;
 }
