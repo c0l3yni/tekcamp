@@ -14,7 +14,7 @@
 
 img {
   padding-left: 46px;
-  padding-top: 52px;
+  padding-top: 48px;
   padding-bottom: 15px;
   opacity: .9;
 }
@@ -24,7 +24,7 @@ img {
   color: var(--very-light-grey);
   font-family:'Big Shoulders Display', cursive;
   font-weight: 700;
-  padding-top: 15px;
+  padding-top: 16px;
   padding-left: 46px;
   text-align: left;
   opacity: 1;
@@ -47,114 +47,87 @@ img {
   opacity: .8;
   }
 
-  .button-1 {
-    font-weight: 700;
-    font-size: 15px;
-    color: var(--bright-orange);
-    
-    font-family: 'Lexend Deca', sans-serif;
-    font-weight: 400;
-    margin-left: 50px;
-    margin-top: 6px;
-    padding: 14px;
-    padding-left: 28px;
-    padding-right: 28px;
-    text-align: center;
-    border: 1px var(--very-light-grey);
-    border-radius: 50px;
-    transition: background-color 1s;
-    }
-
-  .button-1:hover {
-    border: 2px solid var(--very-light-grey);
-    background-color: var(--bright-orange);
-    color: var(--very-light-grey);
-    cursor: pointer;
-    opacity: 1;
+.button {
+  font-size: 15px;
+  font-family: 'Lexend Deca', sans-serif;
+  font-weight: 400;
+  margin-left: 50px;
+  margin-top: 6px;
+  padding: 14px;
+  letter-spacing: -.2px;
+  padding-left: 28px;
+  padding-right: 28px;
+  text-align: center;
+  border: 1px var(--very-light-grey);
+  border-radius: 50px;
+  transition: background-color 1s;
   }
 
-  .button-2 {
-    font-weight: 700;
-    font-size: 15px;
+  #button-1 {
+    color: var(--bright-orange);
+    }
+
+    #button-1:hover {
+      border: 2px solid var(--very-light-grey);
+      background-color: var(--bright-orange);
+      color: var(--very-light-grey);
+      cursor: pointer;
+      }
+
+  #button-2 {
     color: var(--dark-cyan);
-    font-family: 'Lexend Deca', sans-serif;
-    font-weight: 400;
-    margin-left: 50px;
-    padding: 14px;
-    margin-top: 6px;
-    padding-left: 28px;
-    padding-right: 28px;
-    text-align: center;
-    border: 1px var(--very-light-grey);
-    border-radius: 50px;
-    transition: background-color 1s;
     }
 
-  .button-2:hover {
-    border: 2px solid var(--very-light-grey);
-    background-color: var(--dark-cyan);
-    color: var(--very-light-grey);
-    cursor: pointer;
-    }
+    #button-2:hover {
+      border: 2px solid var(--very-light-grey);
+      background-color: var(--dark-cyan);
+      color: var(--very-light-grey);
+      cursor: pointer;
+      }
 
-  .button-3 {
-    font-weight: 700;
-    font-size: 15px;
+  #button-3 {
     color: var(--very-dark-cyan);
-    font-family: 'Lexend Deca', sans-serif;
-    font-weight: 400;
-    margin-left: 50px;
-    padding: 14px;
-    margin-top: 6px;
-    padding-left: 28px;
-    padding-right: 28px;
-    text-align: center;
-    border: 1px var(--very-light-grey);
-    border-radius: 50px;
-    transition: background-color 1s;
     }
 
-  .button-3:hover {
-    border: 2px solid var(--title-color);
-    background-color: var(--very-dark-cyan);
-    color: var(--very-light-grey);
-    cursor: pointer;
-    }
+    #button-3:hover {
+      border: 2px solid var(--very-light-grey);
+      background-color: var(--very-dark-cyan);
+      color: var(--very-light-grey);
+      cursor: pointer;
+      }
 
 .flex-container {
   display: flex; 
-  width: 334px;
-  margin-left: 20px;
-  margin-right: 15px;
-  margin-top: 90px;
-  margin-bottom: 48px;
+  width: 326px;
+  margin-top: 87px;
+  margin-left: 24px;
   flex-direction: column;
   align-items: center;
-  justify-content: left;
-}
+  justify-content: center;
+  }
 
 @media screen and (min-width: 376px) {
   .flex-container {
     flex-direction: row;
+    }
   }
-}
 
 .box {
   height: 442px;
-}
-
-#box-1 {
-  background: var(--bright-orange);
-  border-top-right-radius: 7.5px;
-  border-top-left-radius: 7.5px;
   }
 
-#box-2 {
-  background: var(--dark-cyan);
-}
+  #box-1 {
+    background: var(--bright-orange);
+    border-top-right-radius: 7.5px;
+    border-top-left-radius: 7.5px;
+    }
 
-#box-3 {
-  background: var(--very-dark-cyan);
-  border-bottom-right-radius: 7.5px;
-  border-bottom-left-radius: 7.5px;
-}
+  #box-2 {
+    background: var(--dark-cyan);
+    }
+
+  #box-3 {
+    background: var(--very-dark-cyan);
+    border-bottom-right-radius: 7.5px;
+    border-bottom-left-radius: 7.5px;
+    }
