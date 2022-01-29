@@ -4,51 +4,66 @@
 }
 
 :root {
-  --title-color: rgb(242, 242, 242);
-  --p-color: rgb(255, 255, 255, 0.75);
+  --transparent-white: rgb(242, 242, 242);
+  --very-light-grey: rgba(255, 255, 255, 0.75);
   --bright-orange: rgb(227, 136, 38);
   --dark-cyan: rgb(0, 105, 112);
   --very-dark-cyan: rgb(0, 66, 65);
+  background-color: var(--very-light-grey);
+}
+
+img {
+  padding-left: 50px;
+  padding-top: 46px;
+  padding-bottom: 10px;
 }
 
 .title {
-  font-weight: 400;
-  font-size: 30px;
-  color: var(--title-color);
-  font-family: 'Lexend Deca', sans-serif;
-  padding-top: 40px;
+  font-size: 38px;
+  color: var(--very-light-grey);
+  font-family:'Big Shoulders Display', cursive;
+  font-weight: 700;
+  padding-top: 10px;
+  padding-left: 50px;
   text-align: left;
-  font-stretch: ultra-condensed;
+  opacity: 1;
   }
 
 .paragraph-text {
-  font-weight: 700;
+  line-height: 1.8;
+  color: var(--transparent-white);
+  font-family: 'Lexend Deca', sans-serif;
+  font-weight: 400;
   font-size: 15px;
-  color: var(--p-color);
-  font-family: 'Big Shoulders Display', cursive;
-  padding-top: 40px;
-  padding-bottom: 40px;
+  padding-top: 20px;
+  padding-left: 50px;
+  padding-bottom: 22px;
+  margin-right: 40px;
   text-align: left;
+  opacity: .7;
   }
 
   .button-1 {
     font-weight: 700;
     font-size: 15px;
     color: var(--bright-orange);
-    font-family: 'Big Shoulders Display', cursive;
-    padding: 10px;
+    font-family: 'Lexend Deca', sans-serif;
+    font-weight: 400;
+    margin-left: 50px;
+
+    padding: 14px;
     padding-left: 28px;
     padding-right: 28px;
     text-align: center;
-    border: 1px var(--title-color);
+    border: 1px var(--very-light-grey);
     border-radius: 50px;
     transition: background-color 1s;
     }
 
   .button-1:hover {
-    border: 2px solid var(--title-color);
+    border: 2px solid var(--very-light-grey);
     background-color: var(--bright-orange);
-    color: var(--title-color);
+    color: var(--very-light-grey);
     cursor: pointer;
   }
 
@@ -56,20 +71,22 @@
     font-weight: 700;
     font-size: 15px;
     color: var(--dark-cyan);
-    font-family: 'Big Shoulders Display', cursive;
-    padding: 10px;
+    font-family: 'Lexend Deca', sans-serif;
+    font-weight: 400;
+    margin-left: 50px;
+    padding: 14px;
     padding-left: 28px;
     padding-right: 28px;
     text-align: center;
-    border: 1px var(--title-color);
+    border: 1px var(--very-light-grey);
     border-radius: 50px;
     transition: background-color 1s;
     }
 
   .button-2:hover {
-    border: 2px solid var(--title-color);
+    border: 2px solid var(--very-light-grey);
     background-color: var(--dark-cyan);
-    color: var(--title-color);
+    color: var(--very-light-grey);
     cursor: pointer;
     }
 
@@ -77,12 +94,14 @@
     font-weight: 700;
     font-size: 15px;
     color: var(--very-dark-cyan);
-    font-family: 'Big Shoulders Display', cursive;
-    padding: 10px;
+    font-family: 'Lexend Deca', sans-serif;
+    font-weight: 400;
+    margin-left: 50px;
+    padding: 14px;
     padding-left: 28px;
     padding-right: 28px;
     text-align: center;
-    border: 1px var(--title-color);
+    border: 1px var(--very-light-grey);
     border-radius: 50px;
     transition: background-color 1s;
     }
@@ -90,36 +109,36 @@
   .button-3:hover {
     border: 2px solid var(--title-color);
     background-color: var(--very-dark-cyan);
-    color: var(--title-color);
+    color: var(--very-light-grey);
     cursor: pointer;
     }
 
 .flex-container {
   display: flex; 
-  width: 319px;
-  margin-left: 18px;
-  margin-right: 18px;
-  margin-top: 36px;
-  margin-bottom: 36px;
+  width: 330px;
+  margin-left: 22px;
+  margin-right: 15px;
+  margin-top: 100px;
+  margin-bottom: 45px;
   flex-direction: column;
   align-items: center;
   justify-content: left;
 }
 
-@media screen and (min-width: 426px) {
+@media screen and (min-width: 376px) {
   .flex-container {
     flex-direction: row;
   }
 }
 
 .box {
-  height: 476px;
+  height: 438px;
 }
 
 #box-1 {
   background: var(--bright-orange);
-  border-top-right-radius: 10px;
-  border-top-left-radius: 10px;
+  border-top-right-radius: 8px;
+  border-top-left-radius: 8px;
   }
 
 #box-2 {
@@ -128,6 +147,7 @@
 
 #box-3 {
   background: var(--very-dark-cyan);
-  border-bottom-right-radius: 10px;
-  border-bottom-left-radius: 10px;
+  padding-right: 12px;
+  border-bottom-right-radius: 8px;
+  border-bottom-left-radius: 8px;
 }
