@@ -127,22 +127,21 @@ img {
     border-bottom-left-radius: 7.5px;
     }
 
-@media screen and (min-width: 798px) {
+@media screen and (min-width: 700px) {
   .flex-container {
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    margin-top: 150px;
+    margin-top: 50px;
     }
-  
-  .button {
-    margin-top: 70px;
-  }
 
+ .button {
+    margin-top: 10%;
+ }
   .box {
-    width: 300px;
-    height: 500px;
+    width: 260px;
+    height: 600px;
   }
 
   #box-1 {
@@ -156,4 +155,36 @@ img {
     border-bottom-left-radius: 1px;
     border-top-right-radius: 7.5px;
   }
+}
+
+@media screen and (min-width: 1000px) {
+  .flex-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-top: 150px;
+    }
+  
+  .button {
+    justify-content: space-around;
+   
   }
+
+  .box {
+    width: 320px;
+    height: 520px;
+  }
+
+  #box-1 {
+    border-bottom-left-radius: 7.5px;
+    border-top-right-radius: 1px;
+    border-bottom-right-radius: 1px;
+  }
+
+  #box-3 {
+    border-top-left-radius: 1px;
+    border-bottom-left-radius: 1px;
+    border-top-right-radius: 7.5px;
+  }
+}
