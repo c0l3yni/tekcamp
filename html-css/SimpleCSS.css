@@ -166,10 +166,9 @@ img {
     margin-top: 150px;
     }
   
-  .button {
-    justify-content: space-around;
-   
-  }
+    .button {
+      margin-top: 80px;
+    }
 
   .box {
     width: 320px;
