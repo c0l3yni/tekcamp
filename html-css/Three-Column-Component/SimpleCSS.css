@@ -4,8 +4,8 @@
   }
 
 :root {
-  --transparent-white: hsla(0, 0%, 100%, 0.75);
-  --very-light-grey: hsl(0, 0%, 95%);
+  --transparent-white: rgba(255, 255, 255, 0.75);
+  --very-light-grey: rgb(242, 242, 242);
   --bright-orange: rgb(227, 136, 38);
   --dark-cyan: rgb(0, 105, 112);
   --very-dark-cyan: rgb(0, 66, 65);
