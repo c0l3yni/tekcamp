@@ -27,3 +27,12 @@ Also opacity... made me question everything's color.
 Something I did want to mention is the way I have formatted the CSS file was for easier readability for myself. However, I understand it is not the typical format for CSS files. 
 
 Overall, this assignment excited me and helped me better understand flexbox, css, and even mediaqueries (which baffled me for 4 days). 
+
+Resources: 
+Udemy Section 1-9
+  -keyframe animations and animations https://teksystems.udemy.com/course/modern-html-css-from-the-beginning/learn/lecture/13285546#overview
+CSS basics https://www.w3schools.com/html/html_basic.asp
+CSS responsive W3schools https://www.w3schools.com/css/css_rwd_intro.asp
+CSS flexbox tips https://css-tricks.com/snippets/css/a-guide-to-flexbox/
+Info on READme files https://www.drupal.org/docs/develop/managing-a-drupalorg-theme-module-or-distribution-project/documenting-your-project/readme-template
+CSS advanced topics https://www.w3schools.com/css/css3_borders.asp
