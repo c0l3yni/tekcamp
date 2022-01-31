@@ -8,7 +8,7 @@ Files provided by TEKsystems(images, examples, and style-guide)
 
 Homework - HTML-CSS Three Column Component
 
-I had difficulty with starting on the html before starting css. I was unsure of the id's and class's I wanted to use in my css so I found myself stuck hypothesizing what I might do. Once that was decided I struggled to decide <div> or no <div> as well as <button> or <a> and <img> or <embed>. 
+I had difficulty with starting on the html before starting css. I was unsure of the id's and class's I wanted to use in my css so I found myself stuck hypothesizing what I might do. Once that was decided I struggled to decide div or no div as well as button or --a-- and img or embed. 
 
 After those decisions were made I had trouble deciding whether to include an animation for the button function. I chose to do the animation because it was included in lecture. I also chose to do it becauase the functionality was shown to us in UDEMY. I felt those were sufficient cause to demonstrate skills I learned from the resources provided. I had trouble deciding the timing because if a button doesnt change quickly enough then users will most likely assume it is broken. The button ultimately gave me a lot of questions because it forced me to rethink my CSS. I changed my classes to id's with a main class called .button. This allowed me to shorten my code by 30ish lines. I did the same for .box and #box-1, 2, and 3. Which again shortened my code by 30ish lines. 
 
