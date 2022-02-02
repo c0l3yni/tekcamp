@@ -32,4 +32,15 @@ button.addEventListener('click', function(){
       lastName.classList.remove('error');
       errorImage[1].style.visibility = 'hidden';
     }
+
+    if (password.value === '' || password.value === null) {
+      errorPassword.style.visibility = 'visible';
+      password.classList.add('error');
+      password.placeholder = '';
+      errorImage[3].style.visibility = 'visible';
+    } else {
+      errorPassword.style.visibility = 'hidden';
+      password.classList.remove('error');
+      errorImage[3].style.visibility = 'hidden';
+    }    
   });
