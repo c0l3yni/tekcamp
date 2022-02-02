@@ -22,5 +22,14 @@ button.addEventListener('click', function(){
       errorImage[0].style.visibility = 'hidden';
     }
 
-   
+    if (lastName.value === '' || lastName.value === null) {
+      errorLastName.style.visibility = 'visible';
+      lastName.classList.add('error');
+      lastName.placeholder = '';
+      errorImage[1].style.visibility = 'visible';
+    } else {
+      errorLastName.style.visibility = 'hidden';
+      lastName.classList.remove('error');
+      errorImage[1].style.visibility = 'hidden';
+    }
   });
