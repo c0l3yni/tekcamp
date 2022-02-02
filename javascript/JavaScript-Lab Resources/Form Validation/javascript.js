@@ -14,6 +14,7 @@ button.addEventListener('click', function(){
 
     if (firstName.value === '' || firstName.value === null) {
       errorFirstName.style.visibility = 'visible';
+      errorFirstName.style.fontStyle = 'italic';
       firstName.classList.add('error');
       firstName.placeholder = '';
       errorImage[0].style.visibility = 'visible';
@@ -25,6 +26,7 @@ button.addEventListener('click', function(){
 
     if (lastName.value === '' || lastName.value === null) {
       errorLastName.style.visibility = 'visible';
+      errorLastName.style.fontStyle = 'italic';
       lastName.classList.add('error');
       lastName.placeholder = '';
       errorImage[1].style.visibility = 'visible';
@@ -40,6 +42,7 @@ button.addEventListener('click', function(){
       errorImage[2].style.visibility = 'hidden';
     } else {
       errorEmail.style.visibility = 'visible';
+      errorEmail.style.fontStyle = 'italic';
       email.classList.add('error');
       email.placeholder = '';
       errorImage[2].style.visibility = 'visible';
@@ -47,6 +50,7 @@ button.addEventListener('click', function(){
 
     if (password.value === '' || password.value === null) {
       errorPassword.style.visibility = 'visible';
+      errorPassword.style.fontStyle = 'italic';
       password.classList.add('error');
       password.placeholder = '';
       errorImage[3].style.visibility = 'visible';
