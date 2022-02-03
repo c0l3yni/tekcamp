@@ -5,10 +5,14 @@ const password = document.getElementById('password');
 const button = document.getElementById('form-submit');
 const errorFirstName = document.getElementById('first-name-error');
 const errorLastName = document.getElementById('last-name-error');
-const errorEmail = document.getElementById('email-error');
+const blankEmail = document.getElementById('email-error');
 const errorPassword = document.getElementById('password-error');
 const errorImage = document.getElementsByClassName('fas fa-exclamation-circle');
 const approvedEmail = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+const passwordErrorText = document.getElementById('id')
+
+
+
 
 button.addEventListener('click', function(){
 
@@ -36,13 +40,20 @@ button.addEventListener('click', function(){
       errorImage[1].style.visibility = 'hidden';
     }
 
-    if (email.value.match(approvedEmail)) {
-      errorEmail.style.visibility = 'hidden';
+    if (email.value === '' || email.value === null) {
+      blankEmail.style.visibility = 'visible';
+      blankEmail.style.fontStyle = 'italic';
+      email.classList.add('error');
+      email.placeholder = '';
+      errorImage[2].style.visibility = 'visible';
+    } else if (email.value.match(approvedEmail)) {
+      blankEmail.style.visibility = 'hidden';
       email.classList.remove('error');
       errorImage[2].style.visibility = 'hidden';
     } else {
-      errorEmail.style.visibility = 'visible';
-      errorEmail.style.fontStyle = 'italic';
+      blankEmail.innerText = 'Looks like this is not an email';
+      blankEmail.style.visibility = 'visible';
+      blankEmail.style.fontStyle = 'italic';
       email.classList.add('error');
       email.placeholder = '';
       errorImage[2].style.visibility = 'visible';
