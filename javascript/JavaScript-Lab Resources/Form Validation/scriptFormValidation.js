@@ -9,7 +9,6 @@ const blankEmail = document.getElementById('email-error');
 const errorPassword = document.getElementById('password-error');
 const errorImage = document.getElementsByClassName('fas fa-exclamation-circle');
 const approvedEmail = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
-const passwordErrorText = document.getElementById('id')
 
 button.addEventListener('click', function(){
 
