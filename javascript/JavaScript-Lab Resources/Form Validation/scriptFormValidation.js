@@ -9,10 +9,7 @@ const blankEmail = document.getElementById('email-error');
 const errorPassword = document.getElementById('password-error');
 const errorImage = document.getElementsByClassName('fas fa-exclamation-circle');
 const approvedEmail = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
-<<<<<<< HEAD
 
-=======
->>>>>>> accordionjs
 
 button.addEventListener('click', function(){
 
@@ -69,5 +66,6 @@ button.addEventListener('click', function(){
     errorPassword.style.visibility = 'hidden';
     password.classList.remove('error');
     errorImage[3].style.visibility = 'hidden';
-  }    
+  }   
+   
   })
