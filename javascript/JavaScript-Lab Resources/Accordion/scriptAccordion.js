@@ -78,3 +78,26 @@ question[3].addEventListener('click', function() {
     arrowIcon[3].style.transform = 'rotate(0deg)';
   }
 });
+
+question[4].addEventListener('click', function() {
+  question[4].addEventListener('mouseenter', function() {
+    document.body.style.cursor = 'pointer';
+  });
+  question[4].addEventListener('mouseleave', function() {
+    document.body.style.cursor = 'default';
+  });
+
+if (answer[4].style.display === 'none') {
+  answer[4].style.display = 'block';
+  question[4].style.fontWeight = 'bold';
+  arrowIcon[4].style.transform = 'rotate(180deg)';
+} else {
+  answer[4].style.display = 'none';
+  question[4].style.fontWeight = 'normal';
+  arrowIcon[4].style.transform = 'rotate(0deg)';
+}
+});
+
+
+ 
+  
