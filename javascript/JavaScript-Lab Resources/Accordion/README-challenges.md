@@ -1,0 +1,1 @@
+to rotate the arrow https://sebhastian.com/javascript-rotate-images/#:~:text=When%20you%20need%20to%20rotate,element%20you%20want%20to%20rotate.&text=To%20rotate%20the%20image%2C%20you%20can%20select%20the%20element%20using%20document.
