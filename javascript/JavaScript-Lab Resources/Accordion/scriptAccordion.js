@@ -41,7 +41,40 @@ question[1].addEventListener('click', function() {
   }
 });
 
-
-
- 
+question[2].addEventListener('click', function() {
+  question[2].addEventListener('mouseenter', function() {
+    document.body.style.cursor = 'pointer';
+  });
+  question[2].addEventListener('mouseleave', function() {
+    document.body.style.cursor = 'default';
+  });
   
+if (answer[2].style.display === 'none') {
+  answer[2].style.display = 'block';
+  question[2].style.fontWeight = 'bold';
+  arrowIcon[2].style.transform = 'rotate(180deg)';
+} else {
+  answer[2].style.display = 'none';
+  question[2].style.fontWeight = 'normal';
+  arrowIcon[2].style.transform = 'rotate(0deg)';
+}
+});
+
+question[3].addEventListener('click', function() {
+  question[3].addEventListener('mouseenter', function() {
+    document.body.style.cursor = 'pointer';
+  });
+  question[3].addEventListener('mouseleave', function() {
+    document.body.style.cursor = 'default';
+  });
+  
+  if (answer[3].style.display === 'none') {
+    answer[3].style.display = 'block';
+    question[3].style.fontWeight = 'bold';
+    arrowIcon[3].style.transform = 'rotate(180deg)';
+  } else {
+    answer[3].style.display = 'none';
+    question[3].style.fontWeight = 'normal';
+    arrowIcon[3].style.transform = 'rotate(0deg)';
+  }
+});
