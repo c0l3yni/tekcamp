@@ -6,7 +6,13 @@ const questionList = document.getElementsByClassName('faq-item');
 let i;
 
 for (i = 0; i < questionList.length; i++) {
+  questionList[i].addEventListener('mouseenter', () => {
+    document.body.style.cursor = 'pointer';
+  });
 
+  questionList[i].addEventListener('mouseleave', () => {
+    document.body.style.cursor = 'default';
+  });
   questionList[i].addEventListener("click", function () {
     this.classList.toggle("active");
     let answerList = this.lastElementChild;
