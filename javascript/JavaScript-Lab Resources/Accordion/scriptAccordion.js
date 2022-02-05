@@ -9,9 +9,9 @@ for (i = 0; i < questionList.length; i++) {
   questionList[i].addEventListener('mouseleave', () => {
     document.body.style.cursor = 'default';
   });
-  
-  questionList[i].addEventListener("click", function () {
-    this.classList.toggle("active");
+
+  questionList[i].addEventListener('click', function () {
+    this.classList.toggle('active');
     let answerList = this.lastElementChild;
     let question = this.firstElementChild;
     let arrow = question.firstElementChild
