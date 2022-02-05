@@ -39,6 +39,7 @@ button.addEventListener('click', function(){
 
   if (email.value === '' || email.value === null) {
     blankEmail.style.visibility = 'visible';
+    blankEmail.innerText = 'Email cannot be empty';
     blankEmail.style.fontStyle = 'italic';
     email.classList.add('error');
     email.placeholder = '';
