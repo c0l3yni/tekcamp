@@ -16,12 +16,15 @@ for (i = 0; i < questionList.length; i++) {
   questionList[i].addEventListener("click", function () {
     this.classList.toggle("active");
     let answerList = this.lastElementChild;
+    let question = this.firstElementChild;
 
     if (answerList.style.display === 'block') {
       answerList.style.display = 'none';
+      question.style.fontWeight = 'normal';
 
     } else {
       answerList.style.display = 'block';
+      question.style.fontWeight = 'bold';
     }
   });
 }
