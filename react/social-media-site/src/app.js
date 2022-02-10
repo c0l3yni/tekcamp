@@ -1,12 +1,16 @@
-import UserPosts from './Components/UserPosts';
+import React from 'react';
+import Newsfeed from './Components/Newsfeed';
+
 
 
 function App() {
   return (
     <div className="App">
-      <UserPosts />
+      <Newsfeed />
     </div>
   );
 }
 
 export default App;
+
+
