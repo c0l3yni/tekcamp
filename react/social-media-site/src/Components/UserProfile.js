@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
+import Navbar from "./Navbar";
 import "../CSS/userprofile.css";
 
-const API_KEY = process.env.REACT_APP_API_KEY; 
+const API_KEY = process.env.REACT_APP_API_KEY;
 
 function UserProfile() {
 
@@ -14,15 +15,13 @@ function UserProfile() {
         'app-id': API_KEY
       }
     })
-    .then(response => response.json())
-    .then(jsonResponse => setUser(jsonResponse))
-  },[]);
+      .then(response => response.json())
+      .then(jsonResponse => setUser(jsonResponse))
+  }, []);
 
   return (
     <div className="user-profile">
-      <Link to="/">
-        <button>My Newsfeed</button>
-      </Link>
+      <Navbar />
       <img src="" alt="" />
       <h1 className="user-profile-name">{user.firstName} {user.lastName}</h1>
       <section className="user-info-container">
@@ -37,7 +36,7 @@ function UserProfile() {
           <p>{user.location.country}</p> */}
         </section>
       </section>
-  </div>
+    </div>
   );
 }
 

@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
-import { CSSProperties } from '../CSS/comment.css';
+import '../CSS/comment.css';
 
 const API_KEY = process.env.REACT_APP_API_KEY;
 
-function Comment({postId}) {
+function Comment({ postId }) {
   const [comments, setComments] = useState([]);
 
   useEffect(() => {
@@ -12,29 +12,29 @@ function Comment({postId}) {
         'app-id': API_KEY
       }
     })
-    .then(response => response.json())
-    .then(jsonResponse => setComments(jsonResponse.data))
-  },[]);
+      .then(response => response.json())
+      .then(jsonResponse => setComments(jsonResponse.data))
+  }, []);
 
   let commentList = comments.map(comment => {
     return (
-      <>
-      <img src={comment.owner.picture} alt="" />
-      <h4>{`${comment.owner.firstName} ${comment.owner.lastName}`}</h4>
-      <p>{comment.message}</p>
-      </>
+      <div key={comment.id}>
+        <img src={comment.owner.picture} alt="" />
+        <h4>{`${comment.owner.firstName} ${comment.owner.lastName}`}</h4>
+        <p>{comment.message}</p>
+      </div>
     )
   });
-return (
-  <div>
-    {console.log(comments)}
-    <section className="comment-container">
-      <p className="comment-section-header">Comment Section</p>
-      {commentList}
-    </section>
 
-  </div>
-)
+  return (
+    <div>
+      {console.log(comments)}
+      <section className="comment-container">
+        <p className="comment-section-header">Comment Section</p>
+        {commentList}
+      </section>
+    </div>
+  )
 };
 
 export default Comment;
