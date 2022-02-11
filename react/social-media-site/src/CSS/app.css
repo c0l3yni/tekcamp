@@ -1,0 +1,13 @@
+* {
+  margin: 0;
+  padding: 0; 
+}
+
+:root {
+  --dark-orange: rgb(214,46,2);
+  --light-orange: rgb(253,152,85);
+  --bright-white: rgb(255,255,255);
+  --pink: rgb(209,97,162);
+  --light-pink:	rgb(235, 177, 211);
+  --dark-pink: rgb(162,1,96);
+}

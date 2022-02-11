@@ -1,0 +1,29 @@
+.user-profile {
+  background-color: var(--light-pink);
+  height: 1500px;
+}
+
+.user-profile-name {
+  font-size: 40px;
+  text-align: center;
+  color: black;
+  font-family: Copperplate,Copperplate Gothic Light,fantasy; 
+}
+
+.user-info-container {
+  display: flex;
+  justify-content: space-around;
+  
+}
+
+.left-container {
+  padding: 45px;
+  border: 10px solid black;
+  flex: 1;
+}
+
+.right-container {
+  padding: 45px;
+  border: 10px solid black; 
+  flex: 1;
+}

@@ -1,17 +1,15 @@
-import react from 'react';
+import React from "react";
+import "../CSS/user.css";
 
-function User() {
+function User({UserName}) {
 
 
 
   return (
     <div>
-      <h1>name</h1>
-      <p>gender</p>
-      <p>birthdate</p>
-      <p>city</p>
-      <p>state</p>
-      <p>country</p>
+      <section className="user-container">
+      <h1>{UserName}</h1>
+      </section>
   </div>
   );
 }

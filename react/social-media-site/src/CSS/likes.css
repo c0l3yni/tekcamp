@@ -1,0 +1,11 @@
+
+.likes-container {
+  display: grid;
+  
+
+  /* width: 130px;
+  height: 130px;
+  background: var(--light-orange);
+  clip-path: polygon(0% 100%, 50% 0%, 100% 100%);
+  transform: rotate(45deg); */
+}

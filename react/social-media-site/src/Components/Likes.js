@@ -1,8 +1,8 @@
 import React, {useState} from "react";
+import "../CSS/likes.css";
 
-
-function Likes() {
-  const [likes, setLikes] = useState(40);
+function Likes({quantity}) {
+  const [likes, setLikes] = useState(quantity);
   const [isLiked, setIsLiked] = useState(false);
   
 
@@ -26,10 +26,9 @@ function Likes() {
 
   return (
     <div>
-       <section className="like-flex-container">
-          <aside className="likesCountHeader">Likes</aside>
-      <button className="likeButton" onClick={()=>handleLike()}>{likes} Likes</button>
-      </section>
+      <aside className="likes-container">
+        <button className="likeButton" onClick={()=>handleLike()}>{likes} Likes</button>
+      </aside>
     </div>
   )
   };

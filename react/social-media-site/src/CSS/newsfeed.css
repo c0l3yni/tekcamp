@@ -1,0 +1,59 @@
+/* * {
+  margin: 0;
+  padding: 0; 
+}
+
+:root {
+  --dark-orange: rgb(214,46,2);
+  --light-orange: rgb(253,152,85);
+  --bright-white: rgb(255,255,255);
+  --pink: rgb(209,97,162);
+  --light-pink:	rgb(233, 121, 186);
+  --dark-pink: rgb(162,1,96);
+}
+
+.flex-container {
+  display: flex; 
+  flex-direction: column;
+}
+
+.comment-flex-container {
+  display: ;
+  width: 30px;
+  justify-content: right;
+  flex-direction: left
+}
+
+.likes-flex-container {
+
+}
+
+.appTitle {
+  font-size: 60px;
+  color: var(--dark-pink);
+  font-family: Copperplate,Copperplate Gothic Light,fantasy; 
+  text-align: center;
+  padding: 20px;
+}
+
+.commentSectionHeader {
+  font-size: 28px;
+  color: var(--dark-pink);
+  font-family: Copperplate,Copperplate Gothic Light,fantasy; 
+  text-align: right;
+  padding: 30px;
+}
+
+.likesCountHeader {
+  font-size: 28px;
+  color: var(--dark-pink);
+  font-family: Copperplate,Copperplate Gothic Light,fantasy; 
+  text-align: left;
+  padding: 30px;
+} */
+
+
+
+	
+	
+

@@ -1,12 +1,14 @@
 import React from "react";
+import '../CSS/post.css';
 
-function Post({userName}) {
+function Post({PostBody}) {
 
 
 return (
   <div>
-    <img src="" />
-    <h2>{userName}</h2>
+    <section className="post-container">
+    <h2 className="post">{PostBody}</h2>
+    </section>
   </div>
 )};
 
