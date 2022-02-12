@@ -69,22 +69,27 @@
 
 .t > div:nth-child(1){
   transform: rotate(30deg);
+  color: var(--dark-orange);
 }
 .t > div:nth-child(2){
   transform: rotate(60deg) rotate(30deg);
+  color: var(--dark-orange);
 }
 .t > div:nth-child(3){
   transform: rotate(120deg) rotate(30deg);
+  color: var(--dark-orange);
 }
 .t > div:nth-child(4){
-
   transform: rotate(-60deg) rotate(30deg);
+  color: var(--dark-orange);
 }
 .t > div:nth-child(5){
   transform: rotate(-120deg) rotate(30deg);
+  color: var(--dark-orange);
 }
 .t > div:nth-child(6){
   transform: rotate(-180deg) rotate(30deg);
+  color: var(--dark-orange);
 }
 
 
