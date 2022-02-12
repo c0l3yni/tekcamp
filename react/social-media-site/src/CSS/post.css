@@ -1,5 +1,5 @@
 
-/* .post-container {
+.post-container {
   display: grid;
   justify-content: center;
   margin-left: 125px;
@@ -7,9 +7,4 @@
   color: black;
   font-family: Copperplate,Copperplate Gothic Light,fantasy; 
   text-align: center;
-  width: 130px;
-  height: 130px;
-  background: var(--dark-pink);
-  clip-path: polygon(0% 100%, 50% 0%, 100% 100%);
-  transform: rotate(180deg); 
-} */
+} 

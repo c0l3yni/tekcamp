@@ -20,23 +20,77 @@ function UserProfile() {
   }, []);
 
   return (
-    <div className="user-profile">
+     <div className="user-profile">
       <Navbar />
-      <img src="" alt="" />
-      <h1 className="user-profile-name">{user.firstName} {user.lastName}</h1>
-      <section className="user-info-container">
-        <section className="left-container">
-          <p>{user.gender}</p>
-          <p>{user.dateOfBirth}</p>
-          <p>astro sign</p>
-        </section>
-        <section className="right-container">
-          {/* <p>{user.location.city}</p>
-          <p>{user.location.state}</p>
-          <p>{user.location.country}</p> */}
-        </section>
-      </section>
+
+    <div class="t">
+
+      <div>
+        <div class="triangle">
+        {/* <p className="user-profile-name">{user.firstName} {user.lastName}</p> */}
+        </div>
+      </div>
+
+      <div>
+        <div class="triangle">
+
+        </div>
+      </div>
+
+      <div>
+        <div class="triangle">
+
+        </div>
+      </div>
+
+      <div>
+        <div class="triangle">
+
+        </div>
+      </div>
+      
+      <div>
+        <div class="triangle">
+
+        </div>
+      </div>
+      
+      <div>
+        <div class="triangle">
+
+        </div>
+      </div>
+
     </div>
+   
+
+    //   <div className="hex-container">
+
+    //   <section className="user-name-triangle">
+    //    
+    //   </section>
+
+    //     <section className="dob-triangle">
+    //       <p className="dob">{user.dateOfBirth}</p>
+    //     </section>
+
+    //     <section className="astro-triangle">
+    //       <p className="sign">astro sign</p>
+    //     </section>
+
+    //     <section className="gender-triangle">
+    //       <p className="gender">{user.gender}</p>
+    //     </section>
+
+    //     <section className="location-triangle">
+    //       {/* <p>{user.location.city}</p>
+    //       <p>{user.location.state}</p>
+    //       <p>{user.location.country}</p> */}
+
+    //     <img className="image-triangle" src="" alt="" />
+    //     </section>
+    //   </div>
+    // </div>
   );
 }
 

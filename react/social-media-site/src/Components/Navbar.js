@@ -4,13 +4,16 @@ import '../CSS/navbar.css'
 
 function Navbar() {
   return (
+    
     <div className="navbar-flex-container">
       <Link to="/profile">
         <button className="profile-btn">My Profile</button>
       </Link>
-      <h1 className="app-title">What the hex is going on...</h1>
+      <section className="title-flex-container">
+      <h1 className="app-title">What the HEX is going on...</h1>
+      </section>
       <Link to="/">
-        <button className="newsfeed-btn">My Newsfeed</button>
+        <button className="newsfeed-btn">Newsfeed</button>
       </Link>
     </div>
   );
