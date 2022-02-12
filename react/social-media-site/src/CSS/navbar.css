@@ -1,26 +1,29 @@
 .navbar-flex-container {
   display: flex;
   flex-direction: row;
+  padding-left: 20px;
   background-color: var(--light-pink);
 }
 
 .title-flex-container {
   clip-path: polygon(25% 5%, 75% 5%, 100% 50%, 75% 95%, 25% 95%, 0% 50%);
   background-color: var(--light-orange);
+  width: 150px;
+  margin-left: 10px;
+  margin-right: 10px;
 }
 
 .app-title {
-  
-  font-size: 32px;
+  font-size: 20px;
   padding: 10px;
   margin: 30px;
   text-align: center;
 }
 
 .profile-btn {
-  display: visible;
-  width:100px;
-  height:50px;
+  margin-top: 40px;
+  width:90px;
+  height:70px;
   text-align:center;
   font-size: 15px;
   background-color: var(--pink);
@@ -28,9 +31,9 @@
 }
 
 .newsfeed-btn {
-  display: visible;
-  width: 100px;
-  height:50px;
+  margin-top: 40px;
+  width: 90px;
+  height:70px;
   text-align:center;
   font-size: 15px;;
   background-color: var(--pink);
