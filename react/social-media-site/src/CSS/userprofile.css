@@ -20,7 +20,7 @@
   display: flex;
   position: absolute;
   border-style: solid;
-  border-width: 0 80px 170px 110px;
+  border-width: 0 80px 170px 115px;
   border-color: var(--light-pink);
   cursor: pointer;    
   width: 0px;
