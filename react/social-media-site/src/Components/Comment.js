@@ -30,15 +30,14 @@ function Comment({ postId }) {
     return (
       <div key={comment.id}>
         <img src={comment.owner.picture} alt="" />
-        <p>{`${comment.owner.firstName} ${comment.owner.lastName}`}</p>
-        <p>{comment.message}</p>
+        <li>{`${comment.owner.firstName} ${comment.owner.lastName}`}</li>
+        <li>{comment.message}</li>
       </div>
     )
   });
 
   return (
     <div>
-      {/* {console.log(comment)} */}
       <section className="comment-container">
         <p className="comment-section-header">Comment Section</p>
         {commentList}

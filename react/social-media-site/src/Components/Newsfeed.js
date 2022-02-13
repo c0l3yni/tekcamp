@@ -36,7 +36,7 @@ function Newsfeed() {
 if (posts) {
 
   return (
-    <div>
+    <div className="flex-container">
       <Navbar />
       <section key="{userPostList}">{userPostList}</section>
     </div>

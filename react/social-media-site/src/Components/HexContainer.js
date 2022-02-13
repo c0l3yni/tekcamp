@@ -48,18 +48,19 @@ function HexContainer({ post }) {
 
           <div>
             <div className="triangle">
-              <img className="triangle-5" src={post.image} alt="" />
-
+            <section className="post-image">
+              <img src={post.image} alt="" />
+              </section>
             </div>
           </div>
 
           <div>
             <div className="triangle">
-              <section className="triangle-4">
-                <Link to="/commentpage">
-                  <button className="comment-button">Add Comment</button>
-                </Link>
-                <Comment className="" postId={post.id} />
+              <section className="comments">
+                {/* <Link to="/commentpage"> */}
+                  <button>Comments</button>
+                {/* </Link> */}
+                {/* <Comment postId={post.id} /> */}
               </section>
             </div>
           </div>
