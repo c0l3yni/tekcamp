@@ -22,9 +22,9 @@ function MakeComment( { comment }) {
           'app-id': API_KEY,
       }
     }
-    // ).then(() => {
-    //   history.replace('/');
-    // })
+    ).then(() => {
+      history.replace('/');
+    })
     )}
   return (
     <form onSubmit={handleSubmit(onSubmit)}>

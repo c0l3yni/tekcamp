@@ -7,9 +7,13 @@ import "../CSS/userprofile.css";
 const API_KEY = process.env.REACT_APP_API_KEY;
 
 function UserProfile() {
-  let dob = moment("1996-04-30T19:26:49.610Z").utc().format('YYYY-MM-DD')
+  // let dob = moment("1996-04-30T19:26:49.610Z").utc().format('YYYY-MM-DD')
   const [user, setUser] = useState([])
   const isCancelled = useRef(false)
+
+  function convertDOB(dob) {
+    return moment(dob).utc().format('YYYY-MM-DD')
+  }
 
   useEffect(() => {
     fetch('https://dummyapi.io/data/v1/user/60d0fe4f5311236168a109ca', {
@@ -40,7 +44,7 @@ if (user) {
 
             <div>
               <div className="triangle">
-                <p className="triangle-1">{dob}</p>
+                <p className="triangle-1">{convertDOB(user.dateOfBirth)}</p>
               </div>
             </div>
 

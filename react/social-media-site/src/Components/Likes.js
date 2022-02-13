@@ -1,17 +1,16 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 import "../CSS/likes.css";
 
-function Likes({quantity}) {
+function Likes({ quantity }) {
   const [likes, setLikes] = useState(quantity);
   const [isLiked, setIsLiked] = useState(false);
-  
 
   function addLike() {
-    setLikes(likes + 1)
+    setLikes(likes + 1);
   }
 
   function unLike() {
-    setLikes(likes - 1)
+    setLikes(likes - 1);
   }
 
   function handleLike() {
@@ -27,10 +26,12 @@ function Likes({quantity}) {
   return (
     <div>
       <aside className="likes-container">
-        <button className="likeButton" onClick={()=>handleLike()}>{likes} Likes</button>
+        <button className="likeButton" onClick={() => handleLike()}>
+          {likes} Likes
+        </button>
       </aside>
     </div>
-  )
-  };
+  );
+}
 
 export default Likes;
