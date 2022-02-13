@@ -2,12 +2,12 @@ import React from "react";
 import Post from "./Post";
 import Likes from "./Likes";
 import Comment from "./Comment";
-import CommentPage from "./CommentPage";
+import CommentSection from "./CommentSection";
+
 import User from "./User";
 import "../CSS/hexcontainer.css";
-import { Link } from "react-router-dom";
 
-function HexContainer({ post, postId }) {
+function HexContainer({ post }) {
   return (
     <div>
       <section className="hex-container">
@@ -62,12 +62,16 @@ function HexContainer({ post, postId }) {
           <div>
             <div className="triangle">
               <section className="comments">
-                <button>Comments</button>
+                <button className="commentButton">Comments</button>
                 
               </section>
             </div>
           </div>
-          <Comment />
+
+          <div className="comment-list">
+          <CommentSection postId={post.id} />
+          </div>
+         
         </div>
       </section>
     </div>

@@ -4,10 +4,12 @@
 }
 
 :root {
-  --dark-orange: rgb(175, 59, 6);
+  --dark-orange: rgba(214,46,2,1);
   --light-orange: rgb(221, 140, 85);
-  --bright-white: rgb(255,255,255);
-  --pink: rgb(209,97,162);
-  --light-pink:	rgb(235, 177, 211);
-  --dark-pink: rgb(162,1,96);
+  --bright-white: rgba(255,255,255,1);
+  --pink: rgb(241, 116, 189);
+  --light-pink:	rgb(236, 157, 194);
+  --dark-pink: rgba(252,69,163,1);
 }
+
+  

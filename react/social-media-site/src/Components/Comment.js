@@ -1,49 +1,22 @@
-import React, { useEffect, useRef, useState } from "react";
-import '../CSS/comment.css';
+import React from "react";
+import { useLinkClickHandler } from "react-router-dom";
+import "../CSS/comment.css";
+import CommentSection from "./CommentSection";
 
-const API_KEY = process.env.REACT_APP_API_KEY;
-
-function Comment({ postId }) {
-  const [comments, setComments] = useState([]);
-  const isCancelled = useRef(false)
-  useEffect(() => {
-
-    if (isCancelled.current) {
-      fetch(`https://dummyapi.io/data/v1/post/${postId}/comment?limit=10`, {
-        headers: {
-          'app-id': API_KEY
-        }
-      })
-
-      .then(response => response.json())
-      .then(jsonResponse => setComments(jsonResponse.data))
-      isCancelled.current = true
-    }
-
-
-    return () => {
-      isCancelled.current = true;
-    };
-  }, [isCancelled]);
-  
-  let commentList = comments.map(comment => {
-    return (
-      <div key={comment.id}>
-        <img src={comment.owner.picture} alt="" />
-        <li>{`${comment.owner.firstName} ${comment.owner.lastName}`}</li>
-        <li>{comment.message}</li>
-      </div>
-    )
-  });
-
+function Comment({ comment }) {
   return (
     <div>
-      <section className="comment-container">
-        <p className="comment-section-header">Comment Section</p>
-        {commentList}
+      <div className="image-text-container">
+      <div className="image-container">
+        <img className="user-pic" src={comment.owner.picture} alt="" />
+      </div>
+      <section className="text">
+        <li className="name">{`${comment.owner.firstName} ${comment.owner.lastName}`}</li>
+        <li className="message">{comment.message}</li>
       </section>
+      </div>
     </div>
-  )
-};
+  );
+}
 
 export default Comment;

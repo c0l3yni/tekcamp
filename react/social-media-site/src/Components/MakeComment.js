@@ -1,50 +1,46 @@
 import React, { useState } from "react";
-import CommentPage from "./CommentPage";
 
 const API_KEY = process.env.REACT_APP_API_KEY;
 
-function MakeComment( { comment }) {
-  // const history = useHistory();
-  const [isSending, setIsSending] = useState(false);
-	const { register, errors, handleSubmit } = CommentPage();
+function MakeComment({postId}) {
+  const [message, setMessage] = useState("")
 
-	const onSubmit = data => {
-		setIsSending(true);
+  function onInputChange(event) {
+    setMessage(event.target.value)
+  }
 
+  function onFormSubmit(event) {
+    event.preventDefault();
+    addComment();
+    setMessage("")
+  }
 
-  function addComment(comment) {
-    fetch(`https://dummyapi.io/data/v1/comment/create`,
-      {
-        method: "POST", 
-        body: JSON.stringify(comment),
-        headers: {
-          'Content-Type': 'application.json',
-          'app-id': API_KEY,
-      }
-    }
-    ).then(() => {
-      history.replace('/');
+  function addComment() {
+    fetch(`https://dummyapi.io/data/v1/comment/create`, 
+    {
+      method: "POST",
+      headers: {
+        'Content-Type': 'application/json',
+        'app-id': API_KEY
+      },
+      body: JSON.stringify({
+        message: message,
+        owner: "60d0fe4f5311236168a109ca",
+        post: postId
+        })
     })
-    )}
-  return (
-    <form onSubmit={handleSubmit(onSubmit)}>
-      <div
-        name="comment"
-        placeholder="Your Comment"
-        rows="5"
-        ref={register({ required: true, maxLength: 500 })}
-      />
-      {errors.comment && (
-        <span>You need to write something</span>
-      )}
-      <button
-        type="submit"
-        disabled={isSending}
-        value={isSending ? "Sending Comment..." : "Send Comment"}
-      />
-    </form>
-    
-);
-}}
+    .then(response => response.json())
+    .then(data => console.log(data))
+    };
+  
+  return(
+    <div>
+      <form onSubmit={onFormSubmit}>
+        <input type="text" onChange={onInputChange} value={message} />
+        <button type='submit'>Comment</button>
+      </form>
+    </div>
+  )
+}
 
 export default MakeComment;

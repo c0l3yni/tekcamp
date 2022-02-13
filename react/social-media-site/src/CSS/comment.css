@@ -1,24 +1,29 @@
-
-.comment-container {
-  display: grid;
-  justify-content: right;
-  margin-left: 180px;
-
-  text-align: center;
-  /* width: 130px;
-  height: 130px;
-  background: var(--light-pink);
-  clip-path: polygon(0% 100%, 50% 0%, 100% 100%);
-  transform: rotate(-45deg); */
-  }
-.comment-section-header {
-  font-size: 10px;
-  color: black;
-  font-family: Copperplate,Copperplate Gothic Light,fantasy; 
+.image-text-container {
+  display: flex;
+  flex-direction: row;
 }
 
-.comment-body {
-  font-size: 11px;
-  color: black;
+.image-container {
+  padding: 5px;
+}
+  
+.user-pic {
+  clip-path: polygon(0% 100%, 50% 0%, 100% 100%);
+  width: 50px;
+}
+
+.text {
+  padding-top: 20px;
+  list-style-type: none;
+  text-align: left;
   font-family: Copperplate,Copperplate Gothic Light,fantasy; 
+
+}
+
+.name {
+  font-weight: 800;
+}
+
+.nmessage {
+  padding-left: 120px;
 }
