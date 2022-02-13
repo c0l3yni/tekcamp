@@ -5,11 +5,10 @@ const API_KEY = process.env.REACT_APP_API_KEY;
 
 function Comment({ postId }) {
   const [comments, setComments] = useState([]);
-  const [text, setText] = useState("waiting...");
   const isCancelled = useRef(false)
   useEffect(() => {
 
-    if (!isCancelled.current) {
+    if (isCancelled.current) {
       fetch(`https://dummyapi.io/data/v1/post/${postId}/comment?limit=10`, {
         headers: {
           'app-id': API_KEY
@@ -25,13 +24,13 @@ function Comment({ postId }) {
     return () => {
       isCancelled.current = true;
     };
-  }, [postId]);
-
+  }, [isCancelled]);
+  
   let commentList = comments.map(comment => {
     return (
       <div key={comment.id}>
         <img src={comment.owner.picture} alt="" />
-        <h4>{`${comment.owner.firstName} ${comment.owner.lastName}`}</h4>
+        <p>{`${comment.owner.firstName} ${comment.owner.lastName}`}</p>
         <p>{comment.message}</p>
       </div>
     )

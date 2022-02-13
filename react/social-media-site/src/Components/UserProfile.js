@@ -1,5 +1,5 @@
 import React, { useState, useRef, useEffect } from "react";
-import { Link } from "react-router-dom";
+
 import Navbar from "./Navbar";
 import moment from "moment";
 import "../CSS/userprofile.css";
@@ -10,7 +10,6 @@ function UserProfile() {
   let dob = moment("1996-04-30T19:26:49.610Z").utc().format('YYYY-MM-DD')
   const [user, setUser] = useState([])
   const isCancelled = useRef(false)
-  console.log(user)
 
   useEffect(() => {
     fetch('https://dummyapi.io/data/v1/user/60d0fe4f5311236168a109ca', {
@@ -41,13 +40,13 @@ if (user) {
 
             <div>
               <div className="triangle">
-                <p className="user-dob">{dob}</p>
+                <p className="triangle-1">{dob}</p>
               </div>
             </div>
 
             <div>
               <div className="triangle"> profile pic
-                <section className="image-triangle">
+                <section className="triangle-2">
                   <img src={user.picture} alt="" />
                 </section>
               </div>
@@ -55,25 +54,25 @@ if (user) {
 
             <div>
               <div className="triangle">
-                <section className="astro-sign">Taurus</section>
+                <section className="triangle-3">Taurus</section>
               </div>
             </div>
 
             <div>
               <div className="triangle">
-                <section className="gender">{user.gender}</section>
+                <section className="triangle-6">{user.gender}</section>
               </div>
             </div>
 
             <div>
               <div className="triangle">
-                <p className="user-name">{user.firstName} {user.lastName}</p>
+                <p className="triangle-5">{user.firstName} {user.lastName}</p>
               </div>
             </div>
 
             <div>
               <div className="triangle">
-                <ul className="location">
+                <ul className="triangle-4">
                   <li>{user?.location?.city},</li>
                   <li>{user?.location?.state},</li>
                    <li>{user?.location?.country}</li>

@@ -1,10 +1,10 @@
-.flex-container {
+/* .flex-container {
   display: flex; 
   flex-direction: column;
 }
 
 .comment-flex-container {
-  display: ;
+  display: flex;
   width: 30px;
   justify-content: right;
   flex-direction: left
@@ -37,7 +37,7 @@
   text-align: left;
   padding: 30px;
 }
-
+ */
 
 
 	

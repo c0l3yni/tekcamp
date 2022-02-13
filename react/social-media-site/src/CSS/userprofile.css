@@ -35,10 +35,9 @@
 }
 
 /* triangle 1 */
-.user-dob {
+.triangle-1 {
   font-size: 15px;
   font-family: Copperplate,Copperplate Gothic Light,fantasy; 
-  /* padding-top: 110px; */
   padding-right: 110px;
   padding-bottom: 80px;
   text-align: center;
@@ -53,13 +52,11 @@
 }
 
 /* triangle 2 */
-.image-triangle {
-  /* margin-top: -14px; */
+.triangle-2 {
   margin-left: -170px;
   padding-right: -50px;
   padding-bottom: 200px;
   transform: rotate(180deg);
-  
 }
   
 img {
@@ -73,7 +70,7 @@ img {
 }
 
 /* triangle 6 */
-.gender {
+.triangle-6 {
   font-size: 30px;
   font-family: Copperplate,Copperplate Gothic Light,fantasy; 
   padding-top: 40px;
@@ -90,7 +87,7 @@ img {
 }
 
 /* triangle 3 */
-.astro-sign {
+.triangle-3 {
   font-family: Copperplate,Copperplate Gothic Light,fantasy; 
   font-size: 30px;;
   padding-top: 270px;
@@ -105,7 +102,7 @@ img {
 }
 
 /* triangle 4 */
-.location {
+.triangle-4 {
   font-size: 12px;
   font-family: Copperplate,Copperplate Gothic Light,fantasy; 
   padding-top: 140px;
@@ -120,7 +117,7 @@ img {
 }
 
 /* triangle 5 */
-.user-name {
+.triangle-5 {
   font-size: 30px;
   font-family: Copperplate,Copperplate Gothic Light,fantasy; 
   padding-top: 90px;

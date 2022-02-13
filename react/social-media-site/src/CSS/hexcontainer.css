@@ -1,24 +1,53 @@
-* {
-  margin: 0;
-  padding: 0; 
-}
-
-:root {
-  --dark-orange: rgb(214,46,2);
-  --light-orange: rgb(253,152,85);
-  --bright-white: rgb(255,255,255);
-  --pink: rgb(209,97,162);
-  --light-pink:	rgb(233, 121, 186);
-  --dark-pink: rgb(162,1,96);
-}
 
 .hex-container {
   display: flex;
   flex-direction: column;
+  padding-bottom: 120px;
 }
 
+.user-name {
+  font-size: 30px;
+  align-items: center;
+  padding-bottom: 10px;
+  margin-left: -100px;
+  padding-right: 90px;
+  transform: rotate(240deg);
+  text-align: center;
+  white-space: pre-wrap;
+}
 
-.post-image {
-  height: 300px;
-  object-fit: contain;
+/* post info and date */
+.post-info {
+  font-size: 20px;
+  text-align: center;
+  margin-top: -20px;
+  margin-left: 50px;
+  font-family: Copperplate,Copperplate Gothic Light,fantasy; 
+}
+
+.post-date {
+  font-size: 10px;
+  padding-left: 90px;
+  text-align: center;
+}
+
+.triangle-4 {
+  font-size: 40px;
+  transform: rotate(300deg);
+  text-align: center;
+}
+
+.triangle-5 {
+  margin-left: -170px;
+  padding-right: -50px;
+  padding-bottom: 200px;
+  transform: rotate(180deg);
+}
+
+.likes {
+  padding-left: 10px;
+  padding-top: 140px;
+  text-align: center;
+  margin-left: -120px;
+  transform: rotate(-60deg);
 }
