@@ -62,9 +62,11 @@ function HexContainer({ post }) {
 
           <div>
             <div className="triangle tri-four">
-              <li className="post-date">
-                {`Posted on ${convertPostDate(post.publishDate)}`}
-              </li>
+              <ul>
+                <li className="post-date">
+                  {`Posted on ${convertPostDate(post.publishDate)}`}
+                </li>
+              </ul>
             </div>
           </div>
 

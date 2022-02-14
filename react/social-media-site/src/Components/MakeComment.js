@@ -38,12 +38,14 @@ function MakeComment({ postId, comments, setComments }) {
   return (
     <div>
       <form onSubmit={onFormSubmit}>
+        <label>
         <input
           className="input"
           type="text"
           onChange={onInputChange}
           value={message}
         />
+        </label>
         <button className="button input-button" type="submit">
           Comment
         </button>

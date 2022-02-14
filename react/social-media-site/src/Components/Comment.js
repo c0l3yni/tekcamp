@@ -9,8 +9,10 @@ function Comment({ comment }) {
           <img className="user-pic" src={comment.owner.picture} alt="" />
         </div>
         <section className="text">
-          <li className="name">{`${comment.owner.firstName} ${comment.owner.lastName}`}</li>
-          <li className="message">{comment.message}</li>
+          <ul>
+            <li className="name">{`${comment.owner.firstName} ${comment.owner.lastName}`}</li>
+            <li className="message">{comment.message}</li>
+          </ul>
         </section>
       </div>
     </div>
