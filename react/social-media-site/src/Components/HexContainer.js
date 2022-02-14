@@ -55,7 +55,7 @@ function HexContainer({ post }) {
           <div>
             <div className="triangle tri-five">
               <section className="post-image">
-                <img src={post.image} alt="" />
+                <img className="image" src={post.image} alt="" />
               </section>
             </div>
           </div>
