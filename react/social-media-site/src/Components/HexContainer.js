@@ -1,19 +1,26 @@
-import React from "react";
+import React, { useState } from "react";
 import Post from "./Post";
 import Likes from "./Likes";
-import Comment from "./Comment";
 import CommentSection from "./CommentSection";
 
 import User from "./User";
 import "../CSS/hexcontainer.css";
 
 function HexContainer({ post }) {
+ 
+  const [flag, setflag] = useState(false)
+  function updateflag() {
+    console.log(updateflag)
+    setflag(!flag)
+  }
+
+  console.log(flag)
   return (
     <div>
       <section className="hex-container">
         <div className="t">
           <div>
-            <div className="triangle">
+            <div className="triangle tri-one">
               <div className="user-name">
                 <User
                   UserName={`${post.owner.firstName} ${post.owner.lastName}`}
@@ -23,7 +30,7 @@ function HexContainer({ post }) {
           </div>
 
           <div>
-            <div className="triangle">
+            <div className="triangle tri-two">
               {" "}
               profile pic
               <section className="triangle-2">
@@ -33,7 +40,7 @@ function HexContainer({ post }) {
           </div>
 
           <div>
-            <div className="triangle">
+            <div className="triangle tri-three">
               <ul className="post-info">
                 <li>
                   <Post PostBody={post.text} />
@@ -44,7 +51,7 @@ function HexContainer({ post }) {
           </div>
 
           <div>
-            <div className="triangle">
+            <div className="triangle tri-six">
               <section className="likes">
                 <Likes quantity={post.likes} />
               </section>
@@ -52,7 +59,7 @@ function HexContainer({ post }) {
           </div>
 
           <div>
-            <div className="triangle">
+            <div className="triangle tri-five">
               <section className="post-image">
                 <img src={post.image} alt="" />
               </section>
@@ -60,7 +67,7 @@ function HexContainer({ post }) {
           </div>
 
           <div>
-            <div className="triangle">
+            <div className="triangle tri-four">
               <section className="comments">
                 <button className="commentButton">Comments</button>
                 
@@ -69,7 +76,7 @@ function HexContainer({ post }) {
           </div>
 
           <div className="comment-list">
-          <CommentSection postId={post.id} />
+          <CommentSection postId={post.id} updateflag={updateflag} />
           </div>
          
         </div>

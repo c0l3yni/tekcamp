@@ -1,5 +1,4 @@
 import React, { useEffect, useRef, useState } from "react";
-import { Link } from "react-router-dom";
 import HexContainer from "./HexContainer";
 import '../CSS/newsfeed.css';
 import Navbar from "./Navbar";
@@ -38,7 +37,7 @@ if (posts) {
   return (
     <div className="flex-container">
       <Navbar />
-      <section key="{userPostList}">{userPostList}</section>
+      <section className="newsfeed-container" key="{userPostList}">{userPostList}</section>
     </div>
   );
 } else {

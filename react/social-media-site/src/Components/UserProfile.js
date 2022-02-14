@@ -38,18 +38,19 @@ if (user) {
     <div>
       <div className="user-profile">
         <Navbar />
+        <div className="profile-container">
         <section className="hex-container">
 
           <div className="t">
 
             <div>
-              <div className="triangle">
+              <div className="triangle tri-one">
                 <p className="triangle-1">{convertDOB(user.dateOfBirth)}</p>
               </div>
             </div>
 
             <div>
-              <div className="triangle"> profile pic
+              <div className="triangle tri-two"> profile pic
                 <section className="triangle-2">
                   <img src={user.picture} alt="" />
                 </section>
@@ -57,25 +58,25 @@ if (user) {
             </div>
 
             <div>
-              <div className="triangle">
+              <div className="triangle tri-three">
                 <section className="triangle-3">Taurus</section>
               </div>
             </div>
 
             <div>
-              <div className="triangle">
+              <div className="triangle tri-six">
                 <section className="triangle-6">{user.gender}</section>
               </div>
             </div>
 
             <div>
-              <div className="triangle">
+              <div className="triangle tri-five">
                 <p className="triangle-5">{user.firstName} {user.lastName}</p>
               </div>
             </div>
 
             <div>
-              <div className="triangle">
+              <div className="triangle tri-four">
                 <ul className="triangle-4">
                   <li>{user?.location?.city},</li>
                   <li>{user?.location?.state},</li>
@@ -86,6 +87,7 @@ if (user) {
             </div>
           </div>
         </section>
+        </div>
       </div>
     </div>
   );

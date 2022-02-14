@@ -1,8 +1,11 @@
+
 import React, { useState } from "react";
+import CommentSection from "./CommentSection";
 
 const API_KEY = process.env.REACT_APP_API_KEY;
 
-function MakeComment({postId}) {
+function MakeComment({ postId, comments, setComments, updateflag }) {
+
   const [message, setMessage] = useState("")
 
   function onInputChange(event) {
@@ -30,7 +33,12 @@ function MakeComment({postId}) {
         })
     })
     .then(response => response.json())
-    .then(data => console.log(data))
+    .then(data => {
+      console.log(data)
+      updateflag()
+      setComments([data, ...comments])
+     
+    })
     };
   
   return(
