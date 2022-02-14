@@ -7,12 +7,11 @@ import "../CSS/userprofile.css";
 const API_KEY = process.env.REACT_APP_API_KEY;
 
 function UserProfile() {
-  // let dob = moment("1996-04-30T19:26:49.610Z").utc().format('YYYY-MM-DD')
   const [user, setUser] = useState([])
   const isCancelled = useRef(false)
 
   function convertDOB(dob) {
-    return moment(dob).utc().format('YYYY-MM-DD')
+    return moment(dob).utc().format('MM-DD-YYYY')
   }
 
   useEffect(() => {

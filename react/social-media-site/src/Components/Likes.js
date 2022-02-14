@@ -26,7 +26,7 @@ function Likes({ quantity }) {
   return (
     <div>
       <aside className="likes-container">
-        <button className="likeButton" onClick={() => handleLike()}>
+        <button className="button" onClick={() => handleLike()}>
           {likes} Likes
         </button>
       </aside>

@@ -5,7 +5,7 @@ import "../CSS/commentsection.css";
 
 const API_KEY = process.env.REACT_APP_API_KEY;
 
-function CommentSection({ postId, updateflag }) {
+function CommentSection({ postId }) {
   const [comments, setComments] = useState([]);
   const isCancelled = useRef(true);
   useEffect(() => {
@@ -26,7 +26,7 @@ function CommentSection({ postId, updateflag }) {
     return () => {
       isCancelled.current = false;
     };
-  }, []);
+  }, );
 
   function createList() {
     let commentList = comments.map((comment) => {
@@ -42,7 +42,6 @@ function CommentSection({ postId, updateflag }) {
         <p className="comment-section-header">Comment Section</p>
         <MakeComment
           postId={postId}
-          updateflag={updateflag}
           setComments={setComments}
           comments={comments}
         />

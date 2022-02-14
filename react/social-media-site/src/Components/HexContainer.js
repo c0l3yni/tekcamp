@@ -1,28 +1,25 @@
-import React, { useState } from "react";
+import React from "react";
 import Post from "./Post";
 import Likes from "./Likes";
 import CommentSection from "./CommentSection";
-
+import moment from "moment";
 import User from "./User";
 import "../CSS/hexcontainer.css";
 
 function HexContainer({ post }) {
- 
-  const [flag, setflag] = useState(false)
-  function updateflag() {
-    console.log(updateflag)
-    setflag(!flag)
+
+  function convertPostDate(publishDate) {
+    return moment(publishDate).utc().format('MM-DD-YYYY')
   }
 
-  console.log(flag)
   return (
     <div>
       <section className="hex-container">
         <div className="t">
           <div>
             <div className="triangle tri-one">
-              <div className="user-name">
-                <User
+              <div className="user-name-container">
+                <User className="user-name"
                   UserName={`${post.owner.firstName} ${post.owner.lastName}`}
                 />
               </div>
@@ -31,9 +28,7 @@ function HexContainer({ post }) {
 
           <div>
             <div className="triangle tri-two">
-              {" "}
-              profile pic
-              <section className="triangle-2">
+              <section className="post-owner-picture">
                 <img src={post.owner.picture} alt="" />
               </section>
             </div>
@@ -43,9 +38,8 @@ function HexContainer({ post }) {
             <div className="triangle tri-three">
               <ul className="post-info">
                 <li>
-                  <Post PostBody={post.text} />
+                  <Post PostBody={`"${post.text}"`} />
                 </li>
-                <li className="post-date">{post.publishDate}</li>
               </ul>
             </div>
           </div>
@@ -68,17 +62,16 @@ function HexContainer({ post }) {
 
           <div>
             <div className="triangle tri-four">
-              <section className="comments">
-                <button className="commentButton">Comments</button>
-                
-              </section>
+            
+              <li className="post-date">{`Posted on ${convertPostDate(post.publishDate)}`}</li>
+                {/* <button className="button">Comments</button> */}
+              
             </div>
           </div>
-
+          
           <div className="comment-list">
-          <CommentSection postId={post.id} updateflag={updateflag} />
+            <CommentSection postId={post.id} />
           </div>
-         
         </div>
       </section>
     </div>

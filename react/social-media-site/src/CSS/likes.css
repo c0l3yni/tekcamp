@@ -1,11 +1,5 @@
-
-.likes-container {
-  display: grid;
-  
-
-  /* width: 130px;
-  height: 130px;
-  background: var(--light-orange);
-  clip-path: polygon(0% 100%, 50% 0%, 100% 100%);
-  transform: rotate(45deg); */
+.button {
+  padding: 8px;
+  border: 2px ridge var(--bright-white);
+  border-radius: 50%;
 }

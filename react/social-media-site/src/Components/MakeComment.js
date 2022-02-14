@@ -1,10 +1,9 @@
-
 import React, { useState } from "react";
-import CommentSection from "./CommentSection";
+import "../CSS/makecomment.css";
 
 const API_KEY = process.env.REACT_APP_API_KEY;
 
-function MakeComment({ postId, comments, setComments, updateflag }) {
+function MakeComment({ postId, comments, setComments }) {
 
   const [message, setMessage] = useState("")
 
@@ -34,8 +33,6 @@ function MakeComment({ postId, comments, setComments, updateflag }) {
     })
     .then(response => response.json())
     .then(data => {
-      console.log(data)
-      updateflag()
       setComments([data, ...comments])
      
     })
@@ -44,8 +41,8 @@ function MakeComment({ postId, comments, setComments, updateflag }) {
   return(
     <div>
       <form onSubmit={onFormSubmit}>
-        <input type="text" onChange={onInputChange} value={message} />
-        <button type='submit'>Comment</button>
+        <input className="input" type="text" onChange={onInputChange} value={message} />
+        <button className="button input-button" type='submit'>Comment</button>
       </form>
     </div>
   )

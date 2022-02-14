@@ -1,7 +1,6 @@
 import React from "react";
-import { useLinkClickHandler } from "react-router-dom";
 import "../CSS/comment.css";
-import CommentSection from "./CommentSection";
+
 
 function Comment({ comment }) {
   return (

@@ -1,10 +1,21 @@
 
 .post-container {
-  display: grid;
+  display: flex;
   justify-content: center;
   margin-left: 125px;
   font-size: 10px;
   color: black;
   font-family: Copperplate,Copperplate Gothic Light,fantasy; 
   text-align: center;
+ 
 } 
+
+.post {
+  font-size: 12px;
+  text-align: center;
+  padding-top: 20px;
+  padding-right: px;
+  padding-bottom: 30px;
+  inline-size: 100px;
+  white-space: pre-line;
+}
