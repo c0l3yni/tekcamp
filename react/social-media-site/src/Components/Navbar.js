@@ -9,7 +9,7 @@ function Navbar() {
         <button className="button-navbar">My Profile</button>
       </Link>
       <section className="title-flex-container">
-        <p className="app-title">What the HEX is going on...</p>
+        <p className="app-title">What the HEX is Going on?</p>
       </section>
       <Link to="/">
         <button className="button-navbar">Newsfeed</button>

@@ -8,14 +8,14 @@
   margin-top: 250px;
 }
 
-.t > div {
+.hexagon > div {
   display: flex;
   flex-direction: column;
   justify-items: center;
   justify-content: space-around;
 }
 
-.t div .triangle {
+.hexagon div .triangle {
   display: flex;
   position: absolute;
   border-style: solid;
@@ -51,7 +51,7 @@
   border-color: var(--dark-orange);
 }
 
-.t > div:nth-child(1){
+.hexagon > div:nth-child(1){
   transform: rotate(30deg);
   text-transform: rotate(30px);
 }
@@ -68,7 +68,7 @@
   transform: rotate(-120deg);
 }
 
-.t > div:nth-child(2){
+.hexagon > div:nth-child(2){
   transform: rotate(60deg) rotate(30deg);
   text-transform: rotate(30px);
 }
@@ -85,7 +85,7 @@ img {
     width: 210px;
 }
 
-.t > div:nth-child(3){
+.hexagon > div:nth-child(3){
   transform: rotate(120deg) rotate(30deg);
   text-transform: rotate(30px);
 }
@@ -102,7 +102,7 @@ img {
   transform: rotate(-60deg);
 }
 
-.t > div:nth-child(4){
+.hexagon > div:nth-child(4){
   transform: rotate(-60deg) rotate(30deg);
   text-transform: rotate(30px);
 }
@@ -118,7 +118,7 @@ img {
   transform: rotate(120deg);
 }
 
-.t > div:nth-child(5){
+.hexagon > div:nth-child(5){
   transform: rotate(-120deg) rotate(30deg);
 }
 
@@ -133,7 +133,7 @@ img {
   transform: rotate(60deg);
 }
 
-.t > div:nth-child(6){
+.hexagon > div:nth-child(6){
   transform: rotate(-180deg) rotate(30deg);
 }
 

@@ -18,23 +18,21 @@ function CommentSection({ postId }) {
       .then((jsonResponse) => {
         if (isCancelled.current) {
           setComments(jsonResponse.data);
-          createList()
+          createList();
         }
       });
-      
 
     return () => {
       isCancelled.current = false;
     };
-  }, );
+  });
 
   function createList() {
     let commentList = comments.map((comment) => {
-    return <Comment key={comment.id} comment={comment} />;
-  });
-  return commentList
+      return <Comment key={comment.id} comment={comment} />;
+    });
+    return commentList;
   }
-  
 
   return (
     <div>

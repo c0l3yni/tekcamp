@@ -7,19 +7,19 @@ import User from "./User";
 import "../CSS/hexcontainer.css";
 
 function HexContainer({ post }) {
-
   function convertPostDate(publishDate) {
-    return moment(publishDate).utc().format('MM-DD-YYYY')
+    return moment(publishDate).utc().format("MM-DD-YYYY");
   }
 
   return (
     <div>
       <section className="hex-container">
-        <div className="t">
+        <div className="hexagon">
           <div>
             <div className="triangle tri-one">
               <div className="user-name-container">
-                <User className="user-name"
+                <User
+                  className="user-name"
                   UserName={`${post.owner.firstName} ${post.owner.lastName}`}
                 />
               </div>
@@ -62,13 +62,12 @@ function HexContainer({ post }) {
 
           <div>
             <div className="triangle tri-four">
-            
-              <li className="post-date">{`Posted on ${convertPostDate(post.publishDate)}`}</li>
-                {/* <button className="button">Comments</button> */}
-              
+              <li className="post-date">
+                {`Posted on ${convertPostDate(post.publishDate)}`}
+              </li>
             </div>
           </div>
-          
+
           <div className="comment-list">
             <CommentSection postId={post.id} />
           </div>
