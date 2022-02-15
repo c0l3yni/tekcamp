@@ -1,0 +1,12 @@
+* {
+  margin: 0;
+  padding: 0; 
+}
+
+:root {
+  --white: rgb(255, 255, 255);
+  --grey: rgb(115, 107, 107);
+  --black: hsl(0, 0%, 0%);
+  --powder-pink: rgb(244, 203, 218);
+  --dark-blue: rgb(55, 69, 91);
+}

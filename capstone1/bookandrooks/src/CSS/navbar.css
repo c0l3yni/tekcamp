@@ -1,0 +1,51 @@
+.nav-flex {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding-left: 20px;
+  background-attachment: fixed;
+  background-color: black;
+}
+
+  .title-box {
+    display: flex;
+    background-color: var(--powder-pink);
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+    .title {
+      font-size: 20px;
+      padding: 10px;
+      margin: 10px;
+      text-align: center;
+    }
+
+  .flex-right {
+    margin-right: 10px;
+  }
+
+  .button {
+    display: flex;
+    background-color: var(--white);
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    font-size: 10px;
+    margin: 35px 0px 0px 10px;
+  }  
+    .login {
+      padding-left: 2px;
+      padding-top: 6px;
+    }
+
+    .cart {
+      padding-left: 4px;
+      padding-top: 6px;
+    }
+
+  .menu {
+    color: var(--white);
+    margin-top: 40px;
+    margin-right: 50px;
+  }
