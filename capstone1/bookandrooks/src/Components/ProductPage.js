@@ -1,5 +1,8 @@
 import react, { useEffect, useState } from "react";
 import Product from "./Product";
+import Navbar from "./Navbar";
+import Searchbar from "./SearchBar";
+
 
 function ProductPage() {
   const [products, setProducts] = useState([]);
@@ -19,15 +22,16 @@ function ProductPage() {
       });
   }, []);
 
-  console.log(products);
   function createList() {
     let productList = products.products?.map((product) => {
-      return <Product key="product.id" product={product} />;
+      return <Product key={product.book} product={product} />;
     });
     return productList;
   }
   return (
     <div>
+      <Navbar />
+      <Searchbar />
       <section>{createList()}</section>
     </div>
   );

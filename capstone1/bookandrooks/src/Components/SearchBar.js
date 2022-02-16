@@ -1,4 +1,5 @@
 import react, { useState } from "react";
+import { Link } from "react-router-dom";
 import "../CSS/searchbar.css";
 
 function SearchBar() {
@@ -17,11 +18,13 @@ function SearchBar() {
     <div>
       <section className="search-flex">
         <div>
+        <Link to="/">
           <div className="product-button-flex">
           <button className="products-button">
             More Products
           </button>
           </div>
+          </Link>
         </div>
 
       <form onSubmit={onFormSubmit}>

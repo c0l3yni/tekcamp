@@ -1,13 +1,14 @@
 {
   "products": [
     {
-      "book": "Alice's Adventures in Wonderland/Through the Looking-Glass",
+      "book": "Alice's Adventures in Wonderland",
       "author": "Lewis Carroll",
       "image": "../Alice-in-Wonderland.jpg",
       "price": "$9.99",
       "quantity": 6,
       "serialNum": "AC45H7S1",
-      "category": "Classics, Fantasy, Fiction, YA, Children's"
+      "category": "Classics, Fantasy, Fiction, YA, Children's",
+      "manufacturer": "Baker & Taylor"
     },
     {
       "book": "The Eight",
@@ -16,16 +17,18 @@
       "price": "$17.99",
       "quantity": 14,
       "serialNum": "G896KE2",
-      "category": "Fiction, Mystery, Thriller, Fantasy, Historical"
+      "category": "Fiction, Mystery, Thriller, Fantasy, Historical",
+      "manufacturer": "Baker & Taylor"
     },
     {
       "book": "The Queen's Gambit",
       "author": "Walter Tevis",
       "image": "../queens-gambit.jpg",
-      "Price": "$15.99",
+      "price": "$15.99",
       "quantity": 23,
       "serialNum": "A5JE193D",
-      "category": "Fiction, Young Adult, Contemporary, Historical"
+      "category": "Fiction, Young Adult, Contemporary, Historical",
+      "manufacturer": "Edwards Brothers"
     },
     {
       "book": "Harry Potter and the Sorcerer's Stone",
@@ -34,7 +37,8 @@
       "price": "$15.99",
       "quantity": 5,
       "serialNum": "JK1SN0GUD",
-      "category": "Middle-Grade, Fantasy, Adventure, Childrens"
+      "category": "Middle-Grade, Fantasy, Adventure, Childrens",
+      "manufacturer": "Edwards Brothers"
     },
     {
       "book": "The Rook",
@@ -43,7 +47,8 @@
       "price": "$14.99",
       "quantity": 16,
       "serialNum": "TB342G98",
-      "category": "Fantasy, Mystery, Fiction, Adult"
+      "category": "Fantasy, Mystery, Fiction, Adult",
+      "manufacturer": "Edwards Brothers"
     },
     {
       "book": "Prodigious Savant",
@@ -52,7 +57,8 @@
       "price": "$11.99",
       "quantity": 29,
       "serialNum": "ON894H6",
-      "category": "Adult, Fiction, Contemporary"
+      "category": "Adult, Fiction, Contemporary",
+      "manufacturer": "Baker & Taylor"
     },
     {
       "book": "The Name of the Rose",
@@ -61,7 +67,8 @@
       "price": "$14.99",
       "quantity": 26,
       "serialNum": "X78E19BF",
-      "category": "Fiction, Historical, Mystery, Classic"
+      "category": "Fiction, Historical, Mystery, Classic",
+      "manufacturer": "Dickinson Press"
     },
     {
       "book": "The Flander's Panel",
@@ -70,7 +77,8 @@
       "price": "$17.99",
       "quantity": 3,
       "serialNum": "DB842KVQ",
-      "category": "Mystery, Fiction, Thriller, Art"
+      "category": "Mystery, Fiction, Thriller, Art",
+      "manufacturer": "Edwards Brothers"
     },
     {
       "book": "The Luzhin Defense",
@@ -79,16 +87,18 @@
       "price": "$16.99",
       "quantity": 18,
       "serialNum": "LFR8446VG",
-      "category": "Fiction, Russian, Drama, Psychology"
+      "category": "Fiction, Russian, Drama, Psychology",
+      "manufacturer": "Dickinson Press"
     },
     {
       "book": "The Luneburg Variation",
       "author": "Paolo Maurensig and Jon Rothschild",
       "image": "../luneberg-variation.jpg",
-      "price": "$",
+      "price": "$12.99",
       "quantity": 34,
       "serialNum": "AGT729HK",
-      "category": "Fiction, Contemporary, Thriller, Mystery"
+      "category": "Fiction, Contemporary, Thriller, Mystery",
+      "manufacturer": "Baker & Taylor"
     },
     {
       "book": "The Chess Machine",
@@ -97,7 +107,8 @@
       "price": "$21.99",
       "quantity": 5,
       "serialNum": "BSK782HK",
-      "category": "Thriller, Historical, Fantasy, Fiction"
+      "category": "Thriller, Historical, Fantasy, Fiction",
+      "manufacturer": "Dickinson Press"
     }
   ]
 }
