@@ -1,0 +1,28 @@
+.detail-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.book-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--grey);
+  margin: 10px;
+  padding: 15px;
+}
+
+.book-image {
+  width: 200px;
+  height: 200px;
+}
+
+.product-details {
+  font-size: 20px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  text-align: left;
+  line-height: 25px;
+  margin-top: 20px;
+}
