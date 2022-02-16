@@ -1,11 +1,23 @@
 import react from "react";
+import Product from "./Product";
 
+function ProductPage (){
   return (
     <div>
-      <div>
-   
+      <Product />
+      <Product />
+      <Product />
+      <Product />
+      <Product />
+      <Product />
+      <Product />
+      <Product />
+      <Product />
+      <Product />
+      <Product />
+      <Product />
+      
     </div>
-    </div>
-  )
+  );
 }
 export default ProductPage;

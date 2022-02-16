@@ -1,5 +1,5 @@
-// import react from "react";
-// import ProductPage from "./Components/ProductPage";
+import react from "react";
+import ProductPage from "./Components/ProductPage";
 import ProductDetailPage from "./Components/ProductDetailPage";
 import Navbar from "./Components/Navbar";
 import "./CSS/app.css";
@@ -10,8 +10,8 @@ function App() {
     <div className="App">
     <Navbar />
     <SearchBar />
-    {/* <ProductPage /> */}
-    <ProductDetailPage />
+    <ProductPage />
+    {/* <ProductDetailPage /> */}
     </div>
   );
 }

@@ -1,9 +1,10 @@
 import react from "react";
-import "../CSS/productdetailpage.css";
 
-function ProductDetailPage() {
-  return (
-    <div className="detail-box">
+function Product () {
+
+return (
+
+  <div className="detail-box">
       <section className="book-box">
         <img
           className="book-image"
@@ -43,23 +44,12 @@ function ProductDetailPage() {
             <strong>Quantity In Stock:</strong> 3 books left
           </p>
         </section>
-        <section>
-          <p>
-            <strong>Serial Number:</strong> 4CE0460D0G
-          </p>
-        </section>
-
-        <section>
-          <p>
-            <strong>Manufactured by:</strong> Edwards Brothers Malloy
-          </p>
-        </section>
-
+    
         <div className="add-to-cart-flex">
           <button className="add-to-cart">Add to Cart</button>
         </div>
       </div>
-    </div>
-  );
+      </div>
+);
 }
-export default ProductDetailPage;
+export default Product;
