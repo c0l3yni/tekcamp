@@ -1,92 +1,103 @@
 {
   "products": [
     {
-      "Book": "Alice's Adventures in Wonderland/Through the Looking-Glass",
-      "Author": "Lewis Carroll",
-      "Price": "$9.99",
-      "Quantity": 6,
-      "SerialNum": "AC45H7S1",
-      "Category": "Classics, Fantasy, Fiction, YA, Children's"
+      "book": "Alice's Adventures in Wonderland/Through the Looking-Glass",
+      "author": "Lewis Carroll",
+      "image": "../Alice-in-Wonderland.jpg",
+      "price": "$9.99",
+      "quantity": 6,
+      "serialNum": "AC45H7S1",
+      "category": "Classics, Fantasy, Fiction, YA, Children's"
     },
     {
-      "Book": "The Eight",
-      "Author": "Katherine Neville",
-      "Price": "$17.99",
-      "Quantity": 14,
-      "SerialNum": "G896KE2",
-      "Category": "Fiction, Mystery, Thriller, Fantasy, Historical"
+      "book": "The Eight",
+      "author": "Katherine Neville",
+      "image": "../the-eight.jpg",
+      "price": "$17.99",
+      "quantity": 14,
+      "serialNum": "G896KE2",
+      "category": "Fiction, Mystery, Thriller, Fantasy, Historical"
     },
     {
-      "Book": "The Queen's Gambit",
-      "Author": "Walter Tevis",
+      "book": "The Queen's Gambit",
+      "author": "Walter Tevis",
+      "image": "../queens-gambit.jpg",
       "Price": "$15.99",
-      "Quantity": 23,
-      "SerialNum": "A5JE193D",
-      "Category": "Fiction, Young Adult, Contemporary, Historical"
+      "quantity": 23,
+      "serialNum": "A5JE193D",
+      "category": "Fiction, Young Adult, Contemporary, Historical"
     },
     {
-      "Book": "Harry Potter and the Sorcerer's Stone",
-      "Author": "J.K. Rowling",
-      "Price": "$15.99",
-      "Quantity": 5,
-      "SerialNum": "JK1SN0GUD",
-      "Category": "Middle-Grade, Fantasy, Adventure, Childrens"
+      "book": "Harry Potter and the Sorcerer's Stone",
+      "author": "J.K. Rowling",
+      "image": "../sorcerers-stone.jpg",
+      "price": "$15.99",
+      "quantity": 5,
+      "serialNum": "JK1SN0GUD",
+      "category": "Middle-Grade, Fantasy, Adventure, Childrens"
     },
     {
-      "Book": "The Rook",
-      "Author": "Daniel O'Malley",
-      "Price": "$14.99",
-      "Quantity": 16,
-      "SerialNum": "TB342G98",
-      "Category": "Fantasy, Mystery, Fiction, Adult"
+      "book": "The Rook",
+      "author": "Daniel O'Malley",
+      "image": "../rook.jpg",
+      "price": "$14.99",
+      "quantity": 16,
+      "serialNum": "TB342G98",
+      "category": "Fantasy, Mystery, Fiction, Adult"
     },
     {
-      "Book": "Prodigious Savant",
-      "Author": "J.J. White",
-      "Price": "$11.99",
-      "Quantity": 29,
-      "SerialNum": "ON894H6",
-      "Category": "Adult, Fiction, Contemporary"
+      "book": "Prodigious Savant",
+      "author": "J.J. White",
+      "image": "../prodigious-savant.jpg",
+      "price": "$11.99",
+      "quantity": 29,
+      "serialNum": "ON894H6",
+      "category": "Adult, Fiction, Contemporary"
     },
     {
-      "Book": "The Name of the Rose",
-      "Author": "Umberto Eco",
-      "Price": "$14.99",
-      "Quantity": 26,
-      "SerialNum": "X78E19BF",
-      "Category": "Fiction, Historical, Mystery, Classic"
+      "book": "The Name of the Rose",
+      "author": "Umberto Eco",
+      "image": "../name-of-the-rose.jpg",
+      "price": "$14.99",
+      "quantity": 26,
+      "serialNum": "X78E19BF",
+      "category": "Fiction, Historical, Mystery, Classic"
     },
     {
-      "Book": "The Flander's Panel",
-      "Author": "Arturo Perez-Reverte",
-      "Price": "$17.99",
-      "Quantity": 3,
-      "SerialNum": "DB842KVQ",
-      "Category": "Mystery, Fiction, Thriller, Art"
+      "book": "The Flander's Panel",
+      "author": "Arturo Perez-Reverte",
+      "image": "../flanders-panel.jpg",
+      "price": "$17.99",
+      "quantity": 3,
+      "serialNum": "DB842KVQ",
+      "category": "Mystery, Fiction, Thriller, Art"
     },
     {
-      "Book": "The Luzhin Defense",
-      "Author": "Vladimir Nabokov",
-      "Price": "$16.99",
-      "Quantity": 18,
-      "SerialNum": "LFR8446VG",
-      "Category": "Fiction, Russian, Drama, Psychology"
+      "book": "The Luzhin Defense",
+      "author": "Vladimir Nabokov",
+      "image": "../luzhin-defense.jpg",
+      "price": "$16.99",
+      "quantity": 18,
+      "serialNum": "LFR8446VG",
+      "category": "Fiction, Russian, Drama, Psychology"
     },
     {
-      "Book": "The Luneburg Variation",
-      "Author": "Paolo Maurensig and Jon Rothschild",
-      "Price": "$",
-      "Quantity": 34,
-      "SerialNum": "AGT729HK",
-      "Category": "Fiction, Contemporary, Thriller, Mystery"
+      "book": "The Luneburg Variation",
+      "author": "Paolo Maurensig and Jon Rothschild",
+      "image": "../luneberg-variation.jpg",
+      "price": "$",
+      "quantity": 34,
+      "serialNum": "AGT729HK",
+      "category": "Fiction, Contemporary, Thriller, Mystery"
     },
     {
-      "Book": "The Chess Machine",
-      "Author": "Robert Lohr",
-      "Price": "$21.99",
-      "Quantity": 5,
-      "SerialNum": "BSK782HK",
-      "Category": "Thriller, Historical, Fantasy, Fiction"
+      "book": "The Chess Machine",
+      "author": "Robert Lohr",
+      "image": "../chess-machine.jpg",
+      "price": "$21.99",
+      "quantity": 5,
+      "serialNum": "BSK782HK",
+      "category": "Thriller, Historical, Fantasy, Fiction"
     }
   ]
 }

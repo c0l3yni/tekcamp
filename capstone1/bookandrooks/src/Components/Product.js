@@ -1,14 +1,14 @@
 import react from "react";
 
-function Product () {
-
+function Product ({product}) {
+ 
 return (
 
   <div className="detail-box">
       <section className="book-box">
         <img
           className="book-image"
-          src="https://pictures.depop.com/b0/5543036/839068852_c1e52c291997446c869fb88ae389bc6d/P0.jpg"
+          src={product.image}
           alt=""
         />
       </section>
@@ -16,32 +16,32 @@ return (
       <br />
       <section>
         <p className="category">
-          <strong>Category:</strong> <i>Romance/Young Adult</i>
+          <strong>Category:</strong> <i>{product.category}</i>
         </p>
       </section>
 
       <section>
-        <p className="price">$45</p>
+        <p className="price">{product.price}</p>
       </section>
       <br />
 
       <div className="product-details">
         <section>
           <p>
-            <strong>Title:</strong> A Court of Thrones and Roses
+            <strong>Title:</strong> {product.book}
           </p>
         </section>
 
         <section>
           <p>
-            <strong>Author:</strong> Sarah J. Maas
+            <strong>Author:</strong> {product.author}
           </p>
         </section>
         <br />
 
         <section>
           <p>
-            <strong>Quantity In Stock:</strong> 3 books left
+            <strong>Quantity In Stock:</strong> {product.quantity}
           </p>
         </section>
     
