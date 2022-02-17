@@ -1,0 +1,82 @@
+.cart-and-order-box {
+  display: flex;
+  flex-direction: column;
+}
+
+  .cart-book-image-box {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    margin-left: 10px;
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    background-color: var(--dark-blue);
+  }
+
+    .cart-book-image {
+      width: 100px;
+      height: 150px; 
+    }
+
+  .cart-title {
+    font-size: 15px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-align: left;
+    padding-top: 10px;
+    padding-left: 54px;
+  }
+
+  .descriptive-numbers {
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+    margin-right: 20px;
+    margin-left: 170px;
+    margin-top: -160px;
+    margin-bottom: 150px;
+  }
+
+  .cart-indiv-item-quantity {
+    padding-right: 17px;
+    padding-top: 4px;
+  }
+
+  .cart-indiv-item-price {
+    padding: 4px;
+  }
+
+.order-summary-details {
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  margin: 5px;
+  color: white;
+  letter-spacing: 2.5px;
+  background-color: var(--dark-blue);
+}
+
+.order-summary-flex {
+  display: flex;
+  flex-direction: row;
+}
+
+.order-sum-title {
+  font-size: 20px;
+  padding: 10px;
+  font-weight: 600;
+}
+
+.item-in-cart {
+  padding: 10px;
+}
+
+.checkout-button-box {
+  margin-left: 50px;
+}
+
+.checkout-button {
+  padding: 10px;
+}
