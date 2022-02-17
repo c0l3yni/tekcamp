@@ -3,7 +3,13 @@ import "../CSS/product.css";
 function Product({ product }) {
   return (
     <div className="detail-box">
-      <Link className="link" to="/productdetail">
+      <Link className="link" to={{
+        
+        pathname: `/productdetail/${product.index}`,
+        state: {
+          id: product.index
+        }
+        }}>
         <section className="book-box">
           <img className="book-image" src={product.image} alt="book" />
         </section>

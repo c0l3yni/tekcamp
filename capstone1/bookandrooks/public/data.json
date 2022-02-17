@@ -1,7 +1,7 @@
 {
   "products": [
     {
-      "index": 0,
+      "index": "0",
       "book": "Alice's Adventures in Wonderland",
       "author": "Lewis Carroll",
       "image": "../Alice-in-Wonderland.jpg",
@@ -12,6 +12,7 @@
       "manufacturer": "Baker & Taylor"
     },
     {
+      "index": "1",
       "book": "The Eight",
       "author": "Katherine Neville",
       "image": "../the-eight.jpg",
@@ -22,6 +23,7 @@
       "manufacturer": "Baker & Taylor"
     },
     {
+      "index": "2",
       "book": "The Queen's Gambit",
       "author": "Walter Tevis",
       "image": "../queens-gambit.jpg",
@@ -32,6 +34,7 @@
       "manufacturer": "Edwards Brothers"
     },
     {
+      "index": "3",
       "book": "Harry Potter and the Sorcerer's Stone",
       "author": "J.K. Rowling",
       "image": "../sorcerers-stone.jpg",
@@ -42,6 +45,7 @@
       "manufacturer": "Edwards Brothers"
     },
     {
+      "index": "4",
       "book": "The Rook",
       "author": "Daniel O'Malley",
       "image": "../rook.jpg",
@@ -52,6 +56,7 @@
       "manufacturer": "Edwards Brothers"
     },
     {
+      "index": "5",
       "book": "Prodigious Savant",
       "author": "J.J. White",
       "image": "../prodigious-savant.jpg",
@@ -62,6 +67,7 @@
       "manufacturer": "Baker & Taylor"
     },
     {
+      "index": "6",
       "book": "The Name of the Rose",
       "author": "Umberto Eco",
       "image": "../name-of-the-rose.jpg",
@@ -72,6 +78,7 @@
       "manufacturer": "Dickinson Press"
     },
     {
+      "index": "7",
       "book": "The Flander's Panel",
       "author": "Arturo Perez-Reverte",
       "image": "../flanders-panel.jpg",
@@ -82,6 +89,7 @@
       "manufacturer": "Edwards Brothers"
     },
     {
+      "index": "8",
       "book": "The Luzhin Defense",
       "author": "Vladimir Nabokov",
       "image": "../luzhin-defense.jpg",
@@ -92,6 +100,7 @@
       "manufacturer": "Dickinson Press"
     },
     {
+      "index": "9",
       "book": "The Luneburg Variation",
       "author": "Paolo Maurensig and Jon Rothschild",
       "image": "../luneberg-variation.jpg",
@@ -102,6 +111,7 @@
       "manufacturer": "Baker & Taylor"
     },
     {
+      "index": "10",
       "book": "The Chess Machine",
       "author": "Robert Lohr",
       "image": "../chess-machine.jpg",

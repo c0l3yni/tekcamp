@@ -3,8 +3,12 @@ import ProductDetail from "./ProductDetail";
 import "../CSS/productdetailpage.css";
 import SearchBar from "./SearchBar";
 import Navbar from "./Navbar";
+import { useParams } from "react-router-dom";
 
-function ProductDetailPage( props) {
+function ProductDetailPage() {
+
+  const params = useParams();
+
   const [products, setProducts] = useState([]);
   useEffect(() => {
     fetch("../data.json", {
@@ -23,19 +27,19 @@ function ProductDetailPage( props) {
   }, []);
 
 
-function createList() {
-  let productsList = products.products?.map((product) => {
-    if (product.book === "The Eight")  {
+function grabProduct() {
+  let productDetailView = products.products?.map((product) => {
+    if (product.index === params.index )  {
         return <ProductDetail key={product.book} product={product} />;
       }
     });
-    return productsList;
+    return productDetailView;
 }
   return (
     <div>
       <Navbar />
       <SearchBar />
-      {createList()}
+      {grabProduct()}
     </div>
   );
 }
