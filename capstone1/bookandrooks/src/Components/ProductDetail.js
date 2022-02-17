@@ -1,4 +1,4 @@
-import react from "react";
+
  
 function ProductDetail({product}) {
   return (

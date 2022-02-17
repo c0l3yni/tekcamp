@@ -1,4 +1,4 @@
-import react, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import Product from "./Product";
 import Navbar from "./Navbar";
 import Searchbar from "./SearchBar";
@@ -18,7 +18,6 @@ function ProductPage() {
       })
       .then(function (products) {
         setProducts(products);
-        createList();
       });
   }, []);
 
@@ -32,7 +31,9 @@ function ProductPage() {
     <div>
       <Navbar />
       <Searchbar />
-      <section>{createList()}</section>
+      <section >
+        {createList()}
+        </section>
     </div>
   );
 }

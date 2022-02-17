@@ -1,10 +1,10 @@
-import react, { useEffect, useState } from "react";
+import react, { useState, useEffect } from "react";
 import ProductDetail from "./ProductDetail";
 import "../CSS/productdetailpage.css";
 import SearchBar from "./SearchBar";
 import Navbar from "./Navbar";
-function ProductDetailPage() {
 
+function ProductDetailPage( props) {
   const [products, setProducts] = useState([]);
   useEffect(() => {
     fetch("../data.json", {
@@ -18,21 +18,25 @@ function ProductDetailPage() {
       })
       .then(function (products) {
         setProducts(products);
+
       });
   }, []);
-    // let i = []
-    let productList = products.products?.map(function (product) {
-      return <ProductDetail key={product.book} product={product} />;
+
+
+function createList() {
+  let productsList = products.products?.map((product) => {
+    if (product.book === "The Eight")  {
+        return <ProductDetail key={product.book} product={product} />;
+      }
     });
+    return productsList;
+}
   return (
     <div>
       <Navbar />
       <SearchBar />
-      <section>{productList}</section>
+      {createList()}
     </div>
   );
 }
 export default ProductDetailPage;
-
-
-

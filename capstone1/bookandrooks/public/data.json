@@ -1,6 +1,7 @@
 {
   "products": [
     {
+      "index": 0,
       "book": "Alice's Adventures in Wonderland",
       "author": "Lewis Carroll",
       "image": "../Alice-in-Wonderland.jpg",
