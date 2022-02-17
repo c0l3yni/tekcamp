@@ -1,14 +1,8 @@
-
- 
-function ProductDetail({product}) {
+function ProductDetail({ product, addToCart }) {
   return (
     <div className="detail-box">
       <section className="book-box">
-        <img
-          className="book-image"
-          src={product.image}
-          alt=""
-        />
+        <img className="book-image" src={product.image} alt="" />
       </section>
 
       <br />
@@ -55,7 +49,14 @@ function ProductDetail({product}) {
         </section>
 
         <div className="add-to-cart-flex">
-          <button className="add-to-cart">Add to Cart</button>
+          <button
+            className="add-to-cart"
+            type="submit"
+            value="add"
+            onClick={() => addToCart(product)}
+          >
+            Add to Cart
+          </button>
         </div>
       </div>
     </div>

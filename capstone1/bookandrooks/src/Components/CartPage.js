@@ -1,8 +1,9 @@
 import Navbar from "./Navbar";
 import SearchBar from "./SearchBar";
 import "../CSS/cartpage.css";
+import Cart from "./Cart";
 
-function CartPage() {
+function CartPage({ products }) {
   return (
     <div>
       <Navbar />
@@ -25,31 +26,7 @@ function CartPage() {
           </div>
         </div>
 
-        <div className="order-summary-details">
-          <div className="order-sum-title">Order Summary:</div>
-
-          <div className="order-summary-flex">
-            <div className="items-in-cart-box">
-              <div className="item-in-cart">
-                <div>Item 1</div>
-                <div>Price: $45</div>
-              </div>
-
-              <div className="item-in-cart">
-                <div>Item 2</div>
-                <div>Price: $15</div>
-              </div>
-
-              <div className="item-in-cart">
-                <div>Total Price: $60</div>
-              </div>
-            </div>
-
-            <div className="checkout-button-box">
-              <button className="checkout-button">Proceed to Checkout</button>
-            </div>
-          </div>
-        </div>
+        <Cart />
       </div>
     </div>
   );

@@ -1,4 +1,4 @@
-import react from "react";
+
 import "../CSS/navbar.css";
 import { Link } from "react-router-dom";
 
@@ -8,9 +8,11 @@ function Navbar() {
       <a className="menu" href="#menu">
         &#9776;
       </a>
-      <div className="title-box">
-        <h1 className="title">Books and Rooks</h1>
-      </div>
+      <Link to="/">
+        <div className="title-box">
+          <h1 className="title">Books and Rooks</h1>
+        </div>
+      </Link>
 
       <div className="flex-left">
         <button className="button login">login</button>

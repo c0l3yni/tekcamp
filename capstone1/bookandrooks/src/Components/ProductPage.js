@@ -1,29 +1,13 @@
-import { useEffect, useState } from "react";
 import Product from "./Product";
 import Navbar from "./Navbar";
 import Searchbar from "./SearchBar";
 
-
-function ProductPage() {
-  const [products, setProducts] = useState([]);
-  useEffect(() => {
-    fetch("../data.json", {
-      headers: {
-        "Content-Type": "application/json",
-        Accept: "application/json",
-      },
-    })
-      .then(function (response) {
-        return response.json();
-      })
-      .then(function (products) {
-        setProducts(products);
-      });
-  }, []);
-
+function ProductPage({ products, addToCart }) {
   function createList() {
-    let productList = products.products?.map((product) => {
-      return <Product key={product.book} product={product} />;
+    let productList = products.products?.map(function(product) {
+      return (
+        <Product key={product.book} product={product} addToCart={addToCart} />
+      );
     });
     return productList;
   }
@@ -31,9 +15,7 @@ function ProductPage() {
     <div>
       <Navbar />
       <Searchbar />
-      <section >
-        {createList()}
-        </section>
+      <section>{createList()}</section>
     </div>
   );
 }

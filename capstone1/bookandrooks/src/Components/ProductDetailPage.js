@@ -1,40 +1,23 @@
-import react, { useState, useEffect } from "react";
 import ProductDetail from "./ProductDetail";
 import "../CSS/productdetailpage.css";
 import SearchBar from "./SearchBar";
 import Navbar from "./Navbar";
 import { useParams } from "react-router-dom";
 
-function ProductDetailPage() {
-
-  const params = useParams();
-
-  const [products, setProducts] = useState([]);
-  useEffect(() => {
-    fetch("../data.json", {
-      headers: {
-        "Content-Type": "application/json",
-        Accept: "application/json",
-      },
-    })
-      .then(function (response) {
-        return response.json();
-      })
-      .then(function (products) {
-        setProducts(products);
-
-      });
-  }, []);
-
-
-function grabProduct() {
-  let productDetailView = products.products?.map((product) => {
-    if (product.index === params.index )  {
-        return <ProductDetail key={product.book} product={product} />;
-      }
-    });
+function ProductDetailPage({ products, addToCart }) {
+  const { book } = useParams();
+console.log(book);
+  function grabProduct() {
+    console.log(products.products);
+    let productDetailView = products.products?.map(function(product) {
+      if (product.book === book) {
+        
+        return (
+        <ProductDetail key={product.book} product={product} addToCart={addToCart} />
+        );
+      }});
     return productDetailView;
-}
+  }
   return (
     <div>
       <Navbar />

@@ -1,15 +1,20 @@
+
 import { Link } from "react-router-dom";
 import "../CSS/product.css";
-function Product({ product }) {
+
+function Product({ product, addToCart }) {
+
   return (
     <div className="detail-box">
-      <Link className="link" to={{
-        
-        pathname: `/productdetail/${product.index}`,
-        state: {
-          id: product.index
-        }
-        }}>
+      <Link
+        className="link"
+        to={{
+          pathname: `/productdetail/${product.book}`,
+          state: {
+            id: product.book,
+          },
+        }}
+      >
         <section className="book-box">
           <img className="book-image" src={product.image} alt="book" />
         </section>
@@ -48,9 +53,14 @@ function Product({ product }) {
         </div>
       </Link>
       <div className="add-to-cart-flex">
-        <Link className="link" to="/cart">
-          <button className="add-to-cart">Add to Cart</button>
-        </Link>
+          <button
+            className="add-to-cart"
+            type="submit"
+            value="add"
+            onClick={() => addToCart(product)}
+          >
+            Add to Cart
+          </button>
       </div>
     </div>
   );
