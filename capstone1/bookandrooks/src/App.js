@@ -9,7 +9,24 @@ import SearchBar from "./Components/SearchBar";
 
 function App() {
   const [products, setProducts] = useState([]);
-  // const [cart, setCart] = useState([]);
+  const [cart, setCart] = useState([]);
+  function addItemToCart(product) {
+    const productExist = products.find((x) => x.id === product.id);
+        if(productExist) {
+          setCart(
+            cart.map((x) =>
+            x.id === product.id
+            ? { ...productExist, quantity: productExist.quantity + 1 }
+            : x
+            )
+          );
+        } else {
+          setCart([...cart, product])
+        }
+    console.log(cart)
+    return setCart({...cart, product})
+  }
+
   useEffect(() => {
     fetch("../data.json", {
       headers: {
@@ -31,9 +48,9 @@ function App() {
       <Navbar />
       <SearchBar products={products} />
         <Routes>
-          <Route path="/" exact element={<ProductPage products={products} />} />
+          <Route path="/" exact element={<ProductPage products={products} addToCart={addItemToCart} />} />
           <Route path="/productdetail/:book" element={<ProductDetailPage products={products} />} />
-          <Route path="/cart" element={<CartPage products={products} />} />
+          <Route path="/cart" element={<CartPage products={products}  cart={cart} setCart={setCart} />} />
         </Routes>
       </BrowserRouter>
     </div>
