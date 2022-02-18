@@ -1,30 +1,33 @@
-import {useState} from "react";
+// import { useState } from "react";
 import { Link } from "react-router-dom";
 import "../CSS/product.css";
 
-function Product({ product, addToCart }) {
+function Product({ product, removeFromCart, addToCart, listItems, el }) {
   // const [book, setBook] = useState(product);
-  const [errorMessage, setErrorMessage] = useState('');
+  // const [errorMessage, setErrorMessage] = useState("");
   // function addItem() {
-  //   let addQty = book.quantity + 1
+  //   let addQty = book.quantity + 1;
   //   if (addQty <= book.quantity) {
-  //     setBook({...book, quantity: addQty})
+  //     setBook({ ...book, quantity: addQty });
   //   } else {
-  //     setErrorMessage('Exceeded Available Stock!');
+  //     setErrorMessage("Exceeded Available Stock!");
   //   }
   // }
 
   // function subtractItem() {
-  //   let lessQty = book.quantity - 1
+  //   let lessQty = book.quantity - 1;
   //   if (lessQty >= 0) {
-  //   setBook({...book, quantity: lessQty})
+  //     setBook({ ...book, quantity: lessQty });
   //   } else {
-  //     setBook(lessQty)
-  //     setErrorMessage('Are you sure you want to remove this item from your cart?');
+  //     setBook(lessQty);
+  //     setErrorMessage(
+  //       "Are you sure you want to remove this item from your cart?"
+  //     );
   //   }
   // }
   return (
     <div className="detail-box">
+          <section>{listItems}</section>  
       <Link
         className="link"
         to={{
@@ -80,14 +83,30 @@ function Product({ product, addToCart }) {
           >
             Add to Cart
           </button>
-          {/* <div className="quantity-container">
-          {errorMessage && <div className="error"> {errorMessage} </div>}
-          <button className="item-qty" min="0" onClick={subtractItem}>-</button>
-          <div className="quantity-on-detail">{book.quantity}</div>
-          <button className="item-qty" max={product.quantity} onClick={addItem}>+</button> */}
-        {/* </div> */}
+          <div className="quantity-container">
+          {/* {errorMessage && <div className="error"> {errorMessage} </div>} */}
+          <button 
+          className="item-qty"
+          type="submit"
+          value="add"
+          onClick={() => removeFromCart(product)}
+          >
+            -
+          </button>
+          <div className="quantity-on-detail">{product.quantity}</div>
+          <button 
+          className="item-qty"
+          type="submit"
+          value="add"
+          onClick={() => addToCart(product)}
+          >
+            +
+          </button>
+        </div>
         </div>
     </div>
   );
 }
 export default Product;
+
+

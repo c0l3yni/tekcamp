@@ -1,22 +1,19 @@
 import Product from "./Product";
 
 
-function ProductPage({ products, addToCart }) {
+function ProductPage({ products, removeFromCart, addToCart }) {
 
   function createList() {
-    let productList = products.products?.map(function(product) {
-      return (
-        <Product key={product.book} product={product} addToCart={addToCart} />
-      );
-    });
-    return productList;
+    const listItems = products?.products?.map((product) => (
+      <Product key={product.book} product={product} removeFromCart={removeFromCart} addToCart={addToCart} />
+    ));
+    return listItems;
   }
 
 
   return (
     <div>
       <section>{createList()}</section>
-
     </div>
   );
 }
