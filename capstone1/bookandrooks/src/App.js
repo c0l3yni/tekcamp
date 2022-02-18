@@ -4,10 +4,12 @@ import "./CSS/app.css";
 import CartPage from "./Components/CartPage";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { useState, useEffect } from "react";
+import Navbar from "./Components/Navbar";
+import SearchBar from "./Components/SearchBar";
 
 function App() {
   const [products, setProducts] = useState([]);
-  const [cart, setCart] = useState([]);
+  // const [cart, setCart] = useState([]);
   useEffect(() => {
     fetch("../data.json", {
       headers: {
@@ -22,15 +24,15 @@ function App() {
         setProducts(products);
       });
   }, []);
-  const addToCart = function(product) {
-    setCart([...cart, product]);
-  };
+
   return (
     <div className="App">
       <BrowserRouter>
+      <Navbar />
+      <SearchBar products={products} />
         <Routes>
-          <Route path="/" exact element={<ProductPage products={products} addToCart={addToCart} />} />
-          <Route path="/productdetail/:book" element={<ProductDetailPage products={products} addToCart={addToCart} />} />
+          <Route path="/" exact element={<ProductPage products={products} />} />
+          <Route path="/productdetail/:book" element={<ProductDetailPage products={products} />} />
           <Route path="/cart" element={<CartPage products={products} />} />
         </Routes>
       </BrowserRouter>

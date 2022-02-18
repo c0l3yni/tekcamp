@@ -1,26 +1,43 @@
+import react, { useState } from "react";
 
+function Cart({ product }) {
+  const [book, setBook] = useState(product);
+  const [errorMessage, setErrorMessage] = useState('');
+  function addItem() {
+    let addQty = book.quantity + 1
+    if (addQty <= book.quantity) {
+      setBook({...book, quantity: addQty})
+    } else {
+      setErrorMessage('Exceeded Available Stock!');
+    }
+  }
 
-function Cart() {
+  function subtractItem() {
+    let lessQty = book.quantity - 1
+    if (lessQty === 0) {
+      lessQty.value =0
+   
+    } else {
+      setBook({...book, quantity: lessQty})
+    }
+  }
   return (
-    <div>
-      <div className="order-summary-details">
-        <div className="order-sum-title">Order Summary:</div>
+    <div className="cart-details">
+      <div className="cart-book-image-box">
+        <img className="cart-book-image" src={product.image} alt="/" />
+      </div>
 
-        <div className="order-summary-flex">
-          <div className="items-in-cart-box">
-            <div className="item-in-cart">
-              <div>Item 1</div>
-              <div>Price: $45</div>
-            </div>
+      <div className="cart-title">{product.book}</div>
 
-            <div className="item-in-cart">
-              <div>Total Price: $60</div>
-            </div>
-          </div>
-          <div className="checkout-button-box">
-            <button className="checkout-button">Proceed to Checkout</button>
-          </div>
+      <div className="descriptive-numbers">
+        <div className="cart-indiv-item-quantity">
+        {errorMessage && <div className="error"> {errorMessage} </div>}
+          <button className="add-item" onClick={subtractItem}>-</button>
+          <div className="quantity-cart">{book.quantity}</div>
+          <button className="add-item" onClick={addItem}>+</button>
+          {errorMessage && <div className="error"> {errorMessage} </div>}
         </div>
+        <div className="cart-indiv-item-price">{product.price}</div>
       </div>
     </div>
   );

@@ -1,21 +1,22 @@
 import Product from "./Product";
-import Navbar from "./Navbar";
-import Searchbar from "./SearchBar";
 
-function ProductPage({ products, addToCart }) {
+
+function ProductPage({ products }) {
+
   function createList() {
     let productList = products.products?.map(function(product) {
       return (
-        <Product key={product.book} product={product} addToCart={addToCart} />
+        <Product key={product.book} product={product} />
       );
     });
     return productList;
   }
+
+
   return (
     <div>
-      <Navbar />
-      <Searchbar />
       <section>{createList()}</section>
+
     </div>
   );
 }
