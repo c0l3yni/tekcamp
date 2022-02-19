@@ -1,10 +1,9 @@
-import react, { useState } from "react";
-import { Link, useParams } from "react-router-dom";
+import react from "react";
+import { useParams } from "react-router-dom";
 import Product from "./Product";
 
 function SearchPage({ products, removeFromCart, minusFromCart, cart, addToCart }) {
   const { input } = useParams();
-
   function createList() {
     const listItems = products?.products?.filter(product => product.book.toLowerCase().includes(input.toLowerCase()));
     const prodList = listItems.map((product) => (
@@ -19,7 +18,7 @@ function SearchPage({ products, removeFromCart, minusFromCart, cart, addToCart }
         )
     ); 
     if (prodList.length === 0) {
-      return false;
+      return false
     }
     return prodList;
   }

@@ -1,15 +1,15 @@
 import { Link } from "react-router-dom";
-import SearchPage from "./SearchPage";
 import "../CSS/searchbar.css";
 import { useState } from "react";
 
 function SearchBar() {
   const [input, setInput] = useState("");
-
   function onInputChange(event) {
-    setInput(event.target.value)
+    setInput(event.target.value);
   }
-
+  function onFormSubmit(event) {
+    setInput("");
+  }
   return (
     <div>
       <section className="search-flex">
@@ -21,24 +21,19 @@ function SearchBar() {
           </Link>
         </div>
         <div>
-      {/* <form onSubmit={onFormSubmit}> */}
-      <label className="search-box">
-        <input
-          className="search"
-          type="text"
-          onChange={onInputChange}
-        />
-        <div className="search-button-flex">
-
-           <Link className="link" to={{pathname: `/search/${input}`}}>
-            <button className="search-button" type="submit">
-              Search
-            </button>
-            </Link>
+          <form onSubmit={onFormSubmit}>
+            <label className="search-box">
+              <input className="search" type="text" onChange={onInputChange} />
+              <div className="search-button-flex">
+                <Link className="link" to={{ pathname: `/search/${input}` }}>
+                  <button className="search-button" type="submit" value={input}>
+                    Search
+                  </button>
+                </Link>
+              </div>
+            </label>
+          </form>
         </div>
-      </label>
-      {/* </form> */}
-    </div>
       </section>
     </div>
   );
