@@ -7,6 +7,11 @@ function CartPage({ removeFromCart, cart}) {
   const cartItems = cart.map((product) => (
     <Cart key={product.id} product={product} removeFromCart={removeFromCart} />
   ))
+
+    console.log(cart)
+  // for each book in inventory 
+
+
   return (
     <div>
       <div className="cart-and-order-box">

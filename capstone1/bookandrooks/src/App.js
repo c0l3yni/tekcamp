@@ -8,28 +8,59 @@ import Navbar from "./Components/Navbar";
 import SearchBar from "./Components/SearchBar";
 
 function App() {
-  const [products, setProducts] = useState();
- const [cart, setCart] = useState([]);
-  const [cartTotal, setCartTotal] = useState(0)
-  
-  // function addToCart(product) {
-   
-  //   const productExist = products?.products.find((x) => x.book === product.book);
-  //       if(productExist) {
-  //         setCart(
-  //           cart.filter((x) =>
+  const [products, setProducts] = useState([]);
+  const [cart, setCart] = useState([]);
+  const [cartTotal, setCartTotal] = useState(0);
 
-  //           x.book === product.book
-  //           ? { ...productExist, quantity: productExist.quantity + 1 }
-  //           : x
-  //           )
-  //         );
-  //       } else {
-  //         setCart([...cart, product])
-  //       }
-        
-  //   return setCart({...cart, product})
+  
+  // const [errorMessage, setErrorMessage] = useState("");
+  // function addItem() {
+  //   let addQty = book.quantity + 1;
+  //   if (addQty <= book.quantity) {
+  //     setBook({ ...book, quantity: addQty });
+  //   } else {
+  //     setErrorMessage("Exceeded Available Stock!");
+  //   }
   // }
+
+  // function subtractItem() {
+  //   let lessQty = book.quantity - 1;
+  //   if (lessQty >= 0) {
+  //     setBook({ ...book, quantity: lessQty });
+  //   } else {
+  //     setBook(lessQty);
+  //     setErrorMessage(
+  //       "Are you sure you want to remove this item from your cart?"
+  //     );
+  //   }
+  // }
+
+  function addToCart(product) {
+    const productExist = cart?.find((x) => x.book === product.book);
+    if (productExist) {
+      let cartWithoutBook = cart.filter((x) => x.book !== productExist.book);
+      if(product.quantity >= productExist.qtyInCart + 1) {
+        productExist.qtyInCart += 1;
+        setCart(cartWithoutBook.concat(productExist));
+      }
+      
+    } else {
+      product.qtyInCart += 1
+      setCart([...cart, product]);
+    }
+  }
+
+  function minusFromCart(product) {
+    const productExist = cart?.find((x) => x.book === product.book);
+    let cartWithoutBook = cart.filter((x) => x.book !== productExist.book);
+      productExist.qtyInCart -= 1;
+      if(productExist.qtyInCart > 0) {
+        setCart(cartWithoutBook.concat(productExist));
+      } else {
+        setCart(cartWithoutBook)
+      }
+      
+  }
 
   useEffect(() => {
     fetch("../data.json", {
@@ -55,10 +86,6 @@ function App() {
     setCartTotal(totalVal);
   };
 
-  function addToCart (product) {
-      setCart([...cart, product]);
-  };
-
   const removeFromCart = (product) => {
     let hardCopy = [...cart];
     hardCopy = hardCopy.filter((cartItem) => cartItem.book !== product.book);
@@ -68,12 +95,38 @@ function App() {
   return (
     <div className="App">
       <BrowserRouter>
-      <Navbar />
-      <SearchBar products={products} />
+        <Navbar />
+        <SearchBar products={products} />
         <Routes>
-          <Route path="/" exact element={<ProductPage products={products} removeFromCart={removeFromCart} addToCart={addToCart} />} />
-          <Route path="/productdetail/:book" element={<ProductDetailPage products={products} addToCart={addToCart} />} />
-          <Route path="/cart" element={<CartPage products={products} removeFromCart={removeFromCart} cart={cart} />} />
+          <Route
+            path="/"
+            exact
+            element={
+              <ProductPage
+                products={products}
+                removeFromCart={removeFromCart}
+                addToCart={addToCart}
+                minusFromCart={minusFromCart}
+              />
+            }
+          />
+          <Route
+            path="/productdetail/:book"
+            element={
+              <ProductDetailPage products={products} addToCart={addToCart} />
+            }
+          />
+          <Route
+            path="/cart"
+            element={
+              <CartPage
+                products={products}
+                removeFromCart={removeFromCart}
+                cart={cart}
+
+              />
+            }
+          />
         </Routes>
       </BrowserRouter>
     </div>

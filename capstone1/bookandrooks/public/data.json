@@ -7,6 +7,7 @@
       "image": "../Alice-in-Wonderland.jpg",
       "price": "$9.99",
       "quantity": 6,
+      "qtyInCart": 0,
       "serialNum": "AC45H7S1",
       "category": "Classics, Fantasy, Fiction, YA, Children's",
       "manufacturer": "Baker & Taylor"
@@ -18,6 +19,7 @@
       "image": "../the-eight.jpg",
       "price": "$17.99",
       "quantity": 14,
+      "qtyInCart": 0,
       "serialNum": "G896KE2",
       "category": "Fiction, Mystery, Thriller, Fantasy, Historical",
       "manufacturer": "Baker & Taylor"
@@ -29,6 +31,7 @@
       "image": "../queens-gambit.jpg",
       "price": "$15.99",
       "quantity": 23,
+      "qtyInCart": 0,
       "serialNum": "A5JE193D",
       "category": "Fiction, Young Adult, Contemporary, Historical",
       "manufacturer": "Edwards Brothers"
@@ -40,6 +43,7 @@
       "image": "../sorcerers-stone.jpg",
       "price": "$15.99",
       "quantity": 5,
+      "qtyInCart": 0,
       "serialNum": "JK1SN0GUD",
       "category": "Middle-Grade, Fantasy, Adventure, Childrens",
       "manufacturer": "Edwards Brothers"
@@ -51,6 +55,7 @@
       "image": "../rook.jpg",
       "price": "$14.99",
       "quantity": 16,
+      "qtyInCart": 0,
       "serialNum": "TB342G98",
       "category": "Fantasy, Mystery, Fiction, Adult",
       "manufacturer": "Edwards Brothers"
@@ -62,6 +67,7 @@
       "image": "../prodigious-savant.jpg",
       "price": "$11.99",
       "quantity": 29,
+      "qtyInCart": 0,
       "serialNum": "ON894H6",
       "category": "Adult, Fiction, Contemporary",
       "manufacturer": "Baker & Taylor"
@@ -73,6 +79,7 @@
       "image": "../name-of-the-rose.jpg",
       "price": "$14.99",
       "quantity": 26,
+      "qtyInCart": 0,
       "serialNum": "X78E19BF",
       "category": "Fiction, Historical, Mystery, Classic",
       "manufacturer": "Dickinson Press"
@@ -84,6 +91,7 @@
       "image": "../flanders-panel.jpg",
       "price": "$17.99",
       "quantity": 3,
+      "qtyInCart": 0,
       "serialNum": "DB842KVQ",
       "category": "Mystery, Fiction, Thriller, Art",
       "manufacturer": "Edwards Brothers"
@@ -95,6 +103,7 @@
       "image": "../luzhin-defense.jpg",
       "price": "$16.99",
       "quantity": 18,
+      "qtyInCart": 0,
       "serialNum": "LFR8446VG",
       "category": "Fiction, Russian, Drama, Psychology",
       "manufacturer": "Dickinson Press"
@@ -106,6 +115,7 @@
       "image": "../luneberg-variation.jpg",
       "price": "$12.99",
       "quantity": 34,
+      "qtyInCart": 0,
       "serialNum": "AGT729HK",
       "category": "Fiction, Contemporary, Thriller, Mystery",
       "manufacturer": "Baker & Taylor"
@@ -117,6 +127,7 @@
       "image": "../chess-machine.jpg",
       "price": "$21.99",
       "quantity": 5,
+      "qtyInCart": 0,
       "serialNum": "BSK782HK",
       "category": "Thriller, Historical, Fantasy, Fiction",
       "manufacturer": "Dickinson Press"
