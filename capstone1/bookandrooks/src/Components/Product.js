@@ -8,7 +8,7 @@ import ProductDetailImage from "./ProductDetailImage";
 import ProductDetailPrice from "./ProductDetailPrice";
 import ProductDetailQuantity from "./ProductDetailQuantity";
 
-function Product({ product, addToCart, listItems }) {
+function Product({ product, addToCart, cart, listItems }) {
   return (
     <div className="detail-box">
       <section>{listItems}</section>
@@ -29,7 +29,7 @@ function Product({ product, addToCart, listItems }) {
         <div className="product-details">
           <ProductDetailBook product={product} />
           <ProductDetailAuthor product={product} />
-          <ProductDetailQuantity product={product} />
+          <ProductDetailQuantity product={product} cart={cart} addToCart={addToCart} />
         </div>
       </Link>
       <AddToCart addToCart={addToCart} product={product} />

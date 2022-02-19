@@ -1,0 +1,22 @@
+.error-message {
+  color: red;
+  font-size: 18px;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  padding: 0px 40px 10px 40px;
+}
+
+.descriptive-numbers {
+  display: flex;
+  flex-direction: row;
+  justify-content: right;
+  margin-right: 20px;
+  margin-top: -170px;
+  margin-bottom: 150px;
+}
+
+.cart-indiv-item-quantity {
+  display: flex;
+  flex-direction: row;
+
+
+}

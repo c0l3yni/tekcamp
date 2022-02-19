@@ -1,7 +1,6 @@
 import Product from "./Product";
 
-
-function ProductPage({ products, removeFromCart, addToCart, minusFromCart }) {
+function ProductPage({ products, product, removeFromCart, cart, addToCart, minusFromCart }) {
 
   function createList() {
     const listItems = products?.products?.map((product) => (
@@ -9,6 +8,7 @@ function ProductPage({ products, removeFromCart, addToCart, minusFromCart }) {
       key={product.book} 
       product={product} 
       removeFromCart={removeFromCart} 
+      cart={cart}
       addToCart={addToCart} 
       minusFromCart={minusFromCart} />
     ));

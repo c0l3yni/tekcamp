@@ -1,3 +1,5 @@
+import React from "react";
+
 import ProductDetailImage from "./ProductDetailImage";
 import ProductDetailCategory from "./ProductDetailCategory";
 import ProductDetailPrice from "./ProductDetailPrice";
@@ -8,19 +10,26 @@ import ProductDetailSerialNum from "./ProductDetailSerialNum";
 import ProductDetailManufacturer from "./ProductDetailManufacturer";
 import AddToCart from "./AddToCart";
 
-function ProductDetail({ product, addToCart }) {
+
+function ProductDetail({ addToCart, cart, product }) {
   return (
-    <div className="detail-box">
-      <ProductDetailImage product={product} />
-      <ProductDetailCategory product={product} />
-      <ProductDetailPrice product={product} />
-      <div className="product-details">
-        <ProductDetailBook product={product} />
-        <ProductDetailAuthor product={product} />
-        <ProductDetailQuantity product={product} />
-        <ProductDetailSerialNum product={product} />
-        <ProductDetailManufacturer product={product} />
-        <AddToCart addToCart={addToCart} product={product} />
+    <div>
+      <div className="detail-box">
+        <ProductDetailImage product={product} />
+        <ProductDetailCategory product={product} />
+        <ProductDetailPrice product={product} />
+        <div className="product-details">
+          <ProductDetailBook product={product} />
+          <ProductDetailAuthor product={product} />
+          <ProductDetailQuantity
+            product={product}
+            cart={cart}
+            addToCart={addToCart}
+          />
+          <ProductDetailSerialNum product={product} />
+          <ProductDetailManufacturer product={product} />
+          <AddToCart addToCart={addToCart} product={product} />
+        </div>
       </div>
     </div>
   );

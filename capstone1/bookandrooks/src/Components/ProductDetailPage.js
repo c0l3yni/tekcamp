@@ -2,7 +2,7 @@ import ProductDetail from "./ProductDetail";
 import "../CSS/productdetailpage.css";
 import { useParams } from "react-router-dom";
 
-function ProductDetailPage({ products, addToCart }) {
+function ProductDetailPage({ products, cart, addToCart }) {
   const { book } = useParams();
     function grabProduct() {
       let productDetailView = products.products?.map(function(product) {
@@ -11,6 +11,7 @@ function ProductDetailPage({ products, addToCart }) {
           <ProductDetail 
           key={product.book} 
           product={product} 
+          cart={cart} 
           addToCart={addToCart} />
           );
         }});

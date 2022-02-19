@@ -30,22 +30,7 @@
     padding-left: 54px;
   }
 
-  .descriptive-numbers {
-    display: flex;
-    flex-direction: row;
-    justify-content: right;
-    margin-right: 20px;
-    /* margin-left: 0px; */
-    margin-top: -170px;
-    margin-bottom: 150px;
-  }
-
-  .cart-indiv-item-quantity {
-    display: flex;
-    flex-direction: row;
-    padding-right: 17px;
-    padding-top: 4px;
-  }
+  
 
   .cart-indiv-item-price {
     padding: 4px;

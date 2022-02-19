@@ -1,4 +1,6 @@
-function AddToCart ({ addToCart, product }) {
+import React from 'react';
+
+function AddToCart ({ product, addToCart }) {
   return (
     <div className="add-to-cart-flex">
           <button

@@ -1,4 +1,6 @@
-function ProductDetailQuantity({ product }) {
+
+function ProductDetailQuantity({ product, cart, addToCart }) {
+
   return (
     <div>
       <section>

@@ -1,31 +1,40 @@
-import react, { useState } from "react";
+import { useState } from "react";
+import "../CSS/cart.css";
 
-function Cart({ product, removeFromCart, addToCart }) {
-  //   const [cart, setCart] = useState([]);
-  //   const [errorMessage, setErrorMessage] = useState('');
-  //   function addItem() {
-  //     let addQty = product.quantity + 1
-  //     if (addQty <= product.quantity) {
-  //       setCart({...cart, quantity: addQty})
-  //     } else {
-  //       setErrorMessage('Exceeded Available Stock!');
-  //     }
-  //   }
-  // if (product.quantity === 0 | product.quantity === null)
-  // setErrorMessage('Are you sure you want to remove this item from your cart?');
+function Cart({
+  product,
+  minusFromCart,
+  removeFromCart,
+  addToCart,
+}) {
+  const [showMessage, setShowMessage] = useState(false);
+  const [errorMsg, setErrorMsg] = useState("");
+  const handleAddToCart = function () {
+    if (product.qtyInCart >= product.quantity) {
+      setShowMessage(true);
+      setErrorMsg("Can not exceed in stock quantity.")
+    } else {
+      addToCart(product)
+      setShowMessage(false);
+    }
+  }
 
-  // function subtractItem() {
-  //     let lessQty = product.quantity - 1
-  //     if (lessQty === 0) {
-  //       lessQty.value = 0
-
-  //     } else {
-  //       setCart({...cart, quantity: lessQty})
-  //     }
-  //   }
-
+  const handleMinusFromCart = function () {
+    if (product.qtyInCart === 1 && showMessage === false) {
+      setShowMessage(true);
+      setErrorMsg("Are you sure you want to remove item from your cart?")
+    } else {
+      setShowMessage(false);
+      minusFromCart(product)
+      setErrorMsg("");
+    }
+    
+  }
   return (
     <div className="cart-details">
+      <div className="error-message-box">
+        {showMessage && <div className="error-message"> {errorMsg} </div>}
+      </div>
       <div className="cart-book-image-box">
         <img className="cart-book-image" src={product?.image} alt="/" />
       </div>
@@ -34,33 +43,34 @@ function Cart({ product, removeFromCart, addToCart }) {
 
       <div className="descriptive-numbers">
         <div className="cart-indiv-item-quantity">
-          {/* {errorMessage && <div className="error"> {errorMessage} </div>} */}
           <button
             type="submit"
             value="remove"
             className="add-item"
-            onClick={() => removeFromCart(product.book)}
+            onClick={() => removeFromCart(product)}
           >
             DEL
           </button>
+
           <button
+            className="item-qty"
             type="submit"
-            value="remove"
-            className="add-item"
-            // onClick={subtractItem()}
+            value="add"
+            onClick={handleMinusFromCart}
           >
             -
           </button>
+
           <div className="quantity-cart">{product?.qtyInCart}</div>
+
           <button
-            className="add-item"
+            className="item-qty"
             type="submit"
             value="add"
-            onClick={() => addToCart(product)}
+            onClick={handleAddToCart}
           >
             +
           </button>
-          {/* {errorMessage && <div className="error"> {errorMessage} </div>} */}
         </div>
         <div className="cart-indiv-item-price">{product?.price}</div>
       </div>
