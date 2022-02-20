@@ -1,8 +1,8 @@
 import React from "react";
 
 const FormSuccess = () => {
-<div>
+return(<div>
 Thank you for your purchase!
-</div>
+</div>)
 }
 export default FormSuccess;

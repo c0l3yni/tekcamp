@@ -12,6 +12,8 @@
 .text-input {
   display: flex;
   flex-direction: column;
+  width: 150px;
+  height: 20px;
   border: 3px solid var(--grey);
   margin: 4px;
   padding: 2px;
@@ -19,10 +21,11 @@
 .error-text {
   color: red;
   display: visible;
-
+  white-space: nowrap;
 }
 
-.input-row {
+.input-row {  
+  justify-content: space-between;
   display: flex;
   flex-direction: row;
 }
@@ -45,4 +48,18 @@
 .error {
   font-size: 20px;
   color: red;
+}
+.errormsg-flex-box {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  padding-left: 10px;
+}
+
+.year-flex {
+
+}
+
+.ccv-flex {
+
 }
