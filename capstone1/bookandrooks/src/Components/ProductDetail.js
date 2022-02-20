@@ -8,11 +8,12 @@ import ProductDetailQuantity from "./ProductDetailQuantity";
 import ProductDetailSerialNum from "./ProductDetailSerialNum";
 import ProductDetailManufacturer from "./ProductDetailManufacturer";
 import AddToCart from "./AddToCart";
+import "../CSS/productdetailpage.css";
 
 
 function ProductDetail({ addToCart, cart, product }) {
   return (
-    <div>
+    <div className="product-details">
       <div className="detail-box">
         <ProductDetailImage product={product} />
         <ProductDetailCategory product={product} />

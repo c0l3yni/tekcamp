@@ -11,7 +11,7 @@ import ProductDetailQuantity from "./ProductDetailQuantity";
 
 function Product({ product, addToCart, cart, listItems }) {
   return (
-    <div className="detail-box">
+    <div className="product-detail-box">
       <section>{listItems}</section>
       <Link
         className="link"

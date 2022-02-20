@@ -11,7 +11,7 @@ function SearchBar() {
     setInput("");
   }
   return (
-    <div>
+    <div className="searchbar">
       <section className="search-flex">
         <div>
           <Link to="/">
@@ -23,7 +23,7 @@ function SearchBar() {
         <div>
           <form onSubmit={onFormSubmit}>
             <label className="search-box">
-              <input className="search" type="text" onChange={onInputChange} />
+              <input className="search" placeholder="search..." type="text" onChange={onInputChange} />
               <div className="search-button-flex">
                 <Link className="link" to={{ pathname: `/search/${input}` }}>
                   <button className="search-button" type="submit" value={input}>

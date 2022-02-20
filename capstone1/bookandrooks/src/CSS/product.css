@@ -1,4 +1,16 @@
+
 .link {
   text-decoration: none;
   color: black;
+}
+
+@media only screen and (min-width:700px) {
+  .product-detail-box {
+    display: flex;
+    flex-direction: row;
+    margin-left: 10px;
+    float: left;
+    height: 550px;
+    width: 300px;
+  }
 }

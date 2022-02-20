@@ -24,3 +24,14 @@
   padding: 10px;
   background-color: var(--powder-pink);
 }
+
+@media only screen and (min-width:680px) {
+  .item-available {
+    width: 650px;
+    height: 50px;
+  }
+  .item-unavailable {
+    width: 650px;
+    height: 50px;
+  }
+}

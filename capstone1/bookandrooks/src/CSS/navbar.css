@@ -31,6 +31,7 @@
   .button {
     display: flex;
     background-color: var(--white);
+    cursor: pointer;
     border-radius: 50%;
     width: 30px;
     height: 30px;
@@ -38,17 +39,24 @@
     margin: 35px 0px 0px 10px;
  
   }  
+  .link {
+    text-decoration: none;
+    color: black;
+  }
+
     .login {
       font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
       padding-left: 2px;
       padding-top: 6px;
       text-decoration: none;
+      cursor: pointer;
     }
 
     .cart {
       font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
       padding-left: 4px;
       padding-top: 6px;
+      cursor: pointer;
     }
 
   .menu {

@@ -50,6 +50,7 @@
   height: 70px;
   width: 70px;
   border-radius: 50%;
+  cursor: pointer;
 }
 
 .inventory-title {
@@ -65,3 +66,4 @@
 .content {
   margin-top: 40px;
 }
+
