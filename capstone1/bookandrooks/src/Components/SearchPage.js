@@ -69,10 +69,11 @@ function SearchPage({
     return categoryList;
   }
 
+
   return (
     <div>
-      {findAuth() || <p>No products match in stock authors.</p>}
-      {findBook() || <p>No products match in stock book titles.</p>}
+      {findAuth() ? (<div><h1>Products containing search in Author</h1>{findAuth()}</div>) : <p>No products match in stock authors.</p>}
+      {findBook() ? (<div><h3>Products containing search in Book Title</h3>{findBook()}</div>) : <p>No products match in stock book titles.</p>}
       {findCategory() || <p>No products match in stock categories.</p>}
     </div>
   );

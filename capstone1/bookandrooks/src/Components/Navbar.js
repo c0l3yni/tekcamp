@@ -14,9 +14,11 @@ function Navbar() {
         </div>
       </Link>
 
+      <Link to="/login">
       <div className="flex-left">
         <button className="button login">login</button>
       </div>
+      </Link>
       <div className="flex-right">
         <Link className="link" to="/cart">
           <button className="button cart">cart</button>

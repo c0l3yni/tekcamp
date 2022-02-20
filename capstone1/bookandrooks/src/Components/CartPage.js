@@ -12,7 +12,6 @@ function CartPage({
   errorMessage,
   setErrorMessage,
 }) {
-  const [total, setTotal] = useState(0);
 
   const cartItems = cart.map((product) => (
     <Cart
@@ -25,13 +24,14 @@ function CartPage({
       removeFromCart={removeFromCart}
     />
   ));
-  useEffect(() => {
+
+  function getTotal() {
     let tempTotal = 0;
     cart.map((product) => {
       tempTotal += product.qtyInCart * Number(product.price);
     });
-    setTotal(tempTotal.toFixed(2));
-  }, []);
+    return tempTotal.toFixed(2);
+  }
 
 
   return (
@@ -49,7 +49,7 @@ function CartPage({
               </div>
 
               <div className="item-in-cart">
-                <div>Total Price: ${total} </div>
+                <div>Total Price: ${getTotal()} </div>
               </div>
             </div>
 

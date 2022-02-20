@@ -8,16 +8,18 @@ import Navbar from "./Components/Navbar";
 import SearchBar from "./Components/SearchBar";
 import SearchPage from "./Components/SearchPage";
 import CheckoutPage from "./Components/CheckoutPage";
+import LoginPage from "./Components/LoginPage";
+import PrivateLogin from "./Components/PrivateLogin";
 
 function App() {
   const [products, setProducts] = useState([]);
   const [cart, setCart] = useState([]);
-  let localCart = localStorage.getItem("cart");
+  // let localCart = localStorage.getItem("cart");
 
-  useEffect(() => {
-    localCart = JSON.parse(localCart);
-    if (localCart) setCart(localCart)
-  }, []) 
+  // useEffect(() => {
+  //   localCart = JSON.parse(localCart);
+  //   if (localCart) setCart(localCart)
+  // }, []) 
 
 
   function addToCart(product) {
@@ -89,8 +91,7 @@ function App() {
               <ProductDetailPage 
               addToCart={addToCart}
               cart={cart}
-              products={products} 
-              addToCart={addToCart} />
+              products={products} />
             }
           />
           <Route
@@ -122,6 +123,24 @@ function App() {
               <CheckoutPage
                 products={products}
                 cart={cart}
+ 
+              />
+            }
+          />
+          <Route
+            path="/private"
+            element={
+              <PrivateLogin
+                products={products}
+                cart={cart}
+                setProducts={setProducts}
+              />
+            }
+          />
+          <Route
+            path="/login"
+            element={
+              <LoginPage
               />
             }
           />

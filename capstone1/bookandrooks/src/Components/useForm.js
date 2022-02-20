@@ -34,37 +34,6 @@ const useForm = ({ callback }) => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    if (
-      errors.firstname === "" &&
-      errors.lastname === "" &&
-      errors.country === "" &&
-      errors.states === "" &&
-      errors.city === "" &&
-      errors.phone === "" &&
-      errors.zip === "" &&
-      errors.cardNum === "" &&
-      errors.cardName === "" &&
-      errors.month === "" &&
-      errors.year === "" &&
-      errors.ccv === ""
-    ) {
-      setValues({
-        firstname: "",
-        lastname: "",
-        country: "",
-        states: "",
-        city: "",
-        phone: "",
-        zip: "",
-        cardNum: "",
-        cardName: "",
-        month: "",
-        year: "",
-        ccv: "",
-      });
-
-      setIsSubmitting(true);
-    } else {
      if(values.firstname === "") {
         setErrors({...errors, firstname: "First Name is required"});
      } else if (values.lastname === "") {
@@ -89,10 +58,24 @@ const useForm = ({ callback }) => {
       setErrors({...errors, year: "Year is required"})
     } else if (values.ccv === "") {
       setErrors({...errors, ccv: "CCV is required"})
+    } else {
+      setValues({
+        firstname: "",
+        lastname: "",
+        country: "",
+        states: "",
+        city: "",
+        phone: "",
+        zip: "",
+        cardNum: "",
+        cardName: "",
+        month: "",
+        year: "",
+        ccv: "",
+      });
+
+      setIsSubmitting(true);
     }
-      setIsSubmitting(false);
-    }
-    //setErrors((values))
   };
 
   useEffect(() => {
