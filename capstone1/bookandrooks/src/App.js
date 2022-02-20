@@ -12,7 +12,13 @@ import CheckoutPage from "./Components/CheckoutPage";
 function App() {
   const [products, setProducts] = useState([]);
   const [cart, setCart] = useState([]);
-  // const [cartTotal, setCartTotal] = useState(0);
+  let localCart = localStorage.getItem("cart");
+
+  useEffect(() => {
+    localCart = JSON.parse(localCart);
+    if (localCart) setCart(localCart)
+  }, []) 
+
 
   function addToCart(product) {
     const productExist = cart?.find((x) => x.book === product.book);

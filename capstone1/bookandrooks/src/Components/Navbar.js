@@ -8,7 +8,7 @@ function Navbar() {
       <a className="menu" href="#menu">
         &#9776;
       </a>
-      <Link to="/">
+      <Link className="link" to="/">
         <div className="title-box">
           <h1 className="title">Books and Rooks</h1>
         </div>

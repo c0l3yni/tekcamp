@@ -72,7 +72,7 @@ function Cart({
             +
           </button>
         </div>
-        <div className="cart-indiv-item-price">{product?.price}</div>
+        <div className="cart-indiv-item-price">${product?.price}</div>
       </div>
     </div>
   );

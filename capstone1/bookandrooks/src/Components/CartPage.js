@@ -2,7 +2,6 @@ import react, { useEffect, useState } from "react";
 import "../CSS/cartpage.css";
 import { Link } from "react-router-dom";
 import Cart from "./Cart";
-import CheckoutPage from "./CheckoutPage";
 
 function CartPage({
   products,
@@ -14,9 +13,10 @@ function CartPage({
   setErrorMessage,
 }) {
   const [total, setTotal] = useState(0);
+
   const cartItems = cart.map((product) => (
     <Cart
-      key={product.id}
+      key={product.serialNum}
       product={product}
       addToCart={addToCart}
       minusFromCart={minusFromCart}
@@ -32,6 +32,7 @@ function CartPage({
     });
     setTotal(tempTotal.toFixed(2));
   }, []);
+
 
   return (
     <div>
