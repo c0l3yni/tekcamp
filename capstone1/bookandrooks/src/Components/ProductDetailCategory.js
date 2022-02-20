@@ -1,3 +1,6 @@
+import React from "react";
+import "../CSS/prodcategory.css";
+
 function ProductDetailCategory({ product }) {
   return (
     <section>

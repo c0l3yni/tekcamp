@@ -1,0 +1,13 @@
+.add-to-cart-flex {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 20px;
+}
+
+.add-to-cart {
+  border-radius: 50%;
+  width: 55px;
+  height: 55px;
+}

@@ -1,4 +1,5 @@
 import React from 'react';
+import "../CSS/addtocart.css";
 
 function AddToCart ({ product, addToCart }) {
   return (

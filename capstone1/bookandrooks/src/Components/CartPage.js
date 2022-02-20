@@ -12,7 +12,6 @@ function CartPage({
   errorMessage,
   setErrorMessage,
 }) {
-
   const cartItems = cart.map((product) => (
     <Cart
       key={product.serialNum}
@@ -33,7 +32,6 @@ function CartPage({
     return tempTotal.toFixed(2);
   }
 
-
   return (
     <div>
       <div className="cart-and-order-box">
@@ -43,23 +41,13 @@ function CartPage({
           <div className="order-sum-title">Order Summary:</div>
 
           <div className="order-summary-flex">
-            <div className="items-in-cart-box">
-              <div className="item-in-cart">
-                {/* <div>Tax:</div> */}
-              </div>
-
-              <div className="item-in-cart">
-                <div>Total Price: ${getTotal()} </div>
-              </div>
-            </div>
-
-          
+            <div>Total Price: ${getTotal()} </div>
+            
             <div className="checkout-button-box">
-            <Link to="/checkout">
-              <button className="checkout-button">Proceed to Checkout</button>
+              <Link to="/checkout">
+                <button className="checkout-button">Proceed to Checkout</button>
               </Link>
             </div>
-           
           </div>
         </div>
       </div>

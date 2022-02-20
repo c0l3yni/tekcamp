@@ -1,3 +1,6 @@
+import React from "react";
+import "../CSS/prodimage.css";
+
 function ProductDetailImage({ product }) {
   return (
     <div>

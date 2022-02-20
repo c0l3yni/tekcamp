@@ -2,40 +2,6 @@
   display: flex;
   flex-direction: column;
 }
-
-  .cart-book-image-box {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    padding: 10px;
-    margin-left: 10px;
-    width: 140px;
-    height: 140px;
-    border-radius: 50%;
-    background-color: var(--dark-blue);
-  }
-
-    .cart-book-image {
-      width: 100px;
-      height: 150px; 
-    }
-
-  .cart-title {
-    font-size: 10px;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    text-align: left;
-    margin-left: -30px;
-    padding-top: 10px;
-    padding-left: 54px;
-  }
-
-  .cart-indiv-item-price {
-    padding: 4px;
-    margin-top: 6px;
-   font-size: 15px;
-  }
-
 .order-summary-details {
   display: flex;
   flex-direction: column;
@@ -45,41 +11,21 @@
   letter-spacing: 2.5px;
   background-color: var(--dark-blue);
 }
-
-.order-summary-flex {
-  display: flex;
-  flex-direction: row;
-}
-
 .order-sum-title {
   font-size: 20px;
   padding: 10px;
   font-weight: 600;
 }
 
-.quantity-cart {
-  font-size: 15px;
-  padding-top: 10px;
-  margin: 2px;
-}
-
-.item-in-cart {
+.order-summary-flex {
+  display: flex;
+  flex-direction: row;
   padding: 10px;
 }
-
 .checkout-button-box {
   margin-left: 50px;
 }
 
 .checkout-button {
   padding: 10px;
-}
-
-.add-item {
-  text-align: center;
-  align-items: center;
-  font-size: 10px;
-  margin-top: 10px;
-  width: 25px;
-  height: 25px;
 }

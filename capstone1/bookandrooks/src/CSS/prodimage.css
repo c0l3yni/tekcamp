@@ -1,0 +1,15 @@
+.book-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--dark-blue);
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+}
+
+.book-image {
+  margin-top: 10px;
+  width: 130px;
+  height: 200px;
+}

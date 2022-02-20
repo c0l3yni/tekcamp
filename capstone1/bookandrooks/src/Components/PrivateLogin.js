@@ -5,6 +5,7 @@ import ProductDetailCategory from "./ProductDetailCategory";
 import ProductDetailImage from "./ProductDetailImage";
 import ProductDetailPrice from "./ProductDetailPrice";
 import ProductDetailQuantity from "./ProductDetailQuantity";
+import "../CSS/privatelogin.css";
 
 function PrivateLogin({ products, setProducts }) {
 
@@ -25,6 +26,7 @@ function PrivateLogin({ products, setProducts }) {
   function createList() {
     const listItems = products?.products?.map((product) => (
       <div key={product.book}>
+        <div className="content">
         <div className="detail-box">
         <section className="book-box">
           <ProductDetailImage product={product} />
@@ -41,6 +43,7 @@ function PrivateLogin({ products, setProducts }) {
         </div>
         <br />
         <hr />
+        </div>
       </div>
     ));
     return listItems;
@@ -58,17 +61,25 @@ function PrivateLogin({ products, setProducts }) {
   }
   return (
     <div>
-      <h1>Admin View</h1>
-      <h2>Add new book</h2>
-      <input onChange={handleInput} name="book" placeholder="Book title..." />
-      <input onChange={handleInput} placeholder="Image url..." name="image" />
-      <input onChange={handleInput} placeholder="Quantity in stock..." name="quantity"/>
-      <input onChange={handleInput} placeholder="Author..." name="author" />
-      <input onChange={handleInput} placeholder="Price..." name="price" />
+      <div className="admin-box">
+      <h1 className="admin">Admin View</h1>
+</div>
 
-      <button onClick={handleAddProduct}>Add to inventory</button>
-      <h2>Product Inventory</h2>
+<div className="input-flex-box">
+      <h2 className="add-book">Add new book</h2>
+      <input className="input" onChange={handleInput} name="book" placeholder="Book title..." />
+      <input className="input" onChange={handleInput} placeholder="Image url..." name="image" />
+      <input className="input" onChange={handleInput} placeholder="Quantity in stock..." name="quantity"/>
+      <input className="input" onChange={handleInput} placeholder="Author..." name="author" />
+      <input className="input" onChange={handleInput} placeholder="Price..." name="price" />
+
+      <button className="inventory-button" onClick={handleAddProduct}>Add to inventory</button>
+</div>
+
+<div className="admin-box">
+      <h2 className="inventory-title">Product Inventory</h2>
       <br />
+      </div>
       <section>{createList()}</section>
     </div>
   );

@@ -1,19 +1,27 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import "../CSS/login.css";
 
 function LoginPage() {
   return (
     <div>
-      <h1>Login</h1>
-      <form>
-        <label>UserName</label>
-        <input />
+      <div className="login-box">
+      <h1 className="login-title">Login</h1>
+      </div>
+      <form className="input-flex-box">
+      <div className="input-flex">
+        <label className="label">Username:</label>  
+        <input className="input-login" />
         <br />
-        <label>Password</label>
-        <input />
+        </div>
+
+        <div className="input-flex">
+        <label className="label password">Password:</label>
+        <input className="input-login" />
         <br />
+        </div>
         <Link to="/private">
-          <button>Login</button>
+          <button className="login-button">Login</button>
         </Link>
       </form>
     </div>

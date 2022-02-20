@@ -1,6 +1,7 @@
 import react from "react";
 import { useParams } from "react-router-dom";
 import Product from "./Product";
+import "../CSS/searchpage.css";
 
 function SearchPage({
   products,
@@ -72,9 +73,10 @@ function SearchPage({
 
   return (
     <div>
-      {findAuth() ? (<div><h1>Products containing search in Author</h1>{findAuth()}</div>) : <p>No products match in stock authors.</p>}
-      {findBook() ? (<div><h3>Products containing search in Book Title</h3>{findBook()}</div>) : <p>No products match in stock book titles.</p>}
-      {findCategory() || <p>No products match in stock categories.</p>}
+    
+      {findBook() ? (<div><h3 className="item-available">Products containing search in Book Title</h3>{findBook()}</div>) : <h3 className="item-unavailable">Could not find any books with {input} in the title.</h3>}
+      {findAuth() ? (<div><h3 className="item-available">Products containing search in Author</h3>{findAuth()}</div>) : <h3 className="item-unavailable">Could not find any books with {input} in the author.</h3>}
+      {findCategory() ? (<div><h3 className="item-available">Products containing search in Category</h3>{findCategory()}</div>) : <h3 className="item-unavailable">Could not find any books with {input} in the category.</h3>}
     </div>
   );
 }

@@ -22,11 +22,11 @@ function Product({ product, addToCart, cart, listItems }) {
           },
         }}
       >
-        <section className="book-box">
+        <div className="detail-box">
           <ProductDetailImage product={product} />
-        </section>
         <ProductDetailCategory product={product} />
         <ProductDetailPrice product={product} />
+        </div>
         <div className="product-details">
           <ProductDetailBook product={product} />
           <ProductDetailAuthor product={product} />

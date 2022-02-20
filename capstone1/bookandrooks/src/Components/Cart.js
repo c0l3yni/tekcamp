@@ -31,8 +31,8 @@ function Cart({
     
   }
   return (
-    <div className="cart-details">
-      <div className="error-message-box">
+    <div>
+      <div>
         {showMessage && <div className="error-message"> {errorMsg} </div>}
       </div>
       <div className="cart-book-image-box">
@@ -46,7 +46,7 @@ function Cart({
           <button
             type="submit"
             value="remove"
-            className="add-item"
+            className="item-qty"
             onClick={() => removeFromCart(product)}
           >
             DEL

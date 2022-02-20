@@ -1,27 +1,32 @@
 .flex-box {
   display: flex;
   flex-direction: column;
+  background-color: var(--powder-pink);
+  padding-top: 10px;
+  padding-bottom: 20px;
+  margin: 30px 10px;
+  border: 2px solid var(--dark-blue);
 }
 
 .ship-pay-info {
-  font-size: 20px;
+  font-size: 30px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
   text-align: center;
-  padding: 10px;
+  line-height: 25px;
+  margin-top: 10px;
+  padding: 20px 30px;
+  align-items: center;
 }
 
 .text-input {
   display: flex;
   flex-direction: column;
+  font-family: Georgia, 'Times New Roman', Times, serif;
   width: 150px;
   height: 20px;
   border: 3px solid var(--grey);
   margin: 4px;
   padding: 2px;
-}
-.error-text {
-  color: red;
-  display: visible;
-  white-space: nowrap;
 }
 
 .input-row {  
@@ -35,31 +40,37 @@
   flex-direction: column;
   align-items: center;
 }
+
 .form-submit {
   display: flex;
   align-items: center;
   background-color: var(--white);
   border-radius: 50%;
-  width: 50px;
-  height: 50px;
+  width: 60px;
+  height: 60px;
   font-size: 10px;
   margin: 35px 0px 0px 10px;
 }
-.error {
-  font-size: 20px;
-  color: red;
-}
+
 .errormsg-flex-box {
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: space-between;
   padding-left: 10px;
 }
 
-.year-flex {
-
+.error-text {
+  color: red;
+  display: visible;
+  white-space: nowrap;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  padding-left: 2px;
+  padding-right: 10px;
+  padding-bottom: 2pxpx;
 }
 
-.ccv-flex {
-
+.thanks {
+  font-size: 30px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  text-align: center;
 }

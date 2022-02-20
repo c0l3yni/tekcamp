@@ -36,11 +36,13 @@
     height: 30px;
     font-size: 10px;
     margin: 35px 0px 0px 10px;
+ 
   }  
     .login {
       font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
       padding-left: 2px;
       padding-top: 6px;
+      text-decoration: none;
     }
 
     .cart {
@@ -53,4 +55,5 @@
     color: var(--white);
     margin-top: 40px;
     margin-right: 50px;
+    text-decoration: none;
   }
