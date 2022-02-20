@@ -1,5 +1,4 @@
 import React from "react";
-
 import ProductDetailImage from "./ProductDetailImage";
 import ProductDetailCategory from "./ProductDetailCategory";
 import ProductDetailPrice from "./ProductDetailPrice";

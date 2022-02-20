@@ -1,3 +1,4 @@
+import react from "react";
 import Product from "./Product";
 
 function ProductPage({ products, product, removeFromCart, cart, addToCart, minusFromCart }) {

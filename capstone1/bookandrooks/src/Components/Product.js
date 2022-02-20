@@ -1,3 +1,4 @@
+import react from "react";
 import { Link } from "react-router-dom";
 import "../CSS/product.css";
 import AddToCart from "./AddToCart";

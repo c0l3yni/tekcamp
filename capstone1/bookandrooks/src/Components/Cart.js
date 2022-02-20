@@ -1,4 +1,4 @@
-import { useState } from "react";
+import react, { useState } from "react";
 import "../CSS/cart.css";
 
 function Cart({

@@ -7,6 +7,7 @@ import { useState, useEffect } from "react";
 import Navbar from "./Components/Navbar";
 import SearchBar from "./Components/SearchBar";
 import SearchPage from "./Components/SearchPage";
+import CheckoutPage from "./Components/CheckoutPage";
 
 function App() {
   const [products, setProducts] = useState([]);
@@ -89,7 +90,12 @@ function App() {
           <Route
             path="/search/:input"
             element={
-              <SearchPage products={products} removeFromCart={removeFromCart} minusFromCart={minusFromCart} cart={cart} addToCart={addToCart} />
+              <SearchPage 
+              products={products} 
+              removeFromCart={removeFromCart} 
+              minusFromCart={minusFromCart} 
+              cart={cart} 
+              addToCart={addToCart} />
             }
           />
           <Route
@@ -100,6 +106,15 @@ function App() {
                 removeFromCart={removeFromCart}
                 addToCart={addToCart}
                 minusFromCart={minusFromCart}
+                cart={cart}
+              />
+            }
+          />
+          <Route
+            path="/checkout"
+            element={
+              <CheckoutPage
+                products={products}
                 cart={cart}
               />
             }

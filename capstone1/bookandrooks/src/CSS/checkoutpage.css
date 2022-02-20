@@ -1,0 +1,45 @@
+.flex-box {
+  display: flex;
+  flex-direction: column;
+}
+
+.ship-pay-info {
+  font-size: 20px;
+  text-align: center;
+  padding: 10px;
+}
+
+.text-input {
+  display: flex;
+  flex-direction: column;
+  border: 3px solid var(--grey);
+  margin: 4px;
+  padding: 2px;
+}
+.error-text {
+  color: red;
+  display: none;
+
+}
+
+.input-row {
+  display: flex;
+  flex-direction: row;
+}
+
+.button-flex-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.form-submit {
+  display: flex;
+  align-items: center;
+
+  background-color: var(--white);
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  font-size: 10px;
+  margin: 35px 0px 0px 10px;
+}
