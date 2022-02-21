@@ -1,11 +1,13 @@
+import React from "react";
+
 function ProductDetailPrice({ product }) {
   return (
     <div>
-    <section>
+      <section>
         <p className="price">${product.price}</p>
       </section>
       <br />
-      </div>
+    </div>
   );
 }
 export default ProductDetailPrice;

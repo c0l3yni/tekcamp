@@ -1,35 +1,30 @@
-import react, { useState } from "react";
+import React, { useState } from "react";
 import "../CSS/cart.css";
 
-function Cart({
-  product,
-  minusFromCart,
-  removeFromCart,
-  addToCart,
-}) {
+function Cart({ product, minusFromCart, removeFromCart, addToCart }) {
   const [showMessage, setShowMessage] = useState(false);
   const [errorMsg, setErrorMsg] = useState("");
   const handleAddToCart = function () {
     if (product.qtyInCart >= product.quantity) {
       setShowMessage(true);
-      setErrorMsg("Can not exceed in stock quantity.")
+      setErrorMsg("Can not exceed in stock quantity.");
     } else {
-      addToCart(product)
+      addToCart(product);
       setShowMessage(false);
     }
-  }
+  };
 
   const handleMinusFromCart = function () {
     if (product.qtyInCart === 1 && showMessage === false) {
       setShowMessage(true);
-      setErrorMsg("Are you sure you want to remove item from your cart?")
+      setErrorMsg("Are you sure you want to remove item from your cart?");
     } else {
       setShowMessage(false);
-      minusFromCart(product)
+      minusFromCart(product);
       setErrorMsg("");
     }
-    
-  }
+  };
+  
   return (
     <div className="cart-flex-top">
       <div>
@@ -38,9 +33,7 @@ function Cart({
       <div className="cart-book-image-box">
         <img className="cart-book-image" src={product?.image} alt="/" />
       </div>
-
       <div className="cart-title">{product?.book}</div>
-
       <div className="descriptive-numbers">
         <div className="cart-indiv-item-quantity">
           <button
@@ -51,7 +44,6 @@ function Cart({
           >
             DEL
           </button>
-
           <button
             className="item-qty"
             type="submit"
@@ -60,9 +52,7 @@ function Cart({
           >
             -
           </button>
-
           <div className="quantity-cart">{product?.qtyInCart}</div>
-
           <button
             className="item-qty"
             type="submit"

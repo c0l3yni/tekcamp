@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import "../CSS/searchbar.css";
-import react, { useState } from "react";
+import React, { useState } from "react";
 
 function SearchBar() {
   const [input, setInput] = useState("");
@@ -23,7 +23,12 @@ function SearchBar() {
         <div>
           <form onSubmit={onFormSubmit}>
             <label className="search-box">
-              <input className="search" placeholder="search..." type="text" onChange={onInputChange} />
+              <input
+                className="search"
+                placeholder="search..."
+                type="text"
+                onChange={onInputChange}
+              />
               <div className="search-button-flex">
                 <Link className="link" to={{ pathname: `/search/${input}` }}>
                   <button className="search-button" type="submit" value={input}>

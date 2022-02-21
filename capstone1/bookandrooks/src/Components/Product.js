@@ -1,4 +1,4 @@
-import react from "react";
+import React from "react";
 import { Link } from "react-router-dom";
 import "../CSS/product.css";
 import AddToCart from "./AddToCart";
@@ -24,13 +24,17 @@ function Product({ product, addToCart, cart, listItems }) {
       >
         <div className="detail-box">
           <ProductDetailImage product={product} />
-        <ProductDetailCategory product={product} />
-        <ProductDetailPrice product={product} />
+          <ProductDetailCategory product={product} />
+          <ProductDetailPrice product={product} />
         </div>
         <div className="product-details">
           <ProductDetailBook product={product} />
           <ProductDetailAuthor product={product} />
-          <ProductDetailQuantity product={product} cart={cart} addToCart={addToCart} />
+          <ProductDetailQuantity
+            product={product}
+            cart={cart}
+            addToCart={addToCart}
+          />
         </div>
       </Link>
       <AddToCart addToCart={addToCart} product={product} />

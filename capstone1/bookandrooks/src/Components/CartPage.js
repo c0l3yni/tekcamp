@@ -1,4 +1,4 @@
-import react, { useEffect, useState } from "react";
+import React from "react";
 import "../CSS/cartpage.css";
 import { Link } from "react-router-dom";
 import Cart from "./Cart";
@@ -36,13 +36,10 @@ function CartPage({
     <div className="detail-box">
       <div className="cart-and-order-box">
         <section>{cartItems}</section>
-
         <div className="order-summary-details">
           <div className="order-sum-title">Order Summary:</div>
-
           <div className="order-summary-flex">
             <div>Total Price: ${getTotal()} </div>
-            
             <div className="checkout-button-box">
               <Link to="/checkout">
                 <button className="checkout-button">Proceed to Checkout</button>

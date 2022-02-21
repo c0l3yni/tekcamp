@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React from "react";
 import "../CSS/checkoutpage.css";
 import FormSuccess from "./FormSuccess";
 import useForm from "./useForm";
@@ -34,10 +34,13 @@ function CheckoutForm({ submitFormInputs }) {
             ></input>
           </div>
           <section className="errormsg-flex-box">
-            {errors.firstname && (<div className="error-text">{errors.firstname}</div>)}
-            {errors.lastname && (<div className="error-text">{errors.lastname}</div>)}
+            {errors.firstname && (
+              <div className="error-text">{errors.firstname}</div>
+            )}
+            {errors.lastname && (
+              <div className="error-text">{errors.lastname}</div>
+            )}
           </section>
-
           <div className="input-row">
             <input
               type="text"
@@ -57,10 +60,11 @@ function CheckoutForm({ submitFormInputs }) {
             ></input>
           </div>
           <section className="errormsg-flex-box">
-            {errors.country && (<div className="error-text">{errors.country}</div>)}
+            {errors.country && (
+              <div className="error-text">{errors.country}</div>
+            )}
             {errors.states && <div className="error-text">{errors.states}</div>}
           </section>
-
           <div className="input-row">
             <input
               type="text"
@@ -83,7 +87,6 @@ function CheckoutForm({ submitFormInputs }) {
             {errors.city && <div className="error-text">{errors.city}</div>}
             {errors.zip && <div className="error-text">{errors.zip}</div>}
           </section>
-          
           <div className="input-row">
             <input
               type="text"
@@ -129,7 +132,9 @@ function CheckoutForm({ submitFormInputs }) {
           </div>
           <section className="errormsg-flex-box">
             {errors.month && <div className="error-text">{errors.month}</div>}
-            {errors.cardName && (<div className="error-text">{errors.cardName}</div>)}
+            {errors.cardName && (
+              <div className="error-text">{errors.cardName}</div>
+            )}
           </section>
 
           <div className="input-row">
@@ -154,7 +159,6 @@ function CheckoutForm({ submitFormInputs }) {
             {errors.year && <div className="error-text">{errors.year}</div>}
             {errors.ccv && <div className="error-text">{errors.ccv}</div>}
           </section>
-
           <div className="button-flex-box">
             <button
               className="form-submit"

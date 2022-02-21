@@ -1,4 +1,4 @@
-import react from "react";
+import React from "react";
 import { useParams } from "react-router-dom";
 import Product from "./Product";
 import "../CSS/searchpage.css";
@@ -10,12 +10,12 @@ function SearchPage({
   cart,
   addToCart,
 }) {
+  
   const { input } = useParams();
-
   function findBook() {
     let bookSearch = products?.products?.filter((product) =>
-      product.book.toLowerCase().includes(input.toLowerCase())
-    );
+      product.book.toLowerCase().includes(input.toLowerCase()));
+
     const bookList = bookSearch.map((product) => (
       <Product
         key={product.book}
@@ -31,10 +31,11 @@ function SearchPage({
     }
     return bookList;
   }
+
   function findAuth() {
     let authorSearch = products?.products?.filter((product) =>
-      product.author.toLowerCase().includes(input.toLowerCase())
-    );
+      product.author.toLowerCase().includes(input.toLowerCase()));
+
     const authList = authorSearch.map((product) => (
       <Product
         key={product.book}
@@ -50,10 +51,11 @@ function SearchPage({
     }
     return authList;
   }
+
   function findCategory() {
     let categorySearch = products?.products?.filter((product) =>
-      product.category.toLowerCase().includes(input.toLowerCase())
-    );
+      product.category.toLowerCase().includes(input.toLowerCase()));
+
     const categoryList = categorySearch.map((product) => (
       <Product
         key={product.book}
@@ -106,19 +108,18 @@ function SearchPage({
       </div>
       <div>
         {findCategory() ? (
-        <div>
-          <h3 className="item-available">
-            Products containing search in Category
+          <div>
+            <h3 className="item-available">
+              Products containing search in Category
+            </h3>
+            {findCategory()}
+          </div>
+        ) : (
+          <h3 className="item-unavailable">
+            Could not find any books with "{input}" in the category.
           </h3>
-          {findCategory()}
-        </div>
-      ) : (
-        <h3 className="item-unavailable">
-          Could not find any books with "{input}" in the category.
-        </h3>
-      )}
+        )}
       </div>
-      
     </div>
   );
 }

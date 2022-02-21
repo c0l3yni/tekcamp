@@ -7,9 +7,9 @@ const CheckoutPage = () => {
   const [isSubmitted, setIsSubmitted] = useState(false);
 
   const submitFormInputs = useCallback(() => {
-    setIsSubmitted(true)
-  }, [setIsSubmitted])
-  
+    setIsSubmitted(true);
+  }, [setIsSubmitted]);
+
   return (
     <div>
       {!isSubmitted ? (

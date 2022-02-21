@@ -34,30 +34,38 @@ const useForm = ({ callback }) => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-     if(values.firstname === "") {
-        setErrors({...errors, firstname: "First Name is required"});
-     } else if (values.lastname === "") {
-       setErrors({...errors, lastname:"Last Name is required"});
-     } else if (values.country === "") {
-       setErrors({...errors, country: "Country is required"})
-     } else if(values.states === "") {
-       setErrors({...errors, states: "State is required"})
-     } else if (values.city === "") {
-       setErrors({...errors, city: "City is required"})
-     } else if (values.zip === "" || values.zip.length != 5 || isNaN(values.zip)) {
-       setErrors({...errors, zip: "Zipcode is required (5 digits)"})
-     } else if (values.phone === "" || values.phone.length != 10 || isNaN(values.phone)) {
-      setErrors({...errors, phone: "Phone Number is required (10 digits)"})
+    if (values.firstname === "") {
+      setErrors({ ...errors, firstname: "First Name is required" });
+    } else if (values.lastname === "") {
+      setErrors({ ...errors, lastname: "Last Name is required" });
+    } else if (values.country === "") {
+      setErrors({ ...errors, country: "Country is required" });
+    } else if (values.states === "") {
+      setErrors({ ...errors, states: "State is required" });
+    } else if (values.city === "") {
+      setErrors({ ...errors, city: "City is required" });
+    } else if (
+      values.zip === "" ||
+      values.zip.length !== 5 ||
+      isNaN(values.zip)
+    ) {
+      setErrors({ ...errors, zip: "Zipcode is required (5 digits)" });
+    } else if (
+      values.phone === "" ||
+      values.phone.length !== 10 ||
+      isNaN(values.phone)
+    ) {
+      setErrors({ ...errors, phone: "Phone Number is required (10 digits)" });
     } else if (values.cardNum === "") {
-      setErrors({...errors, cardNum: "Card Number is required"})
+      setErrors({ ...errors, cardNum: "Card Number is required" });
     } else if (values.cardName === "") {
-      setErrors({...errors, cardName: "Name on card is required"})
+      setErrors({ ...errors, cardName: "Name on card is required" });
     } else if (values.month === "") {
-      setErrors({...errors, month: "Month is required"})
+      setErrors({ ...errors, month: "Month is required" });
     } else if (values.year === "") {
-      setErrors({...errors, year: "Year is required"})
+      setErrors({ ...errors, year: "Year is required" });
     } else if (values.ccv === "") {
-      setErrors({...errors, ccv: "CCV is required"})
+      setErrors({ ...errors, ccv: "CCV is required" });
     } else {
       setValues({
         firstname: "",

@@ -10,7 +10,6 @@ import ProductDetailManufacturer from "./ProductDetailManufacturer";
 import AddToCart from "./AddToCart";
 import "../CSS/productdetailpage.css";
 
-
 function ProductDetail({ addToCart, cart, product }) {
   return (
     <div className="product-details">
