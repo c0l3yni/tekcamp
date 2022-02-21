@@ -50,8 +50,6 @@ function PrivateLogin({ products, setProducts }) {
     setNewProduct({ ...newProduct, [event.target.name]: event.target.value });
   }
 
-
-
 function searchInventory () {
   const productExist = products?.products?.find((x) => x.serialNum === newProduct.serialNum);
   console.log(productExist)
