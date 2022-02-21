@@ -5,7 +5,6 @@ import { Link } from "react-router-dom";
 function Navbar() {
   return (
     <div className="nav-flex">
-      <a className="menu" href="#menu"></a>
       <Link className="link" to="/">
         <div className="title-box">
           <h1 className="title">Books and Rooks</h1>

@@ -54,6 +54,7 @@ function PrivateLogin({ products, setProducts }) {
     prodList.products.push(newProduct);
     setProducts(prodList);
   }
+  
   return (
     <div>
       <div className="admin-box">
