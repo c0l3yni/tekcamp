@@ -11,6 +11,7 @@ import ProductDetailQuantity from "./ProductDetailQuantity";
 
 function Product({ product, addToCart, cart, listItems }) {
   return (
+
     <div className="product-detail-box">
       <section>{listItems}</section>
       <Link
@@ -27,6 +28,7 @@ function Product({ product, addToCart, cart, listItems }) {
           <ProductDetailCategory product={product} />
           <ProductDetailPrice product={product} />
         </div>
+        <div className="box-detail">
         <div className="product-details">
           <ProductDetailBook product={product} />
           <ProductDetailAuthor product={product} />
@@ -36,9 +38,11 @@ function Product({ product, addToCart, cart, listItems }) {
             addToCart={addToCart}
           />
         </div>
+        </div>
       </Link>
       <AddToCart addToCart={addToCart} product={product} />
     </div>
+
   );
 }
 export default Product;
