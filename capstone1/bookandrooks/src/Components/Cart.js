@@ -31,7 +31,7 @@ function Cart({
     
   }
   return (
-    <div>
+    <div className="cart-flex-top">
       <div>
         {showMessage && <div className="error-message"> {errorMsg} </div>}
       </div>

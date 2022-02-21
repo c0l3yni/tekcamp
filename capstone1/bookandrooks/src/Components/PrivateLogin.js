@@ -42,7 +42,6 @@ function PrivateLogin({ products, setProducts }) {
         </div>
         </div>
         <br />
-        <hr />
         </div>
       </div>
     ));

@@ -9,7 +9,7 @@ function CheckoutForm({ submitFormInputs }) {
 
   return (
     <div>
-      <section className="flex-box">
+      <section className="flex-box detail-box">
         <section className="ship-pay-info">
           <strong>Shipping and Payment Information</strong>
         </section>

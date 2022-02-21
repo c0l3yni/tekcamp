@@ -1,11 +1,17 @@
+.cart-flex {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
 .cart-and-order-box {
   display: flex;
   flex-direction: column;
+  justify-content: center;
 }
 .order-summary-details {
   display: flex;
   flex-direction: column;
-  justify-content: left;
   margin: 5px;
   color: white;
   letter-spacing: 2.5px;
@@ -29,4 +35,14 @@
 .checkout-button {
   padding: 10px;
   cursor: pointer;
+}
+
+@media only screen and (min-width:700px) {
+  .order-summary-details {
+    width: 700px;
+    align-items: center;
+    justify-content: center;
+   
+  }
+
 }

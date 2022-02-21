@@ -27,7 +27,7 @@ function SearchPage({
       />
     ));
     if (bookList.length === 0) {
-      return false
+      return false;
     }
     return bookList;
   }
@@ -46,7 +46,7 @@ function SearchPage({
       />
     ));
     if (authList.length === 0) {
-      return false
+      return false;
     }
     return authList;
   }
@@ -65,18 +65,60 @@ function SearchPage({
       />
     ));
     if (categoryList.length === 0) {
-      return false
+      return false;
     }
     return categoryList;
   }
 
-
   return (
-    <div>
-    
-      {findBook() ? (<div><h3 className="item-available">Products containing search in Book Title</h3>{findBook()}</div>) : <h3 className="item-unavailable">Could not find any books with {input} in the title.</h3>}
-      {findAuth() ? (<div><h3 className="item-available">Products containing search in Author</h3>{findAuth()}</div>) : <h3 className="item-unavailable">Could not find any books with {input} in the author.</h3>}
-      {findCategory() ? (<div><h3 className="item-available">Products containing search in Category</h3>{findCategory()}</div>) : <h3 className="item-unavailable">Could not find any books with {input} in the category.</h3>}
+    <div className="search-page">
+      <div>
+        {findBook() ? (
+          <div>
+            <div>
+              <h3 className="item-available">
+                Products containing search in Book Title
+              </h3>
+            </div>
+            <div>{findBook()}</div>
+          </div>
+        ) : (
+          <h3 className="item-unavailable">
+            Could not find any books with "{input}" in the title.
+          </h3>
+        )}
+      </div>
+      <div>
+        {findAuth() ? (
+          <div>
+            <div>
+              <h3 className="item-available">
+                Products containing search in Author
+              </h3>
+            </div>
+            <div>{findAuth()}</div>
+          </div>
+        ) : (
+          <h3 className="item-unavailable">
+            Could not find any books with "{input}" in the author.
+          </h3>
+        )}
+      </div>
+      <div>
+        {findCategory() ? (
+        <div>
+          <h3 className="item-available">
+            Products containing search in Category
+          </h3>
+          {findCategory()}
+        </div>
+      ) : (
+        <h3 className="item-unavailable">
+          Could not find any books with "{input}" in the category.
+        </h3>
+      )}
+      </div>
+      
     </div>
   );
 }

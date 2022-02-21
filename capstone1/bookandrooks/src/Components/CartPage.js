@@ -33,7 +33,7 @@ function CartPage({
   }
 
   return (
-    <div>
+    <div className="detail-box">
       <div className="cart-and-order-box">
         <section>{cartItems}</section>
 

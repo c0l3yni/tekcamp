@@ -6,7 +6,7 @@ function Navbar() {
   return (
     <div className="nav-flex">
       <a className="menu" href="#menu">
-        &#9776;
+       
       </a>
       <Link className="link" to="/">
         <div className="title-box">

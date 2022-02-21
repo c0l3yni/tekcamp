@@ -26,12 +26,20 @@
 }
 
 @media only screen and (min-width:680px) {
+  .search-page {
+    display:flex;
+    flex-direction: column;
+  }
+
+  .product-detail-box {
+    flex-direction: column;
+  }
   .item-available {
-    width: 650px;
+    width: 95%;
     height: 50px;
   }
   .item-unavailable {
-    width: 650px;
+    width: 95%;
     height: 50px;
   }
 }
