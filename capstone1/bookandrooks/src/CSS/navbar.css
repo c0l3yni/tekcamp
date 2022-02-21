@@ -28,6 +28,13 @@
     margin-right: 10px;
   }
 
+
+
+  .flex-left {
+    margin-right: 10px;
+  }
+
+  
   .button {
     display: flex;
     background-color: var(--white);
