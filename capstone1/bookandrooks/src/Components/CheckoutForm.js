@@ -1,6 +1,5 @@
 import React from "react";
 import "../CSS/checkoutpage.css";
-import FormSuccess from "./FormSuccess";
 import useForm from "./useForm";
 
 function CheckoutForm({ submitFormInputs }) {
@@ -167,7 +166,7 @@ function CheckoutForm({ submitFormInputs }) {
             >
               Submit Purchase
             </button>
-            {isSubmitting && <FormSuccess />}
+            {isSubmitting && <div className="thanks">Thank you for your purchase!</div>}
             {!isSubmitting && <h3>All fields are required</h3>}
           </div>
         </form>

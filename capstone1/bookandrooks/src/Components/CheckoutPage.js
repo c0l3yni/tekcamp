@@ -1,7 +1,6 @@
 import React, { useState, useCallback } from "react";
 import "../CSS/checkoutpage.css";
 import CheckoutForm from "./CheckoutForm";
-import FormSuccess from "./FormSuccess";
 
 const CheckoutPage = () => {
   const [isSubmitted, setIsSubmitted] = useState(false);
@@ -15,7 +14,7 @@ const CheckoutPage = () => {
       {!isSubmitted ? (
         <CheckoutForm submitFormInputs={submitFormInputs} />
       ) : (
-        <FormSuccess />
+        <div className="thanks">Thank you for your purchase!</div>
       )}
     </div>
   );

@@ -67,7 +67,7 @@ function editInventory () {
     let listWithoutBook={
       products: {}
     }
-     listWithoutBook.products = products?.products?.filter((x) => x.serialNum !== productExist.serialNum);
+    listWithoutBook.products = products?.products?.filter((x) => x.serialNum !== productExist.serialNum);
     listWithoutBook.products.push(newProduct);
     setProducts(listWithoutBook);
     console.log(listWithoutBook)
@@ -77,16 +77,7 @@ function editInventory () {
     prodList.products.push(newProduct);
     setProducts(prodList);
   }
-
-/* 
-1. check to see if the new prod exists in inventory
-2. if exist filter the book out of list
-3. concat editted book to filtered list
-4. set products to concatted list
-*/
-
 }
-
 
   return (
     <div>
