@@ -6,6 +6,10 @@ function CheckoutForm({ submitFormInputs }) {
   const { handleChange, values, handleSubmit, errors, isSubmitting } =
     useForm(submitFormInputs);
 
+    function clearCart() {
+      window.location.reload(false);
+    }
+
   return (
     <div>
       <section className="flex-box detail-box">
@@ -159,6 +163,7 @@ function CheckoutForm({ submitFormInputs }) {
             {errors.ccv && <div className="error-text">{errors.ccv}</div>}
           </section>
           <div className="button-flex-box">
+            <div>
             <button
               className="form-submit"
               onClick={handleSubmit}
@@ -166,6 +171,8 @@ function CheckoutForm({ submitFormInputs }) {
             >
               Submit Purchase
             </button>
+            <button className="form-submit" onClick={clearCart}>Click to Clear Cart</button>
+            </div>
             {isSubmitting && <div className="thanks">Thank you for your purchase!</div>}
             {!isSubmitting && <h3>All fields are required</h3>}
           </div>
