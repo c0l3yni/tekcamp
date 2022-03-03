@@ -1,12 +1,15 @@
 package com.teksystems.bootcamp.java_exercises.factorByTwo;
 
 public class PointerNode extends Node {
-  public PointerNode(){
-    int nodeOne = 2;
-    int nodeTwo = 4;
+  private final Node nodeOne;
+  private final Node nodeTwo;
+
+  public PointerNode(Node nodeOne, Node nodeTwo){
+    this.nodeOne = nodeOne;
+    this.nodeTwo = nodeTwo;
   }
 
   public int getCountOfTwos() {
-    sum of getCountOfTwos() from both nodes
+    return nodeOne.getCountOfTwos() + nodeTwo.getCountOfTwos();
   }
 }
