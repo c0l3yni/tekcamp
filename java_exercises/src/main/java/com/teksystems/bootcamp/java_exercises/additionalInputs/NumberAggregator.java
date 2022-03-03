@@ -8,12 +8,11 @@ public class NumberAggregator {
   public static void main(String[] args) {
 
     Scanner userNumber = new Scanner(System.in);
-    String input = "";
     int total = 0;
 
     while (true) {
       System.out.print("Enter a number: ");
-      
+
       try {
         int number = userNumber.nextInt();
         total = NumberAggregator.addNumber(number);
