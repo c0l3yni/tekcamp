@@ -3,11 +3,12 @@ import java.util.Scanner;
 
 public class NumberAggregator {
 
-  private static int total;
+  private int total;
 
   public static void main(String[] args) {
 
     Scanner userNumber = new Scanner(System.in);
+    NumberAggregator numberAggregator = new NumberAggregator();
     int total = 0;
 
     while (true) {
@@ -15,14 +16,14 @@ public class NumberAggregator {
 
       try {
         int number = userNumber.nextInt();
-        total = NumberAggregator.addNumber(number);
+        total = numberAggregator.addNumber(number);
       } catch (Exception e) {
         System.out.println("The sum equals " + total);
         break;
       }
     }
   }
-  public static int addNumber(int number) {
+  public int addNumber(int number) {
     total = total + number;
     return total;
   }
