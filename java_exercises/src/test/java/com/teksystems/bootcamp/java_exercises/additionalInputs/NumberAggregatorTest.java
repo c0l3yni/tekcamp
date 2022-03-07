@@ -9,6 +9,7 @@ public class NumberAggregatorTest {
 
   @Test
   public void testAddNumberZero() {
+
     Assert.assertEquals(new NumberAggregator().addNumber(0), 0);
   }
   @Test

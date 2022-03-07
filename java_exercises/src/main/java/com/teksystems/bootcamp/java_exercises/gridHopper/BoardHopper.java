@@ -8,6 +8,7 @@ public class BoardHopper {
     while(hopCounter < 100) {
       int targetX = board[location.getTargetY()][location.getTargetX()].getTargetX();
       int targetY = board[location.getTargetY()][location.getTargetX()].getTargetY();
+
       if (targetX == location.getTargetX() && targetY == location.getTargetY()) {
         return location;
       }

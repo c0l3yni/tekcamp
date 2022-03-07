@@ -4,7 +4,6 @@ public class ValueNode extends Node {
   private final int num;
 
   public ValueNode(int num) {
-
     this.num = num;
   }
 
