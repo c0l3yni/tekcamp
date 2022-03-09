@@ -34,6 +34,8 @@ were easily discoverable, and I think it's because I knew what the output should
 
 
 Resources:
+Abram and Dylan(you): helped wih exercise 3 and 4
+
 Exercise 1, Exercise 5, try catch statements:
 https://www.w3schools.com/java/java_try_catch.asp
 
