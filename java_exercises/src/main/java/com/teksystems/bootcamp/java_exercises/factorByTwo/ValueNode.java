@@ -1,6 +1,7 @@
 package com.teksystems.bootcamp.java_exercises.factorByTwo;
 
 public class ValueNode extends Node {
+
   private final int num;
 
   public ValueNode(int num) {
@@ -14,5 +15,4 @@ public class ValueNode extends Node {
       return 0;
     }
   }
-
 }

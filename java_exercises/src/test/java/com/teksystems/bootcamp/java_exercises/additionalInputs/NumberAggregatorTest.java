@@ -1,9 +1,6 @@
 package com.teksystems.bootcamp.java_exercises.additionalInputs;
-
 import org.testng.Assert;
 import org.testng.annotations.Test;
-
-import static org.testng.Assert.*;
 
 public class NumberAggregatorTest {
 

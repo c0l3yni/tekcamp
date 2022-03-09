@@ -13,7 +13,6 @@ public class Expression extends Term{
   
   @Override
   public double getValue() {
-    System.out.println(term1.getValue() + operation.getValue() + term2.getValue() + "=" +operation.calculate(term1.getValue(), term2.getValue()));
     return operation.calculate(term1.getValue(), term2.getValue());
   }
 }

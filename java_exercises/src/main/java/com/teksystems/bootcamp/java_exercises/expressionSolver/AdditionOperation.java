@@ -9,6 +9,7 @@ public class AdditionOperation extends Operation{
 
   @Override
   public String getValue() {
+
     return "+";
   }
 }

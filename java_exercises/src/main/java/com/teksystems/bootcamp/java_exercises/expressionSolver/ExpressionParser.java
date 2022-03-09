@@ -3,6 +3,7 @@ package com.teksystems.bootcamp.java_exercises.expressionSolver;
 public class ExpressionParser {
   public static Term parseExpression(String input) {
     Double d;
+    input = input.replaceAll(" ", "");
 
     try {
       d = Double.parseDouble(input);
