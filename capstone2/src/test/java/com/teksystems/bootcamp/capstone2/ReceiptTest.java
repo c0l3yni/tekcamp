@@ -8,15 +8,25 @@ public class ReceiptTest {
   @Test
   public void testGetValueIfTotalZeroReturnZero() {
     Receipt receipt = new Receipt();
-    double actual = receipt.getValue(0, 0);
+    double actual = receipt.getValue(0);
 
     Assert.assertEquals(actual, 0);
   }
-  @Test
-  public void testGetValue() {
-    Receipt receipt = new Receipt();
-    double actual = receipt.getValue(2, 2);
 
-    Assert.assertEquals(actual, 4);
+  @Test
+  public void testGetValueOfTwoPlusThreePlusOneReturnSix() {
+    Receipt receipt = new Receipt();
+    receipt.getValue(2);
+    receipt.getValue(3);
+
+    Assert.assertEquals(receipt.getValue(1), 6);
   }
+
+  @Test
+  public void testGetTaxTotalTaxTimesTwelveReturnPointNinetyNine() {
+    Receipt receipt = new Receipt();
+    double actual = receipt.getTaxTotal(12);
+    Assert.assertEquals(actual, .99);
+  }
+
 }
