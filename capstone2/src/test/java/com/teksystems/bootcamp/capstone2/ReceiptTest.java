@@ -1,5 +1,6 @@
 package com.teksystems.bootcamp.capstone2;
 
+import com.teksystems.bootcamp.capstone2.purchaseFood.Receipt;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
@@ -8,7 +9,7 @@ public class ReceiptTest {
   @Test
   public void testGetValueIfTotalZeroReturnZero() {
     Receipt receipt = new Receipt();
-    double actual = receipt.getValue(0);
+    double actual = receipt.receiptSubTotal(0);
 
     Assert.assertEquals(actual, 0);
   }
@@ -16,16 +17,16 @@ public class ReceiptTest {
   @Test
   public void testGetValueOfTwoPlusThreePlusOneReturnSix() {
     Receipt receipt = new Receipt();
-    receipt.getValue(2);
-    receipt.getValue(3);
+    receipt.receiptSubTotal(2);
+    receipt.receiptSubTotal(3);
 
-    Assert.assertEquals(receipt.getValue(1), 6);
+    Assert.assertEquals(receipt.receiptSubTotal(1), 6);
   }
 
   @Test
   public void testGetTaxTotalTaxTimesTwelveReturnPointNinetyNine() {
     Receipt receipt = new Receipt();
-    double actual = receipt.getTaxTotal(12);
+    double actual = receipt.receiptTaxTotal(12);
     Assert.assertEquals(actual, .99);
   }
 
