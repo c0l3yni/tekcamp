@@ -1,12 +1,11 @@
 package com.teksystems.bootcamp.capstone2.purchaseFood;
-
-import com.teksystems.bootcamp.capstone2.additionalToppings.Cheese;
+import com.teksystems.bootcamp.capstone2.additionalToppings.HardCheese;
 
 public class Receipt {
   private double subTotal;
   private double taxTotal;
-  Cheese cheese = new Cheese();
-  double number1 = cheese.getCost(3);
+  HardCheese hardCheese = new HardCheese();
+  double number1 = hardCheese.getCost();
 
   public double receiptSubTotal(double number1){
     subTotal = subTotal + number1;
@@ -14,7 +13,7 @@ public class Receipt {
   }
 
   public double receiptTaxTotal(double subTotal) {
-    taxTotal = subTotal * .0825;
+    taxTotal = subTotal + (subTotal * .0825);
     return taxTotal;
   }
 }
