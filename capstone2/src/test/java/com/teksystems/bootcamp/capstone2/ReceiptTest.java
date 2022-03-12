@@ -1,6 +1,6 @@
 package com.teksystems.bootcamp.capstone2;
 
-import com.teksystems.bootcamp.capstone2.purchaseFood.Receipt;
+import com.teksystems.bootcamp.capstone2.Checkout.Receipt;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 

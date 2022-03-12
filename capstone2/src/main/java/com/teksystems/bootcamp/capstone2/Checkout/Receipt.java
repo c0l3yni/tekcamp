@@ -1,5 +1,5 @@
-package com.teksystems.bootcamp.capstone2.purchaseFood;
-import com.teksystems.bootcamp.capstone2.additionalToppings.HardCheese;
+package com.teksystems.bootcamp.capstone2.Checkout;
+import com.teksystems.bootcamp.capstone2.Menu.Entree.HardCheese;
 
 public class Receipt {
   private double subTotal;

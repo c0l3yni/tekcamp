@@ -1,9 +1,16 @@
 package com.teksystems.bootcamp.capstone2;
-
-import com.teksystems.bootcamp.capstone2.additionalToppings.Cheese;
-import com.teksystems.bootcamp.capstone2.additionalToppings.HardCheese;
-import com.teksystems.bootcamp.capstone2.additionalToppings.SoftCheese;
-import com.teksystems.bootcamp.capstone2.purchaseFood.Receipt;
+import com.teksystems.bootcamp.capstone2.Menu.*;
+import com.teksystems.bootcamp.capstone2.Checkout.Receipt;
+import static com.teksystems.bootcamp.capstone2.Checkout.AddBriny.brinyMenu;
+import static com.teksystems.bootcamp.capstone2.Checkout.AddCrackers.crackerMenu;
+import static com.teksystems.bootcamp.capstone2.Checkout.AddDrink.drinkMenu;
+import static com.teksystems.bootcamp.capstone2.Checkout.AddFreshFruit.freshFruitMenu;
+import static com.teksystems.bootcamp.capstone2.Checkout.AddHardCheese.hardCheeseMenu;
+import static com.teksystems.bootcamp.capstone2.Checkout.AddMeat.meatMenu;
+import static com.teksystems.bootcamp.capstone2.Checkout.AddNuts.nutMenu;
+import static com.teksystems.bootcamp.capstone2.Checkout.AddSoftCheese.softCheeseMenu;
+import static com.teksystems.bootcamp.capstone2.Checkout.AddVegetable.vegetableMenu;
+import static com.teksystems.bootcamp.capstone2.Checkout.UserInput.getInput;
 import java.text.DecimalFormat;
 import java.util.Scanner;
 
@@ -11,10 +18,7 @@ public class Main {
 
   public static void main(String[] args) {
     Scanner scanner = new Scanner(System.in);
-
-
     System.out.print("Press 1 for meal menu or 2 for meal builder: ");
-
     if (scanner.nextDouble() == 1) {
       System.out.println("meal options");
     } else {
@@ -28,7 +32,6 @@ public class Main {
         switch (menuItem) {
           case 1:
             System.out.println("Entree Options: " + "Press 1 for cheese, 2 for meat, or 3 for crackers");
-
             menuItem = scanner.nextInt();
             switch (menuItem) {
               case 1:
@@ -40,94 +43,47 @@ public class Main {
                 }
                 break;
               case 2:
-                System.out.println("List of Meats will be a hashmap");
+                meatMenu();
                 break;
               case 3:
-                System.out.println("List of Crackers will be a hashmap");
+                crackerMenu();
                 break;
             }
             break;
           case 2:
-            System.out.println("Toppings");
-            scanner.nextInt();
+            System.out.println("no");
             break;
           case 3:
-            System.out.println("Sides");
-            scanner.nextInt();
-            break;
+            System.out.println("Side Options: " + "Press 1 for Nuts, 2 for Briny, 3 for Vegetables, or 4 for Fresh Fruit");
+            menuItem = scanner.nextInt();
+            switch (menuItem) {
+              case 1:
+                nutMenu();
+                break;
+              case 2:
+                brinyMenu();
+                break;
+              case 3:
+                vegetableMenu();
+                break;
+              case 4:
+                freshFruitMenu();
+                break;
+            }
           case 4:
-            System.out.println("Drinks");
-            scanner.nextInt();
+            drinkMenu();
             break;
         }
       }
     }
   }
-  private static int getInput(String question) {
-    Scanner scanner = new Scanner(System.in);
-    System.out.println(question);
-    return scanner.nextInt();
-  }
 
-
-  static Receipt receipt = new Receipt();
-  public static void hardCheeseMenu() {
-    int value = getInput("Which hard cheese would you like?" + HardCheese.findCheeseNumber());
-    createReceipt(new HardCheese());
-  }
-
-  public static void softCheeseMenu() {
-    int value = getInput("Which soft cheese would you like?" + SoftCheese.findCheeseNumber());
-    createReceipt(new SoftCheese());
-  }
-
-  public static void createReceipt(Cheese item) {
+  public static Receipt receipt = new Receipt();
+  public static void createReceipt(Menu item) {
     double addToCart = item.getCost();
     double subtotal = receipt.receiptSubTotal(addToCart);
     double taxTotal = receipt.receiptTaxTotal(subtotal);
     DecimalFormat df = new DecimalFormat("#.00");
-    System.out.println("Your current total is" + "$" + df.format(taxTotal));
+    System.out.println("Your current total is " + "$ " + df.format(taxTotal));
   }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*
-  int menuItem;
-      menuItem = scanner.nextInt();
-          switch (menuItem) {
-          case 0:
-
-          scanner.nextInt();
-          break;
-          case 1:
-          System.out.println("A la carte Menu: " + "Press 1 for entree, 2 for toppings, 3 for sides, or 4 for drinks");
-          scanner.nextInt();
-          break;
-          case 2:
-
-          scanner.nextInt();
-          break;
-          case 3:
-          System.out.println("Topping Options: " + "Press 1 for Dips, 2 for Chocolate, or 3 for Spreads");
-          scanner.nextInt();
-          break;
-          case 4:
-          System.out.println("Side Options: " + "Press 1 for Veggies, 2 for Nuts, 3 for Fresh Fruit, or 4 for Briny");
-          scanner.nextInt();
-          break;
-          case 5:
-          System.out.println("Drink Options: " + "Press 1 for Water, 2 for Sweet Tea, 3 for Unsweetened Tea, 4 for Iced Coffee, or 5 for Hot Coffee");
-          scanner.nextInt();
-          break;
-          }*/
