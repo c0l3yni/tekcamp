@@ -1,22 +1,12 @@
 package com.teksystems.bootcamp.capstone2;
 
+import com.teksystems.bootcamp.capstone2.Checkout.AddEntree.AddEntree;
 import com.teksystems.bootcamp.capstone2.Checkout.Receipt;
 import com.teksystems.bootcamp.capstone2.MenuItem.MenuItem;
 
 import java.text.DecimalFormat;
 import java.util.Scanner;
 
-import static com.teksystems.bootcamp.capstone2.Checkout.AddBriny.brinyMenu;
-import static com.teksystems.bootcamp.capstone2.Checkout.AddCrackers.crackerMenu;
-import static com.teksystems.bootcamp.capstone2.Checkout.AddDrink.drinkMenu;
-import static com.teksystems.bootcamp.capstone2.Checkout.AddFreshFruit.freshFruitMenu;
-import static com.teksystems.bootcamp.capstone2.Checkout.AddHardCheese.hardCheeseMenu;
-import static com.teksystems.bootcamp.capstone2.Checkout.AddMeat.meatMenu;
-import static com.teksystems.bootcamp.capstone2.Checkout.AddNuts.nutMenu;
-import static com.teksystems.bootcamp.capstone2.Checkout.AddSoftCheese.softCheeseMenu;
-import static com.teksystems.bootcamp.capstone2.Checkout.AddSpreads.spreadsMenu;
-import static com.teksystems.bootcamp.capstone2.Checkout.AddVegetable.vegetableMenu;
-import static com.teksystems.bootcamp.capstone2.Checkout.UserInput.getInput;
 
 public class Main {
 
@@ -33,10 +23,25 @@ public class Main {
         int menuItem;
         menuItem = scanner.nextInt();
 
-        if (menuItem == 5){
+        if (menuItem == 5) {
           break;
         }
 
+        switch (menuItem) {
+          case 1:
+            new AddEntree();
+            break;
+         /* case 2:
+            new AddTopping();
+            break;
+          case 3:
+            new AddSide();
+            break;
+          case 4:
+            new AddDrink();
+            break;*/
+        }
+/*
         switch (menuItem) {
           case 1:
             System.out.println("Entree Options: " + "Press 1 for cheese, 2 for meat, or 3 for crackers");
@@ -84,13 +89,14 @@ public class Main {
 
           case 4:
             drinkMenu();
-            break;
-        }
+            break;*/
       }
     }
   }
 
+
   public static Receipt receipt = new Receipt();
+
   public static void createReceipt(MenuItem item) {
     double addToCart = item.getCost();
     double subtotal = receipt.receiptSubTotal(addToCart);

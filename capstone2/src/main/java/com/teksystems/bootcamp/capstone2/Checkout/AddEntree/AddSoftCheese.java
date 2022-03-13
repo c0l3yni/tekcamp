@@ -1,4 +1,4 @@
-package com.teksystems.bootcamp.capstone2.Checkout;
+package com.teksystems.bootcamp.capstone2.Checkout.AddEntree;
 
 import com.teksystems.bootcamp.capstone2.MenuItem.Entree.SoftCheese;
 

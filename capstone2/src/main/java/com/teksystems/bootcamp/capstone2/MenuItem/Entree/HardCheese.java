@@ -5,7 +5,7 @@ import java.util.HashMap;
 import java.util.List;
 
 public class HardCheese extends Cheese {
-  private HardCheese(String name) {
+  protected HardCheese(String name) {
     super(name, 3.00);
   }
 
