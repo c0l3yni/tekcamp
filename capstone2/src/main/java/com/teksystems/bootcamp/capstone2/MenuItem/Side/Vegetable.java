@@ -1,14 +1,11 @@
-package com.teksystems.bootcamp.capstone2.Menu.Side;
-
-import com.teksystems.bootcamp.capstone2.Menu.Side.Side;
+package com.teksystems.bootcamp.capstone2.MenuItem.Side;
 
 import java.util.HashMap;
 
 public class Vegetable extends Side {
-  private double cost = .75;
-  @Override
-  public double getCost() {
-    return cost;
+
+  protected Vegetable(String name, double cost) {
+    super(name, cost);
   }
 
   public static HashMap<String, String> findVegetableNumber() {

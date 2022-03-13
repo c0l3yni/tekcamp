@@ -1,8 +1,8 @@
-package com.teksystems.bootcamp.capstone2.Menu;
+package com.teksystems.bootcamp.capstone2.MenuItem;
 
 import java.util.HashMap;
 
-public class Drink extends Menu{
+public class Drink extends MenuItem {
   private double cost = 2.15;
 
   @Override

@@ -1,5 +1,5 @@
 package com.teksystems.bootcamp.capstone2;
-import com.teksystems.bootcamp.capstone2.Menu.*;
+import com.teksystems.bootcamp.capstone2.MenuItem.*;
 import com.teksystems.bootcamp.capstone2.Checkout.Receipt;
 import static com.teksystems.bootcamp.capstone2.Checkout.AddBriny.brinyMenu;
 import static com.teksystems.bootcamp.capstone2.Checkout.AddCrackers.crackerMenu;
@@ -19,20 +19,25 @@ public class Main {
   public static void main(String[] args) {
     Scanner scanner = new Scanner(System.in);
     System.out.print("Press 1 for meal menu or 2 for meal builder: ");
+
     if (scanner.nextDouble() == 1) {
       System.out.println("meal options");
     } else {
+
       while (true) {
         System.out.println("Press 1 for entree, 2 for toppings, 3 for sides, 4 for drinks, or 5 to go back");
         int menuItem;
         menuItem = scanner.nextInt();
+
         if (menuItem == 5){
           break;
         }
+
         switch (menuItem) {
           case 1:
             System.out.println("Entree Options: " + "Press 1 for cheese, 2 for meat, or 3 for crackers");
             menuItem = scanner.nextInt();
+
             switch (menuItem) {
               case 1:
                 menuItem = getInput("Press 1 for Hard Cheese or 2 for Soft Cheeses");
@@ -50,6 +55,7 @@ public class Main {
                 break;
             }
             break;
+
           case 2:
             System.out.println("no");
             break;
@@ -70,6 +76,8 @@ public class Main {
                 freshFruitMenu();
                 break;
             }
+            break;
+
           case 4:
             drinkMenu();
             break;
@@ -79,7 +87,7 @@ public class Main {
   }
 
   public static Receipt receipt = new Receipt();
-  public static void createReceipt(Menu item) {
+  public static void createReceipt(MenuItem item) {
     double addToCart = item.getCost();
     double subtotal = receipt.receiptSubTotal(addToCart);
     double taxTotal = receipt.receiptTaxTotal(subtotal);

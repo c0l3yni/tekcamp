@@ -1,6 +1,6 @@
 package com.teksystems.bootcamp.capstone2.Checkout;
 
-import com.teksystems.bootcamp.capstone2.Menu.Drink;
+import com.teksystems.bootcamp.capstone2.MenuItem.Drink;
 
 import static com.teksystems.bootcamp.capstone2.Checkout.UserInput.getInput;
 import static com.teksystems.bootcamp.capstone2.Main.createReceipt;

@@ -1,12 +1,11 @@
-package com.teksystems.bootcamp.capstone2.Menu.Side;
+package com.teksystems.bootcamp.capstone2.MenuItem.Side;
 
 import java.util.HashMap;
 
 public class Nuts extends Side {
-private double cost = 1.50;
-  @Override
-  public double getCost() {
-    return cost;
+
+  protected Nuts(String name, double cost) {
+    super(name, cost);
   }
 
   public static HashMap<String, String> findNutNumber() {
