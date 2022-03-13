@@ -1,10 +1,9 @@
 package com.teksystems.bootcamp.capstone2.MenuItem.Entree;
-import com.teksystems.bootcamp.capstone2.MenuItem.MenuItem;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
-public abstract class Cheese extends MenuItem {
+public abstract class Cheese extends Entree {
 
   protected Cheese(String name, double cost) {
     super(name, cost);

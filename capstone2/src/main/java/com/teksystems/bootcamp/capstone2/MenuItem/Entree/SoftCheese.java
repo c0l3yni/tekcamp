@@ -4,16 +4,18 @@ import java.util.HashMap;
 import java.util.List;
 
 public class SoftCheese extends Cheese {
-  private SoftCheese(String name) {
+
+
+  public SoftCheese(String name) {
     super(name, 3.00);
   }
 
-  public static List<Cheese> softCheeseList() {
-    List<Cheese> softCheeses = new ArrayList<>();
+  public static List<SoftCheese> softCheeseList() {
+    List<SoftCheese> softCheeses = new ArrayList<>();
     softCheeses.add(new SoftCheese("Brie"));
-    softCheeses.add(new SoftCheese("Goat-Cheese"));
-    softCheeses.add(new SoftCheese("Havarti"));
+    softCheeses.add(new SoftCheese("Goat Cheese"));
     softCheeses.add(new SoftCheese("Bleu Cheese"));
+    softCheeses.add(new SoftCheese("Havarti"));
     return softCheeses;
   }
 

@@ -4,7 +4,11 @@ import java.util.HashMap;
 
 public class Vegetable extends Side {
 
-  protected Vegetable(String name, double cost) {
+  public Vegetable() {
+
+  }
+
+  public Vegetable(String name, double cost) {
     super(name, cost);
   }
 

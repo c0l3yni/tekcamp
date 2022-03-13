@@ -5,12 +5,12 @@ import java.util.HashMap;
 import java.util.List;
 
 public class HardCheese extends Cheese {
-  protected HardCheese(String name) {
+  public HardCheese(String name) {
     super(name, 3.00);
   }
 
-  public static List<Cheese> hardCheeseList() {
-    List<Cheese> cheeses = new ArrayList<>();
+  public static List<HardCheese> hardCheeseList() {
+    List<HardCheese> cheeses = new ArrayList<>();
     cheeses.add(new HardCheese("Manchego"));
     cheeses.add(new HardCheese("White-Cheddar"));
     cheeses.add(new HardCheese("Swiss"));
@@ -22,7 +22,6 @@ public class HardCheese extends Cheese {
     HashMap<String, String> findCheeseType = new HashMap<>();
     for (int i = 0; i < hardCheeseList().size(); i++) {
       findCheeseType.put(Integer.toString(i), hardCheeseList().get(i).getName());
-      return findCheeseType;
     }
     return findCheeseType;
   }

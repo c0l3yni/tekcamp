@@ -4,8 +4,12 @@ import java.util.HashMap;
 
 public class Nuts extends Side {
 
-  protected Nuts(String name, double cost) {
+  public Nuts(String name, double cost) {
     super(name, cost);
+  }
+
+  public Nuts() {
+
   }
 
   public static HashMap<String, String> findNutNumber() {

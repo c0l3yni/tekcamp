@@ -4,8 +4,12 @@ import java.util.HashMap;
 
 public class FreshFruit extends Side {
 
-  protected FreshFruit(String name, double cost) {
+  public FreshFruit(String name, double cost) {
     super(name, cost);
+  }
+
+  public FreshFruit() {
+
   }
 
   public static HashMap<String, String> findFreshFruitNumber() {

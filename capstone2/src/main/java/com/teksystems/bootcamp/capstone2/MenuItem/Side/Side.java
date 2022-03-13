@@ -8,4 +8,7 @@ public abstract class Side extends MenuItem {
     super(name, cost);
   }
 
+  public Side() {
+    super();
+  }
 }

@@ -4,8 +4,12 @@ import java.util.HashMap;
 
 public class Briny extends Side {
 
-  protected Briny(String name, double cost) {
+  public Briny(String name, double cost) {
     super(name, cost);
+  }
+
+  public Briny() {
+    super();
   }
 
   public static HashMap<String, String> findBrinyNumber() {

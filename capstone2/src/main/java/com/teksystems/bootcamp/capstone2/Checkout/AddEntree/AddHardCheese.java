@@ -1,11 +1,16 @@
 package com.teksystems.bootcamp.capstone2.Checkout.AddEntree;
 
 import com.teksystems.bootcamp.capstone2.MenuItem.Entree.HardCheese;
+import com.teksystems.bootcamp.capstone2.MenuItem.Entree.SoftCheese;
+
 import static com.teksystems.bootcamp.capstone2.Checkout.UserInput.getInput;
+import static com.teksystems.bootcamp.capstone2.Main.createReceipt;
 
 public class AddHardCheese {
-  public static void hardCheeseMenu() {
-    getInput("Which hard cheese would you like?" + HardCheese.findCheeseNumber());
-    /*createReceipt(new MenuItem()}*/
+  public AddHardCheese() {
+
+    int order = getInput("Which hard cheese would you like?" + HardCheese.findCheeseNumber());
+    HardCheese choice = HardCheese.hardCheeseList().get(order);
+    createReceipt(choice);
   }
 }

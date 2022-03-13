@@ -1,119 +1,85 @@
 package com.teksystems.bootcamp.capstone2;
-<<<<<<< HEAD
 
-import com.teksystems.bootcamp.capstone2.Checkout.AddEntree.AddEntree;
-import com.teksystems.bootcamp.capstone2.Checkout.Receipt;
+import com.teksystems.bootcamp.capstone2.Checkout.*;
+import com.teksystems.bootcamp.capstone2.Checkout.AddEntree.AddCrackers;
+import com.teksystems.bootcamp.capstone2.Checkout.AddEntree.AddHardCheese;
+import com.teksystems.bootcamp.capstone2.Checkout.AddEntree.AddMeat;
+import com.teksystems.bootcamp.capstone2.Checkout.AddEntree.AddSoftCheese;
 import com.teksystems.bootcamp.capstone2.MenuItem.MenuItem;
 
 import java.text.DecimalFormat;
 import java.util.Scanner;
 
-=======
-import com.teksystems.bootcamp.capstone2.MenuItem.*;
-import com.teksystems.bootcamp.capstone2.Checkout.Receipt;
-import static com.teksystems.bootcamp.capstone2.Checkout.AddBriny.brinyMenu;
-import static com.teksystems.bootcamp.capstone2.Checkout.AddCrackers.crackerMenu;
-import static com.teksystems.bootcamp.capstone2.Checkout.AddDrink.drinkMenu;
-import static com.teksystems.bootcamp.capstone2.Checkout.AddFreshFruit.freshFruitMenu;
-import static com.teksystems.bootcamp.capstone2.Checkout.AddHardCheese.hardCheeseMenu;
-import static com.teksystems.bootcamp.capstone2.Checkout.AddMeat.meatMenu;
-import static com.teksystems.bootcamp.capstone2.Checkout.AddNuts.nutMenu;
-import static com.teksystems.bootcamp.capstone2.Checkout.AddSoftCheese.softCheeseMenu;
-import static com.teksystems.bootcamp.capstone2.Checkout.AddVegetable.vegetableMenu;
 import static com.teksystems.bootcamp.capstone2.Checkout.UserInput.getInput;
-import java.text.DecimalFormat;
-import java.util.Scanner;
->>>>>>> test-revert
 
 public class Main {
 
   public static void main(String[] args) {
     Scanner scanner = new Scanner(System.in);
     System.out.print("Press 1 for meal menu or 2 for meal builder: ");
-
     if (scanner.nextDouble() == 1) {
       System.out.println("meal options");
     } else {
-
       while (true) {
         System.out.println("Press 1 for entree, 2 for toppings, 3 for sides, 4 for drinks, or 5 to go back");
         int menuItem;
         menuItem = scanner.nextInt();
-
-        if (menuItem == 5) {
+        if (menuItem == 5){
           break;
         }
-
-        switch (menuItem) {
-          case 1:
-            new AddEntree();
-            break;
-         /* case 2:
-            new AddTopping();
-            break;
-          case 3:
-            new AddSide();
-            break;
-          case 4:
-            new AddDrink();
-            break;*/
-        }
-/*
         switch (menuItem) {
           case 1:
             System.out.println("Entree Options: " + "Press 1 for cheese, 2 for meat, or 3 for crackers");
             menuItem = scanner.nextInt();
-
             switch (menuItem) {
               case 1:
                 menuItem = getInput("Press 1 for Hard Cheese or 2 for Soft Cheeses");
                 if (menuItem == 1) {
-                  hardCheeseMenu();
+                  new AddHardCheese();
                 } else {
-                  softCheeseMenu();
+                  new AddSoftCheese();
                 }
                 break;
               case 2:
-                meatMenu();
+                new AddMeat();
                 break;
               case 3:
-                crackerMenu();
+                new AddCrackers();
                 break;
             }
             break;
 
           case 2:
             System.out.println("no");
+            /*spreadsMenu();*/
             break;
           case 3:
             System.out.println("Side Options: " + "Press 1 for Nuts, 2 for Briny, 3 for Vegetables, or 4 for Fresh Fruit");
             menuItem = scanner.nextInt();
             switch (menuItem) {
               case 1:
-                nutMenu();
+                new AddNuts();
                 break;
               case 2:
-                brinyMenu();
+                new AddBriny();
                 break;
               case 3:
-                vegetableMenu();
+                new AddVegetable();
                 break;
               case 4:
-                freshFruitMenu();
+                new AddFreshFruit();
                 break;
             }
             break;
-
           case 4:
-            drinkMenu();
-            break;*/
+            new AddDrink();
+            break;
+        }
       }
     }
   }
 
-
   public static Receipt receipt = new Receipt();
-
   public static void createReceipt(MenuItem item) {
     double addToCart = item.getCost();
     double subtotal = receipt.receiptSubTotal(addToCart);
