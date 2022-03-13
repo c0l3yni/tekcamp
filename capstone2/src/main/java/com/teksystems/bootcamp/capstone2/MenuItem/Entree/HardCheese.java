@@ -22,7 +22,6 @@ public class HardCheese extends Cheese {
     HashMap<String, String> findCheeseType = new HashMap<>();
     for (int i = 0; i < hardCheeseList().size(); i++) {
       findCheeseType.put(Integer.toString(i), hardCheeseList().get(i).getName());
-      return findCheeseType;
     }
     return findCheeseType;
   }

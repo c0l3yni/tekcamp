@@ -1,23 +1,28 @@
 package com.teksystems.bootcamp.capstone2.MenuItem.Entree;
-
 import com.teksystems.bootcamp.capstone2.MenuItem.MenuItem;
-
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 
 public class Meat extends MenuItem {
-  private double cost = 5.00;
+  protected Meat(String name, double cost) {
+    super(name, cost);
+  }
 
-  @Override
-  public double getCost() {
-    return cost;
+  public static List<Meat> MeatList() {
+    List<Meat> meats = new ArrayList<>();
+    meats.add(new Meat("Salami", 4.50));
+    meats.add(new Meat("Prosciutto", 4.50));
+    meats.add(new Meat("Ham", 3.50));
+    meats.add(new Meat("Sopressata", 5.00));
+    return meats;
   }
 
   public static HashMap<String, String> findMeatNumber() {
     HashMap<String, String> findMeatType = new HashMap<>();
-    findMeatType.put("0", "Salami");
-    findMeatType.put("1", "Prosciutto");
-    findMeatType.put("2", "Ham");
-    findMeatType.put("3", "Sopressata");
+    for (int i = 0; i < MeatList().size(); i++) {
+      findMeatType.put(Integer.toString(i), MeatList().get(i).getName());
+    }
     return findMeatType;
   }
 }
