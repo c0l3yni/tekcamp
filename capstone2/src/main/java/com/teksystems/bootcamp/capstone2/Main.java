@@ -1,4 +1,5 @@
 package com.teksystems.bootcamp.capstone2;
+<<<<<<< HEAD
 
 import com.teksystems.bootcamp.capstone2.Checkout.AddEntree.AddEntree;
 import com.teksystems.bootcamp.capstone2.Checkout.Receipt;
@@ -7,6 +8,22 @@ import com.teksystems.bootcamp.capstone2.MenuItem.MenuItem;
 import java.text.DecimalFormat;
 import java.util.Scanner;
 
+=======
+import com.teksystems.bootcamp.capstone2.MenuItem.*;
+import com.teksystems.bootcamp.capstone2.Checkout.Receipt;
+import static com.teksystems.bootcamp.capstone2.Checkout.AddBriny.brinyMenu;
+import static com.teksystems.bootcamp.capstone2.Checkout.AddCrackers.crackerMenu;
+import static com.teksystems.bootcamp.capstone2.Checkout.AddDrink.drinkMenu;
+import static com.teksystems.bootcamp.capstone2.Checkout.AddFreshFruit.freshFruitMenu;
+import static com.teksystems.bootcamp.capstone2.Checkout.AddHardCheese.hardCheeseMenu;
+import static com.teksystems.bootcamp.capstone2.Checkout.AddMeat.meatMenu;
+import static com.teksystems.bootcamp.capstone2.Checkout.AddNuts.nutMenu;
+import static com.teksystems.bootcamp.capstone2.Checkout.AddSoftCheese.softCheeseMenu;
+import static com.teksystems.bootcamp.capstone2.Checkout.AddVegetable.vegetableMenu;
+import static com.teksystems.bootcamp.capstone2.Checkout.UserInput.getInput;
+import java.text.DecimalFormat;
+import java.util.Scanner;
+>>>>>>> test-revert
 
 public class Main {
 
@@ -66,7 +83,7 @@ public class Main {
             break;
 
           case 2:
-            spreadsMenu();
+            System.out.println("no");
             break;
           case 3:
             System.out.println("Side Options: " + "Press 1 for Nuts, 2 for Briny, 3 for Vegetables, or 4 for Fresh Fruit");
