@@ -2,6 +2,7 @@ package com.teksystems.bootcamp.capstone2.MenuItem.Entree;
 
 import com.teksystems.bootcamp.capstone2.MenuItem.MenuItem;
 
+import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -22,8 +23,9 @@ public class Crackers extends MenuItem {
 
   public static HashMap<String, String> findCrackers() {
     HashMap<String, String> findCrackerType = new HashMap<>();
+    DecimalFormat df = new DecimalFormat("#.00");
     for (int i = 0; i < crackerList().size(); i++){
-      findCrackerType.put(Integer.toString(i), crackerList().get(i).getName());
+      findCrackerType.put(Integer.toString(i), crackerList().get(i).getName() + " $" + df.format(crackerList().get(i).getCost()));
     }
     return findCrackerType;
   }

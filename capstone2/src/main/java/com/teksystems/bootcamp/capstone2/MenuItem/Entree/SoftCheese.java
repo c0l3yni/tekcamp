@@ -1,4 +1,5 @@
 package com.teksystems.bootcamp.capstone2.MenuItem.Entree;
+import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -21,8 +22,9 @@ public class SoftCheese extends Cheese {
 
   public static HashMap<String, String> findSoftCheese() {
     HashMap<String, String> findCheeseType = new HashMap<>();
+    DecimalFormat df = new DecimalFormat("#.00");
     for (int i = 0; i < softCheeseList().size(); i++){
-      findCheeseType.put(Integer.toString(i), softCheeseList().get(i).getName());
+      findCheeseType.put(Integer.toString(i), softCheeseList().get(i).getName() + " $" + df.format(softCheeseList().get(i).getCost()));
     }
     return findCheeseType;
   }

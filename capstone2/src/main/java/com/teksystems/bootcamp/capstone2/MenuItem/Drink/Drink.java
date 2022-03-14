@@ -2,6 +2,7 @@ package com.teksystems.bootcamp.capstone2.MenuItem.Drink;
 
 import com.teksystems.bootcamp.capstone2.MenuItem.MenuItem;
 
+import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -23,8 +24,9 @@ public class Drink extends MenuItem {
 
   public static HashMap<String, String> findDrink() {
     HashMap<String, String> findDrinkType = new HashMap<>();
+    DecimalFormat df = new DecimalFormat("#.00");
     for (int i = 0; i < drinkList().size(); i++){
-      findDrinkType.put(Integer.toString(i), drinkList().get(i).getName());
+      findDrinkType.put(Integer.toString(i), drinkList().get(i).getName() + " $" + df.format(drinkList().get(i).getCost()));
     }
     return findDrinkType;
   }

@@ -1,5 +1,6 @@
 package com.teksystems.bootcamp.capstone2.MenuItem.Side;
 
+import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -19,8 +20,9 @@ public class Vegetable extends Side {
 
   public static HashMap<String, String> findVegetableNumber() {
     HashMap<String, String> findVegetableType = new HashMap<>();
+    DecimalFormat df = new DecimalFormat("#.00");
     for (int i = 0; i < VegetableList().size(); i++) {
-      findVegetableType.put(Integer.toString(i), VegetableList().get(i).getName());
+      findVegetableType.put(Integer.toString(i), VegetableList().get(i).getName() + " $" + df.format(VegetableList().get(i).getCost()));
     }
     return findVegetableType;
   }

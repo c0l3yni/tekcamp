@@ -5,6 +5,8 @@ public class Receipt {
   private double subTotal;
   private double taxTotal;
 
+
+
   public double receiptSubTotal(double number1){
     subTotal = subTotal + number1;
     return subTotal;

@@ -1,5 +1,6 @@
 package com.teksystems.bootcamp.capstone2.MenuItem.Side;
 
+import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -22,8 +23,9 @@ public class Nut extends Side {
 
   public static HashMap<String, String> findNutNumber() {
     HashMap<String, String> findNutType = new HashMap<>();
+    DecimalFormat df = new DecimalFormat("#.00");
     for (int i = 0; i < nutList().size(); i++){
-      findNutType.put(Integer.toString(i), nutList().get(i).getName());
+      findNutType.put(Integer.toString(i), nutList().get(i).getName() + " $" + df.format(nutList().get(i).getCost()));
     }
     return findNutType;
   }

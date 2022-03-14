@@ -1,4 +1,6 @@
 package com.teksystems.bootcamp.capstone2.MenuItem.Topping;
+
+import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -19,8 +21,9 @@ public class Dip extends Topping{
 
   public static HashMap<String, String> findDips() {
     HashMap<String, String> findDipType = new HashMap<>();
+    DecimalFormat df = new DecimalFormat("#.00");
     for (int i = 0; i < dipList().size(); i++){
-      findDipType.put(Integer.toString(i), dipList().get(i).getName());
+      findDipType.put(Integer.toString(i), dipList().get(i).getName() + " $" + df.format(dipList().get(i).getCost()));
     }
     return findDipType;
   }

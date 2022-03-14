@@ -1,7 +1,6 @@
 package com.teksystems.bootcamp.capstone2.MenuItem.Entree;
 
-import com.teksystems.bootcamp.capstone2.MenuItem.MenuItem;
-
+import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -23,8 +22,9 @@ public class Meat extends Entree {
 
   public static HashMap<String, String> findMeatNumber() {
     HashMap<String, String> findMeatType = new HashMap<>();
+    DecimalFormat df = new DecimalFormat("#.00");
     for (int i = 0; i < meatList().size(); i++){
-      findMeatType.put(Integer.toString(i), meatList().get(i).getName());
+      findMeatType.put(Integer.toString(i), meatList().get(i).getName() + " $" + df.format(meatList().get(i).getCost()));
     }
     return findMeatType;
   }

@@ -1,7 +1,6 @@
 package com.teksystems.bootcamp.capstone2.MenuItem.Side;
 
-import com.teksystems.bootcamp.capstone2.MenuItem.Entree.SoftCheese;
-
+import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -24,8 +23,9 @@ public class FreshFruit extends Side {
 
   public static HashMap<String, String> findFreshFruitNumber() {
     HashMap<String, String> findFreshFruitType = new HashMap<>();
+    DecimalFormat df = new DecimalFormat("#.00");
     for (int i = 0; i < freshFruitList().size(); i++){
-      findFreshFruitType.put(Integer.toString(i), freshFruitList().get(i).getName());
+      findFreshFruitType.put(Integer.toString(i), freshFruitList().get(i).getName() + " $" + df.format(freshFruitList().get(i).getCost()));
     }
     return findFreshFruitType;
   }

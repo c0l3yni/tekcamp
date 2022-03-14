@@ -1,7 +1,6 @@
 package com.teksystems.bootcamp.capstone2.MenuItem.Side;
 
-import com.teksystems.bootcamp.capstone2.MenuItem.Entree.SoftCheese;
-
+import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -24,8 +23,9 @@ public class Briny extends Side {
 
   public static HashMap<String, String> findBrinyNumber() {
     HashMap<String, String> findBrinyType = new HashMap<>();
+    DecimalFormat df = new DecimalFormat("#.00");
     for (int i = 0; i < brinyList().size(); i++){
-      findBrinyType.put(Integer.toString(i), brinyList().get(i).getName());
+      findBrinyType.put(Integer.toString(i), brinyList().get(i).getName() + " $" + df.format(brinyList().get(i).getCost()));
     }
     return findBrinyType;
   }
