@@ -7,8 +7,4 @@ public abstract class Side extends MenuItem {
   protected Side(String name, double cost) {
     super(name, cost);
   }
-
-  public Side() {
-    super();
-  }
 }

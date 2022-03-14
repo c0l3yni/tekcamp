@@ -1,10 +1,15 @@
 package com.teksystems.bootcamp.capstone2;
 
 import com.teksystems.bootcamp.capstone2.Checkout.*;
+import com.teksystems.bootcamp.capstone2.Checkout.AddDrink.AddDrink;
 import com.teksystems.bootcamp.capstone2.Checkout.AddEntree.AddCrackers;
 import com.teksystems.bootcamp.capstone2.Checkout.AddEntree.AddHardCheese;
 import com.teksystems.bootcamp.capstone2.Checkout.AddEntree.AddMeat;
 import com.teksystems.bootcamp.capstone2.Checkout.AddEntree.AddSoftCheese;
+import com.teksystems.bootcamp.capstone2.Checkout.AddSide.AddBriny;
+import com.teksystems.bootcamp.capstone2.Checkout.AddSide.AddFreshFruit;
+import com.teksystems.bootcamp.capstone2.Checkout.AddSide.AddNuts;
+import com.teksystems.bootcamp.capstone2.Checkout.AddSide.AddVegetable;
 import com.teksystems.bootcamp.capstone2.MenuItem.MenuItem;
 
 import java.text.DecimalFormat;

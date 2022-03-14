@@ -1,4 +1,4 @@
-package com.teksystems.bootcamp.capstone2.Checkout;
+package com.teksystems.bootcamp.capstone2.Checkout.AddTopping;
 import static com.teksystems.bootcamp.capstone2.Checkout.UserInput.getInput;
 
 public class AddDips {
