@@ -10,6 +10,8 @@ import com.teksystems.bootcamp.capstone2.Checkout.AddSide.AddBriny;
 import com.teksystems.bootcamp.capstone2.Checkout.AddSide.AddFreshFruit;
 import com.teksystems.bootcamp.capstone2.Checkout.AddSide.AddNuts;
 import com.teksystems.bootcamp.capstone2.Checkout.AddSide.AddVegetable;
+import com.teksystems.bootcamp.capstone2.Checkout.AddTopping.AddDips;
+import com.teksystems.bootcamp.capstone2.Checkout.AddTopping.AddSpreads;
 import com.teksystems.bootcamp.capstone2.MenuItem.MenuItem;
 
 import java.text.DecimalFormat;
@@ -55,11 +57,13 @@ public class Main {
             break;
 
           case 2:
-            System.out.println("no");
-            /*spreadsMenu();*/
+            new AddDips();
             break;
           case 3:
-            System.out.println("Side Options: " + "Press 1 for Nuts, 2 for Briny, 3 for Vegetables, or 4 for Fresh Fruit");
+            new AddSpreads();
+            break;
+          case 4:
+            System.out.println("Side Options: " + "Press 1 for Nut, 2 for Briny, 3 for Vegetables, or 4 for Fresh Fruit");
             menuItem = scanner.nextInt();
             switch (menuItem) {
               case 1:
@@ -76,7 +80,7 @@ public class Main {
                 break;
             }
             break;
-          case 4:
+          case 5:
             new AddDrink();
             break;
         }

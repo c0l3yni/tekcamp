@@ -1,11 +1,12 @@
 package com.teksystems.bootcamp.capstone2.Checkout.AddTopping;
+import com.teksystems.bootcamp.capstone2.MenuItem.Topping.Dip;
 import static com.teksystems.bootcamp.capstone2.Checkout.UserInput.getInput;
+import static com.teksystems.bootcamp.capstone2.Main.createReceipt;
 
 public class AddDips {
-  public static void dipsMenu() {
-/*
-    getInput("Which kind of dip would you like?" + Dips.findDipsNumber());
-*/
-    /*    createReceipt(new Drink());*/
+  public AddDips() {
+    int order = getInput("Which dip would you like?" + Dip.findDips());
+    Dip choice = Dip.dipList().get(order);
+    createReceipt(choice);
   }
 }
