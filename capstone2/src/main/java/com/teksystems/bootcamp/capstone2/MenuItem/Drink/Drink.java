@@ -1,15 +1,12 @@
-package com.teksystems.bootcamp.capstone2.MenuItem;
+package com.teksystems.bootcamp.capstone2.MenuItem.Drink;
 
-import com.teksystems.bootcamp.capstone2.MenuItem.Entree.Entree;
-import com.teksystems.bootcamp.capstone2.MenuItem.Entree.SoftCheese;
+import com.teksystems.bootcamp.capstone2.MenuItem.MenuItem;
 
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
 public class Drink extends MenuItem {
-
-
   public Drink(String name, double cost) {
     super(name, cost);
   }

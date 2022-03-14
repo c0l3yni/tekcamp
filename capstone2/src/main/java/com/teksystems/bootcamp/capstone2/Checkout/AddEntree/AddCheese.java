@@ -1,13 +1,13 @@
 package com.teksystems.bootcamp.capstone2.Checkout.AddEntree;
-
-import com.teksystems.bootcamp.capstone2.MenuItem.Entree.Cheese;
-
 import static com.teksystems.bootcamp.capstone2.Checkout.UserInput.getInput;
 
 public class AddCheese {
-
   public AddCheese() {
-    int value = getInput("Which type of cheese would you like?" + Cheese.findCheeseNumber());
-
+    int menuItem = getInput("Press 1 for Hard Cheese or 2 for Soft Cheeses");
+    if (menuItem == 1) {
+      new AddHardCheese();
+    } else {
+      new AddSoftCheese();
+    }
   }
 }

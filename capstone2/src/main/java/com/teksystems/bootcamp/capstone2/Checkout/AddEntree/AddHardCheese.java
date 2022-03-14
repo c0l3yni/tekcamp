@@ -1,8 +1,5 @@
 package com.teksystems.bootcamp.capstone2.Checkout.AddEntree;
-
 import com.teksystems.bootcamp.capstone2.MenuItem.Entree.HardCheese;
-import com.teksystems.bootcamp.capstone2.MenuItem.Entree.SoftCheese;
-
 import static com.teksystems.bootcamp.capstone2.Checkout.UserInput.getInput;
 import static com.teksystems.bootcamp.capstone2.Main.createReceipt;
 

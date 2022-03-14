@@ -1,11 +1,8 @@
 package com.teksystems.bootcamp.capstone2.MenuItem.Entree;
-
 import com.teksystems.bootcamp.capstone2.MenuItem.MenuItem;
-
 import java.util.HashMap;
 
 public class Entree extends MenuItem {
-
   public Entree(String name, double cost) {
     super(name, cost);
   }

@@ -1,9 +1,6 @@
 package com.teksystems.bootcamp.capstone2.Checkout.AddEntree;
 import com.teksystems.bootcamp.capstone2.MenuItem.Entree.Entree;
 import static com.teksystems.bootcamp.capstone2.Checkout.UserInput.getInput;
-/*
-import static com.teksystems.bootcamp.capstone2.Main.createReceipt;
-*/
 
 public class AddEntree {
   public AddEntree() {
@@ -19,7 +16,5 @@ public class AddEntree {
         new AddCrackers();
         break;
     }
-/*        createReceipt(new Entree());*/
   }
-
 }
