@@ -4,7 +4,7 @@ import static com.teksystems.bootcamp.capstone2.Checkout.UserInput.getInput;
 
 public class AddSide {
   public AddSide() {
-    int value = getInput("Which kind of side would you like?" + Side.findSideNumber());
+    int value = getInput("Which kind of side would you like?", Side.findMenuOption());
     switch (value) {
       case 1:
         new AddNuts();

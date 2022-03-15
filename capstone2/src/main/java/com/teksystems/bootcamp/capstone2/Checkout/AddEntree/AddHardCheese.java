@@ -6,7 +6,7 @@ import static com.teksystems.bootcamp.capstone2.Main.createReceipt;
 public class AddHardCheese {
   public AddHardCheese() {
 
-    int order = getInput("Which hard cheese would you like?" + HardCheese.findCheeseNumber());
+    int order = getInput("Which hard cheese would you like?", HardCheese.findMenuOption());
     HardCheese choice = HardCheese.hardCheeseList().get(order);
     createReceipt(choice);
   }

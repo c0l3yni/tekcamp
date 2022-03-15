@@ -7,7 +7,7 @@ public class Entree extends MenuItem {
     super(name, cost);
   }
 
-  public static HashMap<String, String> findEntreeNumber() {
+  public static HashMap<String, String> findMenuOption() {
   HashMap<String, String> entreeMap = new HashMap<>();
     entreeMap.put("0", "Cheeses");
     entreeMap.put("1", "Meats");

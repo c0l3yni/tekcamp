@@ -20,7 +20,7 @@ public class Meat extends Entree {
     return meats;
   }
 
-  public static HashMap<String, String> findMeatNumber() {
+  public static HashMap<String, String> findMenuOption() {
     HashMap<String, String> findMeatType = new HashMap<>();
     DecimalFormat df = new DecimalFormat("#.00");
     for (int i = 0; i < meatList().size(); i++){

@@ -20,7 +20,7 @@ public class SoftCheese extends Cheese {
     return softCheeses;
   }
 
-  public static HashMap<String, String> findSoftCheese() {
+  public static HashMap<String, String> findMenuOption() {
     HashMap<String, String> findCheeseType = new HashMap<>();
     DecimalFormat df = new DecimalFormat("#.00");
     for (int i = 0; i < softCheeseList().size(); i++){

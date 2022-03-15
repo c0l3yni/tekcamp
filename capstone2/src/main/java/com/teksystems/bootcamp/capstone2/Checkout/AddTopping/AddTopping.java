@@ -5,7 +5,7 @@ import static com.teksystems.bootcamp.capstone2.Checkout.UserInput.getInput;
 
 public class AddTopping {
   public AddTopping() {
-    int value = getInput("Which kind of topping would you like?" + Topping.findToppingNumber());
+    int value = getInput("Which kind of topping would you like?", Topping.findMenuOption());
     switch (value) {
       case 1:
         new AddDips();

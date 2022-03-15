@@ -6,7 +6,7 @@ import static com.teksystems.bootcamp.capstone2.Main.createReceipt;
 
 public class AddNuts {
   public AddNuts() {
-    int order = getInput("What kind of nuts would you like?" + Nut.findNutNumber());
+    int order = getInput("What kind of nuts would you like?", Nut.findMenuOption());
     Nut choice = Nut.nutList().get(order);
     createReceipt(choice);
   }

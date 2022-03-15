@@ -19,7 +19,7 @@ public class HardCheese extends Cheese {
     return cheeses;
   }
 
-  public static HashMap<String, String> findCheeseNumber() {
+  public static HashMap<String, String> findMenuOption() {
     HashMap<String, String> findCheeseType = new HashMap<>();
     DecimalFormat df = new DecimalFormat("#.00");
     for (int i = 0; i < hardCheeseList().size(); i++) {

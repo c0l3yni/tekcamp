@@ -9,7 +9,7 @@ public class Topping extends MenuItem {
     super(name, cost);
   }
 
-  public static HashMap<String, String> findToppingNumber() {
+  public static HashMap<String, String> findMenuOption() {
     HashMap<String, String> toppingMap = new HashMap<>();
     toppingMap.put("0", "Dips");
     toppingMap.put("1", "Spreads");

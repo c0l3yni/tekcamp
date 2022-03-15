@@ -21,7 +21,7 @@ public class FreshFruit extends Side {
     return freshFruit;
   }
 
-  public static HashMap<String, String> findFreshFruitNumber() {
+  public static HashMap<String, String> findMenuOption() {
     HashMap<String, String> findFreshFruitType = new HashMap<>();
     DecimalFormat df = new DecimalFormat("#.00");
     for (int i = 0; i < freshFruitList().size(); i++){

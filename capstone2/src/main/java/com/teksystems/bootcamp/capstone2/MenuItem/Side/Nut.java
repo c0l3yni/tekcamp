@@ -21,7 +21,7 @@ public class Nut extends Side {
     return nuts;
   }
 
-  public static HashMap<String, String> findNutNumber() {
+  public static HashMap<String, String> findMenuOption() {
     HashMap<String, String> findNutType = new HashMap<>();
     DecimalFormat df = new DecimalFormat("#.00");
     for (int i = 0; i < nutList().size(); i++){

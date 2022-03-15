@@ -22,7 +22,7 @@ public class Drink extends MenuItem {
     return drinks;
   }
 
-  public static HashMap<String, String> findDrink() {
+  public static HashMap<String, String> findMenuOption() {
     HashMap<String, String> findDrinkType = new HashMap<>();
     DecimalFormat df = new DecimalFormat("#.00");
     for (int i = 0; i < drinkList().size(); i++){

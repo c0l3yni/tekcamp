@@ -21,7 +21,7 @@ public class Spread extends Topping{
     return spreads;
   }
 
-  public static HashMap<String, String> findSpreadsNumber() {
+  public static HashMap<String, String> findMenuOption() {
     HashMap<String, String> findSpreadType = new HashMap<>();
     DecimalFormat df = new DecimalFormat("#.00");
     for (int i = 0; i < SpreadsList().size(); i++) {

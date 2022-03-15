@@ -21,7 +21,7 @@ public class Briny extends Side {
     return brinys;
   }
 
-  public static HashMap<String, String> findBrinyNumber() {
+  public static HashMap<String, String> findMenuOption() {
     HashMap<String, String> findBrinyType = new HashMap<>();
     DecimalFormat df = new DecimalFormat("#.00");
     for (int i = 0; i < brinyList().size(); i++){

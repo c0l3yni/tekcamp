@@ -7,7 +7,7 @@ public abstract class Side extends MenuItem {
     super(name, cost);
   }
 
-  public static HashMap<String, String> findSideNumber() {
+  public static HashMap<String, String> findMenuOption() {
     HashMap<String, String> sideMap = new HashMap<>();
     sideMap.put("0", "Briny");
     sideMap.put("1", "Nuts");

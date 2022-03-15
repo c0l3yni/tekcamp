@@ -19,7 +19,7 @@ public class Dip extends Topping{
     return dips;
   }
 
-  public static HashMap<String, String> findDips() {
+  public static HashMap<String, String> findMenuOption() {
     HashMap<String, String> findDipType = new HashMap<>();
     DecimalFormat df = new DecimalFormat("#.00");
     for (int i = 0; i < dipList().size(); i++){

@@ -5,7 +5,7 @@ import static com.teksystems.bootcamp.capstone2.Main.createReceipt;
 
 public class AddBriny {
   public AddBriny() {
-    int order = getInput("Which savory side would you like?" + Briny.findBrinyNumber());
+    int order = getInput("Which savory side would you like?", Briny.findMenuOption());
     Briny choice = Briny.brinyList().get(order);
     createReceipt(choice);
   }

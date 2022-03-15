@@ -18,7 +18,7 @@ public class Vegetable extends Side {
     return vegetables;
   }
 
-  public static HashMap<String, String> findVegetableNumber() {
+  public static HashMap<String, String> findMenuOption() {
     HashMap<String, String> findVegetableType = new HashMap<>();
     DecimalFormat df = new DecimalFormat("#.00");
     for (int i = 0; i < VegetableList().size(); i++) {

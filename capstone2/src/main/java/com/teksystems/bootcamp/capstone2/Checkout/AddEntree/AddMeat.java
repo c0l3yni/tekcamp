@@ -8,7 +8,7 @@ import static com.teksystems.bootcamp.capstone2.Main.createReceipt;
 
 public class AddMeat {
   public AddMeat() {
-    int order = getInput("Which meat would you like?" + Meat.findMeatNumber());
+    int order = getInput("Which meat would you like?", Meat.findMenuOption());
     Meat choice = Meat.meatList().get(order);
     createReceipt(choice);
   }
