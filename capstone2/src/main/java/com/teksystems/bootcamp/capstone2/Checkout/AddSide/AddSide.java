@@ -6,17 +6,17 @@ public class AddSide {
   public AddSide() {
     int value = getInput("Which kind of side would you like?", Side.findMenuOption());
     switch (value) {
+      case 0:
+        new AddBriny();
+        break;
       case 1:
         new AddNuts();
         break;
       case 2:
-        new AddBriny();
+        new AddFreshFruit();
         break;
       case 3:
         new AddVegetable();
-        break;
-      case 4:
-        new AddFreshFruit();
         break;
     }
   }

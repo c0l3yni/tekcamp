@@ -8,7 +8,7 @@ import java.util.List;
 public class Spread extends Topping{
 
 
-  protected Spread(String name, double cost) {
+  public Spread(String name, double cost) {
     super(name, cost);
   }
 

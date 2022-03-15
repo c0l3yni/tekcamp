@@ -9,9 +9,9 @@ public class Entree extends MenuItem {
 
   public static HashMap<String, String> findMenuOption() {
   HashMap<String, String> entreeMap = new HashMap<>();
-    entreeMap.put("0", "Cheeses");
-    entreeMap.put("1", "Meats");
-    entreeMap.put("2", "Crackers");
+    entreeMap.put("1", "Cheeses");
+    entreeMap.put("2", "Meats");
+    entreeMap.put("3", "Crackers");
     return entreeMap;
   }
 }

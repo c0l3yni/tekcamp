@@ -7,10 +7,10 @@ public class AddTopping {
   public AddTopping() {
     int value = getInput("Which kind of topping would you like?", Topping.findMenuOption());
     switch (value) {
-      case 1:
+      case 0:
         new AddDips();
         break;
-      case 2:
+      case 1:
         new AddSpreads();
         break;
     }

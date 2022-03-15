@@ -6,7 +6,7 @@ import java.util.HashMap;
 import java.util.List;
 
 public class Dip extends Topping{
-  protected Dip(String name, double cost) {
+  public Dip(String name, double cost) {
     super(name, cost);
   }
 
