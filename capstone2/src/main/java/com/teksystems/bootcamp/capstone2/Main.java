@@ -1,20 +1,16 @@
 package com.teksystems.bootcamp.capstone2;
 
-import com.teksystems.bootcamp.capstone2.Checkout.*;
-import com.teksystems.bootcamp.capstone2.Checkout.AddCombo.AddCombo;
-import com.teksystems.bootcamp.capstone2.Checkout.AddDrink.AddDrink;
-import com.teksystems.bootcamp.capstone2.Checkout.AddEntree.*;
-import com.teksystems.bootcamp.capstone2.Checkout.AddSide.*;
-import com.teksystems.bootcamp.capstone2.Checkout.AddTopping.AddDips;
-import com.teksystems.bootcamp.capstone2.Checkout.AddTopping.AddSpreads;
-import com.teksystems.bootcamp.capstone2.Checkout.AddTopping.AddTopping;
+import com.teksystems.bootcamp.capstone2.AddToOrder.AddCombo.AddCombo;
+import com.teksystems.bootcamp.capstone2.AddToOrder.AddDrink.AddDrink;
+import com.teksystems.bootcamp.capstone2.AddToOrder.AddEntree.*;
+import com.teksystems.bootcamp.capstone2.AddToOrder.AddSide.*;
+import com.teksystems.bootcamp.capstone2.AddToOrder.AddTopping.AddTopping;
+import com.teksystems.bootcamp.capstone2.Receipt.OrderHistory;
+import com.teksystems.bootcamp.capstone2.Receipt.Receipt;
 import com.teksystems.bootcamp.capstone2.MenuItem.MenuItem;
 
-import javax.security.auth.login.CredentialException;
 import java.text.DecimalFormat;
 import java.util.*;
-
-import static com.teksystems.bootcamp.capstone2.Checkout.UserInput.getInput;
 
 public class Main {
   public static DecimalFormat df = new DecimalFormat("#.00");
