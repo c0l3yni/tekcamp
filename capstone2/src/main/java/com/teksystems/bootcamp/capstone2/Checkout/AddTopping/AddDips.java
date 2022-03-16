@@ -6,7 +6,7 @@ import static com.teksystems.bootcamp.capstone2.Main.createReceipt;
 public class AddDips {
   public AddDips() {
     int order = getInput("Which dip would you like?", Dip.findMenuOption());
-    Dip choice = Dip.dipList().get(order);
+    Dip choice = Dip.dipList().get(order-1);
     createReceipt(choice);
   }
 }

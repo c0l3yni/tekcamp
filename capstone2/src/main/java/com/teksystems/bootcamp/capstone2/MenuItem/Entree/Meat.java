@@ -24,7 +24,7 @@ public class Meat extends Entree {
     HashMap<String, String> findMeatType = new HashMap<>();
     DecimalFormat df = new DecimalFormat("#.00");
     for (int i = 0; i < meatList().size(); i++){
-      findMeatType.put(Integer.toString(i), meatList().get(i).getName() + " $" + df.format(meatList().get(i).getCost()));
+      findMeatType.put(Integer.toString(i+1), meatList().get(i).getName() + " $" + df.format(meatList().get(i).getCost()));
     }
     return findMeatType;
   }

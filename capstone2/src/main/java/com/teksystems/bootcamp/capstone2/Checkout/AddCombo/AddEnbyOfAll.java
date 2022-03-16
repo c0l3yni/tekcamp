@@ -15,11 +15,12 @@ public class AddEnbyOfAll {
   EnbyOfAllCombo combo = new EnbyOfAllCombo();
 
   public AddEnbyOfAll() {
+
     boolean continueFlag = true;
     while (continueFlag) {
       System.out.println("Enby of All comes with: ");
-      int userInput = getInput("Press 0 to customize or 1  to add to order", EnbyOfAllCombo.findMenuOption());
-      if (userInput == 0) {
+      int userInput = getInput("Press 1 to customize or 2 to add to order", combo.findMenuOption2());
+      if (userInput == 1) {
         int newInput = getInput("Here are your customization options", EnbyOfAllCombo.findComboOption());
         switch (newInput) {
           case 0:
@@ -71,8 +72,11 @@ public class AddEnbyOfAll {
             combo.setVeg1(veg1);
             break;
         }
-      }   createReceipt(new EnbyOfAllCombo());
+      } else {
+        continueFlag = false;
+      }
     }
+    createReceipt(new EnbyOfAllCombo());
 
   }
 }

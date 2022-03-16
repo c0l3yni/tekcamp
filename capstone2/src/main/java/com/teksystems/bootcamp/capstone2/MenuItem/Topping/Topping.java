@@ -11,8 +11,8 @@ public class Topping extends MenuItem {
 
   public static HashMap<String, String> findMenuOption() {
     HashMap<String, String> toppingMap = new HashMap<>();
-    toppingMap.put("0", "Dips");
-    toppingMap.put("1", "Spreads");
+    toppingMap.put("1", "Dips");
+    toppingMap.put("2", "Spreads");
     return toppingMap;
   }
 }

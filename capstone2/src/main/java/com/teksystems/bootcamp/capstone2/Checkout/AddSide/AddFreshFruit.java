@@ -8,7 +8,7 @@ import static com.teksystems.bootcamp.capstone2.Main.createReceipt;
 public class AddFreshFruit {
   public AddFreshFruit() {
     int order = getInput("Which fresh fruit would you like?", FreshFruit.findMenuOption());
-    FreshFruit choice = FreshFruit.freshFruitList().get(order);
+    FreshFruit choice = FreshFruit.freshFruitList().get(order-1);
     createReceipt(choice);
   }
 }

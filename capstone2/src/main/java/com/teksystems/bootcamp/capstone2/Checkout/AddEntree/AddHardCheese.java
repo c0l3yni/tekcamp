@@ -7,7 +7,7 @@ public class AddHardCheese {
   public AddHardCheese() {
 
     int order = getInput("Which hard cheese would you like?", HardCheese.findMenuOption());
-    HardCheese choice = HardCheese.hardCheeseList().get(order);
+    HardCheese choice = HardCheese.hardCheeseList().get(order-1);
     createReceipt(choice);
   }
 }

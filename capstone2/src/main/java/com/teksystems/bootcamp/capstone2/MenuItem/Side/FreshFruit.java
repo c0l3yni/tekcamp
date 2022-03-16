@@ -25,7 +25,7 @@ public class FreshFruit extends Side {
     HashMap<String, String> findFreshFruitType = new HashMap<>();
     DecimalFormat df = new DecimalFormat("#.00");
     for (int i = 0; i < freshFruitList().size(); i++){
-      findFreshFruitType.put(Integer.toString(i), freshFruitList().get(i).getName() + " $" + df.format(freshFruitList().get(i).getCost()));
+      findFreshFruitType.put(Integer.toString(i+1), freshFruitList().get(i).getName() + " $" + df.format(freshFruitList().get(i).getCost()));
     }
     return findFreshFruitType;
   }

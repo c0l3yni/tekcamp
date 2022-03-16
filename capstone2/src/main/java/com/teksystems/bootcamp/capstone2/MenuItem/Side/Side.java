@@ -9,10 +9,10 @@ public abstract class Side extends MenuItem {
 
   public static HashMap<String, String> findMenuOption() {
     HashMap<String, String> sideMap = new HashMap<>();
-    sideMap.put("0", "Briny");
-    sideMap.put("1", "Nuts");
-    sideMap.put("2", "Fresh Fruit");
-    sideMap.put("3", "Vegetables");
+    sideMap.put("1", "Briny");
+    sideMap.put("2", "Nuts");
+    sideMap.put("3", "Fresh Fruit");
+    sideMap.put("4", "Vegetables");
     return sideMap;
   }
 }

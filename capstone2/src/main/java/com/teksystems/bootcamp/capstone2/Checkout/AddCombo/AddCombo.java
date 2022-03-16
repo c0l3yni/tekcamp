@@ -8,7 +8,7 @@ public class AddCombo {
 
   public AddCombo() {
     int value = getInput("Which COMBO would you like?", Combo.findMenuOption());
-    if (value == 0) {
+    if (value == 1) {
       new AddEnbyOfAll();
     } else {
       new AddButcherBlock();

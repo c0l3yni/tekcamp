@@ -24,7 +24,7 @@ public class SoftCheese extends Cheese {
     HashMap<String, String> findCheeseType = new HashMap<>();
     DecimalFormat df = new DecimalFormat("#.00");
     for (int i = 0; i < softCheeseList().size(); i++){
-      findCheeseType.put(Integer.toString(i), softCheeseList().get(i).getName() + " $" + df.format(softCheeseList().get(i).getCost()));
+      findCheeseType.put(Integer.toString(i+1), softCheeseList().get(i).getName() + " $" + df.format(softCheeseList().get(i).getCost()));
     }
     return findCheeseType;
   }

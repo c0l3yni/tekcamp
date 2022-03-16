@@ -6,7 +6,7 @@ import static com.teksystems.bootcamp.capstone2.Main.createReceipt;
 public class AddSpreads {
   public AddSpreads(){
   int order = getInput("Which spread would you like?", Spread.findMenuOption());
-  Spread choice = Spread.SpreadsList().get(order);
+  Spread choice = Spread.SpreadsList().get(order-1);
   createReceipt(choice);
 }
 }

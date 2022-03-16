@@ -64,30 +64,30 @@ public class EnbyOfAllCombo extends Combo {
     fruit1 = newFruit;
   }
 
-  public static List<String> getComboAllOptions() {
+  public List<String> getComboAllOptions() {
     List<String> options = new ArrayList<>();
-    options.add("Brie");
-    options.add( "Gouda");
-    options.add( "Manchego");
-    options.add( "Prosciutto");
-    options.add("Pita");
+    options.add(cheese1.getName());
+    options.add(cheese2.getName());
+    options.add(cheese3.getName());
+    options.add(meat1.getName());
+    options.add(crackers1.getName());
 
-    options.add("Fig Jam");
-    options.add("Strawberry Jam");
-    options.add("Rosemary Hummus");
-    options.add("Balsamic and Oil");
+    options.add(spread1.getName());
+    options.add(spread2.getName());
+    options.add(dip1.getName());
+    options.add(dip2.getName());
 
-    options.add("Grapes");
-    options.add("Pickles");
-    options.add("Almond");
-    options.add("Carrots");
+    options.add(fruit1.getName());
+    options.add(briny1.getName());
+    options.add(nut1.getName());
+    options.add(veg1.getName());
     return options;
   }
 
-  public static HashMap<String, String> findMenuOption() {
+  public HashMap<String, String> findMenuOption2() {
     HashMap<String, String> findComboOption = new HashMap<>();
     for (int i = 0; i < getComboAllOptions().size(); i++) {
-      findComboOption.put(Integer.toString(i), getComboAllOptions().get(i));
+      findComboOption.put(Integer.toString(i+1), getComboAllOptions().get(i));
     }
     return findComboOption;
   }

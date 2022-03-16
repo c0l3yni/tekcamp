@@ -25,7 +25,7 @@ public class Briny extends Side {
     HashMap<String, String> findBrinyType = new HashMap<>();
     DecimalFormat df = new DecimalFormat("#.00");
     for (int i = 0; i < brinyList().size(); i++){
-      findBrinyType.put(Integer.toString(i), brinyList().get(i).getName() + " $" + df.format(brinyList().get(i).getCost()));
+      findBrinyType.put(Integer.toString(i+1), brinyList().get(i).getName() + " $" + df.format(brinyList().get(i).getCost()));
     }
     return findBrinyType;
   }

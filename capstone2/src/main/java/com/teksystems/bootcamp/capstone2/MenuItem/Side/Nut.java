@@ -25,7 +25,7 @@ public class Nut extends Side {
     HashMap<String, String> findNutType = new HashMap<>();
     DecimalFormat df = new DecimalFormat("#.00");
     for (int i = 0; i < nutList().size(); i++){
-      findNutType.put(Integer.toString(i), nutList().get(i).getName() + " $" + df.format(nutList().get(i).getCost()));
+      findNutType.put(Integer.toString(i+1), nutList().get(i).getName() + " $" + df.format(nutList().get(i).getCost()));
     }
     return findNutType;
   }

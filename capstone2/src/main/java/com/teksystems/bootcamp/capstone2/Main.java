@@ -14,6 +14,8 @@ import javax.security.auth.login.CredentialException;
 import java.text.DecimalFormat;
 import java.util.*;
 
+import static com.teksystems.bootcamp.capstone2.Checkout.UserInput.getInput;
+
 public class Main {
   public static Receipt receipt = new Receipt();
   public static OrderHistory orderHistory = new OrderHistory();
@@ -35,7 +37,9 @@ public class Main {
       System.out.println("+=================================================+");
       System.out.println("| Press 1 for NEW ORDER or 2 to SEARCH FOR ORDER  |");
       System.out.println("+=================================================+");
+
       userMode = scanner.nextInt();
+
 
       if (userMode == 2) {
         System.out.println("+===============================+");
@@ -56,9 +60,10 @@ public class Main {
       System.out.println("+=================================================+");
       if (scanner.nextDouble() == 1) {
         System.out.println("+=================================================+");
-        System.out.println("|       Press 0 for Enby-of-all COMBO or          |");
-        System.out.println("|          1 for Butch-er Block COMBO             |");
+        System.out.println("|       Press 1 for Enby-of-all COMBO or          |");
+        System.out.println("|          2 for Butch-er Block COMBO             |");
         System.out.println("+=================================================+");
+
         new AddCombo();
 
       } else {
@@ -69,6 +74,7 @@ public class Main {
           System.out.println("|            3 for SIDES, 4 for DRINKS,           |");
           System.out.println("|                or 5 to CHECKOUT                 |");
           System.out.println("+=================================================+");
+
           int menuItem;
           menuItem = scanner.nextInt();
 
@@ -101,8 +107,10 @@ public class Main {
               System.out.println("=======================================");
               continueFlag = false;
               break;
+            default:
+              System.out.println("This is not a valid Menu Option! Please Select Another");
+              break;
           }
-
         }
       }
     }

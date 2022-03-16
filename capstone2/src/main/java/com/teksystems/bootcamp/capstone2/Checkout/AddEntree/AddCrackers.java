@@ -8,7 +8,7 @@ import static com.teksystems.bootcamp.capstone2.Main.createReceipt;
 public class AddCrackers {
   public AddCrackers() {
     int order = getInput("Which crackers would you like?", Crackers.findMenuOption());
-    Crackers choice = Crackers.crackerList().get(order);
+    Crackers choice = Crackers.crackerList().get(order-1);
     createReceipt(choice);
   }
 }

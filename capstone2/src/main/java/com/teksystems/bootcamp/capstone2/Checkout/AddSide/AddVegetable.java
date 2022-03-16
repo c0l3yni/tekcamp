@@ -7,7 +7,7 @@ import static com.teksystems.bootcamp.capstone2.Main.createReceipt;
 public class AddVegetable {
   public AddVegetable() {
     int order = getInput("Which vegetable would you like?", Vegetable.findMenuOption());
-    Vegetable choice = Vegetable.VegetableList().get(order);
+    Vegetable choice = Vegetable.VegetableList().get(order-1);
     createReceipt(choice);
   }
 }

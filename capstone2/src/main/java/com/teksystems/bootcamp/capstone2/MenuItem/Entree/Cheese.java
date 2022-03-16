@@ -19,7 +19,7 @@ public abstract class Cheese extends Entree {
   public static HashMap<String, String> findMenuOption() {
     HashMap<String, String> findCheeseType = new HashMap<>();
     for (int i = 0; i < getCheeses().size(); i++) {
-      findCheeseType.put(Integer.toString(i), getCheeses().get(i));
+      findCheeseType.put(Integer.toString(i+1), getCheeses().get(i));
     }
     return findCheeseType;
   }

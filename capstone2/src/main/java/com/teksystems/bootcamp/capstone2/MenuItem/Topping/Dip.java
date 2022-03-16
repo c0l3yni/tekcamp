@@ -23,7 +23,7 @@ public class Dip extends Topping{
     HashMap<String, String> findDipType = new HashMap<>();
     DecimalFormat df = new DecimalFormat("#.00");
     for (int i = 0; i < dipList().size(); i++){
-      findDipType.put(Integer.toString(i), dipList().get(i).getName() + " $" + df.format(dipList().get(i).getCost()));
+      findDipType.put(Integer.toString(i+1), dipList().get(i).getName() + " $" + df.format(dipList().get(i).getCost()));
     }
     return findDipType;
   }

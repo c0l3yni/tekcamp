@@ -25,7 +25,7 @@ public class Spread extends Topping{
     HashMap<String, String> findSpreadType = new HashMap<>();
     DecimalFormat df = new DecimalFormat("#.00");
     for (int i = 0; i < SpreadsList().size(); i++) {
-      findSpreadType.put(Integer.toString(i), SpreadsList().get(i).getName() + " $" + df.format(SpreadsList().get(i).getCost()));
+      findSpreadType.put(Integer.toString(i+1), SpreadsList().get(i).getName() + " $" + df.format(SpreadsList().get(i).getCost()));
     }
     return findSpreadType;
   }
