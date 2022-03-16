@@ -19,23 +19,23 @@ public class EnbyOfAllCombo extends Combo {
   private static final String name = "Enby Of All Combo";
   private static final Double price = 20.00;
 
-  private  SoftCheese cheese1;
-  private  HardCheese cheese2;
-  private  HardCheese cheese3;
+  private SoftCheese cheese1;
+  private HardCheese cheese2;
+  private HardCheese cheese3;
 
-  private  Meat meat1;
+  private Meat meat1;
 
-  private  Crackers crackers1;
+  private Crackers crackers1;
 
-  private  Spread spread1;
-  private  Dip dip1;
-  private  Dip dip2;
-  private  Spread spread2;
+  private Spread spread1;
+  private Dip dip1;
+  private Dip dip2;
+  private Spread spread2;
 
   private FreshFruit fruit1;
-  private  Briny briny1;
-  private  Nut nut1;
-  private  Vegetable veg1;
+  private Briny briny1;
+  private Nut nut1;
+  private Vegetable veg1;
 
   public EnbyOfAllCombo() {
     super(name, price);
@@ -81,39 +81,59 @@ public class EnbyOfAllCombo extends Combo {
     options.add(briny1.getName());
     options.add(nut1.getName());
     options.add(veg1.getName());
+    options.add(14, "Checkout");
     return options;
   }
 
   public HashMap<String, String> findMenuOption2() {
     HashMap<String, String> findComboOption = new HashMap<>();
-    for (int i = 0; i < getComboAllOptions().size(); i++) {
+    int i = 0;
+    for (i = 0; i < getComboAllOptions().size(); i++) {
       findComboOption.put(Integer.toString(i+1), getComboAllOptions().get(i));
     }
+    findComboOption.put(Integer.toString(i+1), "Add to Order");
     return findComboOption;
   }
 
-  public static List<String> getComboCustomOptions() {
-    List<String> options = new ArrayList<>();
-    options.add("Fig Jam");
-    options.add("Strawberry Jam");
-    options.add("Rosemary Hummus");
-    options.add("Balsamic and Oil");
-
-    options.add("Grapes");
-    options.add("Pickles");
-    options.add("Almond");
-    options.add("Carrots");
-    return options;
+  public SoftCheese getCheese1() {
+    return cheese1;
   }
 
-  public static HashMap<String, String> findComboOption() {
-    HashMap<String, String> findComboOption = new HashMap<>();
-    for (int i = 0; i < getComboCustomOptions().size(); i++) {
-      findComboOption.put(Integer.toString(i), getComboCustomOptions().get(i));
-    }
-    return findComboOption;
+  public void setCheese1(SoftCheese cheese1) {
+    this.cheese1 = cheese1;
   }
 
+  public HardCheese getCheese2() {
+    return cheese2;
+  }
+
+  public void setCheese2(HardCheese cheese2) {
+    this.cheese2 = cheese2;
+  }
+
+  public HardCheese getCheese3() {
+    return cheese3;
+  }
+
+  public void setCheese3(HardCheese cheese3) {
+    this.cheese3 = cheese3;
+  }
+
+  public Meat getMeat1() {
+    return meat1;
+  }
+
+  public void setMeat1(Meat meat1) {
+    this.meat1 = meat1;
+  }
+
+  public Crackers getCrackers1() {
+    return crackers1;
+  }
+
+  public void setCrackers1(Crackers crackers1) {
+    this.crackers1 = crackers1;
+  }
 
   public Spread getSpread1() {
     return spread1;

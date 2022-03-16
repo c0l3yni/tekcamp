@@ -18,7 +18,7 @@ public abstract class Combo extends MenuItem {
     combos.add("Butch-er Block");
     return combos;
   }
-  public static Map<String, String> findMenuOption() {
+  public Map<String, String> findMenuOption() {
     Map<String, String> findComboType = new HashMap<>();
     for (int i = 0; i < getCombos().size(); i++) {
       findComboType.put(Integer.toString(i+1), getCombos().get(i));

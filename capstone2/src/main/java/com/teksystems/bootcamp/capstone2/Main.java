@@ -17,13 +17,13 @@ import java.util.*;
 import static com.teksystems.bootcamp.capstone2.Checkout.UserInput.getInput;
 
 public class Main {
+  public static DecimalFormat df = new DecimalFormat("#.00");
+  public static Scanner scanner = new Scanner(System.in);
   public static Receipt receipt = new Receipt();
   public static OrderHistory orderHistory = new OrderHistory();
 
   public static void main(String[] args) {
-    Scanner scanner = new Scanner(System.in);
     while (true) {
-
       receipt = new Receipt();
       orderHistory.addReceipt(receipt);
       System.out.println(" ");
@@ -37,91 +37,101 @@ public class Main {
       System.out.println("+=================================================+");
       System.out.println("| Press 1 for NEW ORDER or 2 to SEARCH FOR ORDER  |");
       System.out.println("+=================================================+");
-
+      while (!scanner.hasNextInt()) {
+        System.out.println("That's not valid input. Try again:");
+        scanner.next();
+      }
       userMode = scanner.nextInt();
-
-
       if (userMode == 2) {
         System.out.println("+===============================+");
         System.out.println("|   Please enter your order #:  |");
         System.out.println("+===============================+");
-
+        while (!scanner.hasNextInt()) {
+          System.out.println("That's not valid input. Try again:");
+          scanner.next();
+        }
         int userInput = scanner.nextInt();
         Receipt result = orderHistory.receiptFinder(userInput);
         if (result != null) {
           receipt = result;
-          MenuItem menuItem3 = new MenuItem("", 0);
-          displayReceipt();
-          createReceipt(menuItem3);
+          receipt.printReceipt();
+        } else {
+          System.out.println("Could not find the receipt with #" + userInput);
         }
-      }
-      System.out.println("+=================================================+");
-      System.out.println("|  Press 1 for MEAL MENU or 2 for MEAL BUILDER:   |");
-      System.out.println("+=================================================+");
-      if (scanner.nextDouble() == 1) {
-        System.out.println("+=================================================+");
-        System.out.println("|       Press 1 for Enby-of-all COMBO or          |");
-        System.out.println("|          2 for Butch-er Block COMBO             |");
-        System.out.println("+=================================================+");
-
-        new AddCombo();
-
-      } else {
-        boolean continueFlag = true;
-        while (continueFlag) {
+      } else if (userMode == 1) {
+        boolean continueMainMenuFlag = true;
+        while (continueMainMenuFlag) {
           System.out.println("+=================================================+");
-          System.out.println("|       Press 1 for ENTREES, 2 for TOPPINGS       |");
-          System.out.println("|            3 for SIDES, 4 for DRINKS,           |");
-          System.out.println("|                or 5 to CHECKOUT                 |");
+          System.out.println("|  Press 1 for MEAL MENU or 2 for MEAL BUILDER    |");
+          System.out.println("|              Press 3 to CHECKOUT                |");
           System.out.println("+=================================================+");
+          while (!scanner.hasNextInt()) {
+            System.out.println("That's not valid input. Try again:");
+            scanner.next();
+          }
+          userMode = scanner.nextInt();
+          if (userMode == 1) {
+            System.out.println("+=================================================+");
+            System.out.println("|       Press 1 for Enby-of-all COMBO or          |");
+            System.out.println("|          2 for Butch-er Block COMBO             |");
+            System.out.println("+=================================================+");
 
-          int menuItem;
-          menuItem = scanner.nextInt();
+            new AddCombo();
 
-          switch (menuItem) {
-            case 1:
-              new AddEntree();
-              break;
-            case 2:
-              new AddTopping();
-              break;
-            case 3:
-              new AddSide();
-              break;
-            case 4:
-              new AddDrink();
-              break;
-            case 5:
-              Date currentDate = new Date();
-              System.out.println(" ");
-              System.out.println("=======================================");
-              System.out.println("             Char-Cuties");
-              System.out.println("      " + currentDate);
-              System.out.println("     Thank you for dining with us!     ");
-              System.out.println("=======================================");
-              MenuItem menuItem1 = new MenuItem("", 0);
-              displayReceipt();
-              System.out.println("=======================================");
-              MenuItem menuItem2 = new MenuItem("", 0);
-              createReceipt(menuItem1);
-              System.out.println("=======================================");
-              continueFlag = false;
-              break;
-            default:
-              System.out.println("This is not a valid Menu Option! Please Select Another");
-              break;
+          } else if (userMode == 2) {
+            boolean continueFlag = true;
+            while (continueFlag) {
+              System.out.println("+=================================================+");
+              System.out.println("|       Press 1 for ENTREES, 2 for TOPPINGS       |");
+              System.out.println("|            3 for SIDES, 4 for DRINKS,           |");
+              System.out.println("|                or 5 for MAIN MENU               |");
+              System.out.println("+=================================================+");
+
+              while (!scanner.hasNextInt()) {
+                System.out.println("That's not valid input. Try again:");
+                scanner.next();
+              }
+
+              int menuItem = scanner.nextInt();
+
+              switch (menuItem) {
+                case 1:
+                  new AddEntree();
+                  break;
+                case 2:
+                  new AddTopping();
+                  break;
+                case 3:
+                  new AddSide();
+                  break;
+                case 4:
+                  new AddDrink();
+                  break;
+                case 5:
+                  continueFlag = false;
+                  break;
+                default:
+                  System.out.println("This is not a valid Menu Option! Please Select Another");
+                  break;
+              }
+            }
+          } else if (userMode == 3) {
+            continueMainMenuFlag = false;
+            receipt.printReceipt();
+          } else {
+            System.out.println("This is not a valid Menu Option!");
           }
         }
+      } else {
+        System.out.println("This is not a valid Menu Option!");
       }
     }
   }
-
 
   public static void displayReceipt() {
     List<String> createOrderList = new ArrayList<>();
     for (int i = 0; i < receipt.getItems().size(); i++) {
       MenuItem item = receipt.getItems().get(i);
-      DecimalFormat df = new DecimalFormat("#.00");
       System.out.println(item.getName() + " $" + df.format(item.getCost()));
     }
   }
@@ -130,11 +140,9 @@ public class Main {
     double addToCart = item.getCost();
     receipt.addItem(item);
     double subtotal = receipt.receiptSubTotal(addToCart);
-    double taxTotal = receipt.receiptTaxTotal(subtotal);
-    System.out.println("Order Number: " + receipt.getOrderNum());
-    DecimalFormat df = new DecimalFormat("#.00");
-    System.out.println("Subtotal is " + "$ " + df.format(subtotal));
-    System.out.println("Total due today is " + "$ " + df.format(taxTotal));
+    receipt.receiptTaxTotal(subtotal);
+    System.out.println("Added " + item.getName() + " to your order.");
+    System.out.println("Current subtotal for order #" + receipt.getOrderNum() + " is $" + df.format(subtotal));
   }
 }
 
