@@ -81,7 +81,6 @@ public class EnbyOfAllCombo extends Combo {
     options.add(briny1.getName());
     options.add(nut1.getName());
     options.add(veg1.getName());
-    options.add(14, "Checkout");
     return options;
   }
 
@@ -89,9 +88,9 @@ public class EnbyOfAllCombo extends Combo {
     HashMap<String, String> findComboOption = new HashMap<>();
     int i = 0;
     for (i = 0; i < getComboAllOptions().size(); i++) {
-      findComboOption.put(Integer.toString(i+1), getComboAllOptions().get(i));
+      findComboOption.put(Integer.toString(i + 1), getComboAllOptions().get(i));
     }
-    findComboOption.put(Integer.toString(i+1), "Add to Order");
+    findComboOption.put(Integer.toString(i + 1), "Add to Order");
     return findComboOption;
   }
 

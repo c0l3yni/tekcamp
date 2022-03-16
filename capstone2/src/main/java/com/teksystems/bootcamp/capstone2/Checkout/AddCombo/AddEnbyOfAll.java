@@ -110,8 +110,10 @@ public class AddEnbyOfAll {
           System.out.println(combo.getDip2().getName() + " will be replaced by " + veg1.getName());
           combo.setVeg1(veg1);
           break;
+        case 13:
+          continueFlag = false;
+          break;
       }
-      continueFlag = false;
     }
     createReceipt(new EnbyOfAllCombo());
   }

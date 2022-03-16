@@ -56,7 +56,7 @@ public class ButcherBlock extends Combo {
   public ButcherBlock() {
     super(name, price);
     double cost = 0;
-    cheese1= new HardCheese("Manchego");
+    cheese1 = new HardCheese("Manchego");
     cheese2 = new HardCheese("Gouda");
     cheese3 = new HardCheese("Swiss");
     cheese4 = new HardCheese("White Cheddar");
@@ -121,11 +121,13 @@ public class ButcherBlock extends Combo {
     return options;
   }
 
-  public HashMap<String, String> findMenuOption() {
+  public HashMap<String, String> findMenuOption2() {
     HashMap<String, String> findComboOption = new HashMap<>();
-    for (int i = 0; i < getComboOptions().size(); i++) {
-      findComboOption.put(Integer.toString(i), getComboOptions().get(i));
+    int i = 0;
+    for (i = 0; i < getComboOptions().size(); i++) {
+      findComboOption.put(Integer.toString(i + 1), getComboOptions().get(i));
     }
+    findComboOption.put(Integer.toString(i + 1), "Add to Order");
     return findComboOption;
   }
 
