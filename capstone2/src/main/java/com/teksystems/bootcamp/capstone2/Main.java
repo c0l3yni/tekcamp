@@ -83,14 +83,11 @@ public class Main {
               System.out.println("|            3 for SIDES, 4 for DRINKS,           |");
               System.out.println("|                or 5 for MAIN MENU               |");
               System.out.println("+=================================================+");
-
               while (!scanner.hasNextInt()) {
                 System.out.println("That's not valid input. Try again:");
                 scanner.next();
               }
-
               int menuItem = scanner.nextInt();
-
               switch (menuItem) {
                 case 1:
                   new AddEntree();
