@@ -26,6 +26,7 @@ public class Main {
       System.out.println("+======================================================+");
       System.out.println("|                                                      |");
       System.out.println("|               Welcome to Char-Cuties                 |");
+      System.out.println("|                    Charcuterie                       |");
       System.out.println("|                                                      |");
       System.out.println("+======================================================+");
       int userMode = 0;
