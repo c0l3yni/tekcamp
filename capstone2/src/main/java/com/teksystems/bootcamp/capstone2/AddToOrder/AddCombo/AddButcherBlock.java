@@ -21,7 +21,7 @@ public class AddButcherBlock {
     boolean continueFlag = true;
     while (continueFlag) {
       System.out.println("__________________________________________________");
-      System.out.println("Enby of All includes:");
+      System.out.println("Butch-er Block includes:");
       int newInput = getInput("Pick an item to customize or input 25 to add Butch-er Block to order", combo.findMenuOption2());
       System.out.println("__________________________________________________");
       if (newInput >= 1 && newInput <= 24) {
