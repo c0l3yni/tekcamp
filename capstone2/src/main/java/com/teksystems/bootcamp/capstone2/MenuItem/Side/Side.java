@@ -1,5 +1,7 @@
 package com.teksystems.bootcamp.capstone2.MenuItem.Side;
+
 import com.teksystems.bootcamp.capstone2.MenuItem.MenuItem;
+
 import java.util.HashMap;
 
 public class Side extends MenuItem {

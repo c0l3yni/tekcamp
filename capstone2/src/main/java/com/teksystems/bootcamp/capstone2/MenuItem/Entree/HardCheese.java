@@ -23,7 +23,7 @@ public class HardCheese extends Cheese {
     HashMap<String, String> findCheeseType = new HashMap<>();
     DecimalFormat df = new DecimalFormat("#.00");
     for (int i = 0; i < hardCheeseList().size(); i++) {
-      findCheeseType.put(Integer.toString(i+1), hardCheeseList().get(i).getName() + " $" + df.format(hardCheeseList().get(i).getCost()));
+      findCheeseType.put(Integer.toString(i + 1), hardCheeseList().get(i).getName() + " $" + df.format(hardCheeseList().get(i).getCost()));
     }
     return findCheeseType;
   }

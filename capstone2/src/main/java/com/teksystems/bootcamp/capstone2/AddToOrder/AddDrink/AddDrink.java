@@ -7,10 +7,10 @@ import static com.teksystems.bootcamp.capstone2.Main.createReceipt;
 
 public class AddDrink {
   public AddDrink() {
-      int order = getInput("Which drink would you like?", Drink.findMenuOption());
+    int order = getInput("Which drink would you like?", Drink.findMenuOption());
     System.out.println("__________________________________________________");
-      Drink choice = Drink.drinkList().get(order-1);
-      createReceipt(choice);
+    Drink choice = Drink.drinkList().get(order - 1);
+    createReceipt(choice);
     System.out.println("__________________________________________________");
-    }
   }
+}

@@ -12,16 +12,17 @@ public abstract class Combo extends MenuItem {
     super(name, cost);
   }
 
-  public static List<String> getCombos(){
+  public static List<String> getCombos() {
     List<String> combos = new ArrayList<>();
     combos.add("Enby of All");
     combos.add("Butch-er Block");
     return combos;
   }
+
   public static Map<String, String> findMenuOption() {
     Map<String, String> findComboType = new HashMap<>();
     for (int i = 0; i < getCombos().size(); i++) {
-      findComboType.put(Integer.toString(i+1), getCombos().get(i));
+      findComboType.put(Integer.toString(i + 1), getCombos().get(i));
     }
     return findComboType;
   }

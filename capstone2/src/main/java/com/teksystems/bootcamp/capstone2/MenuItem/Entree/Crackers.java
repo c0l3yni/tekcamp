@@ -24,8 +24,8 @@ public class Crackers extends MenuItem {
   public static HashMap<String, String> findMenuOption() {
     HashMap<String, String> findCrackerType = new HashMap<>();
     DecimalFormat df = new DecimalFormat("#.00");
-    for (int i = 0; i < crackerList().size(); i++){
-      findCrackerType.put(Integer.toString(i+1), crackerList().get(i).getName() + " $" + df.format(crackerList().get(i).getCost()));
+    for (int i = 0; i < crackerList().size(); i++) {
+      findCrackerType.put(Integer.toString(i + 1), crackerList().get(i).getName() + " $" + df.format(crackerList().get(i).getCost()));
     }
     return findCrackerType;
   }

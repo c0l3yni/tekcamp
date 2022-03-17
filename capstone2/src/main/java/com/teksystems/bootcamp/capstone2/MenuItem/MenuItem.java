@@ -9,7 +9,6 @@ public class MenuItem {
     this.cost = cost;
   }
 
-
   public String getName() {
     return name;
   }

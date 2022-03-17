@@ -10,7 +10,7 @@ public class AddFreshFruit {
     System.out.println("__________________________________________________");
     int order = getInput("Which fresh fruit would you like?", FreshFruit.findMenuOption());
     System.out.println("__________________________________________________");
-    FreshFruit choice = FreshFruit.freshFruitList().get(order-1);
+    FreshFruit choice = FreshFruit.freshFruitList().get(order - 1);
     createReceipt(choice);
   }
 }

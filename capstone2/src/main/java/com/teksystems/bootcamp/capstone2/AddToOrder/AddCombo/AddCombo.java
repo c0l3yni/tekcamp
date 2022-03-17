@@ -8,7 +8,6 @@ public class AddCombo {
 
   public AddCombo() {
     int value = getInput("Which COMBO would you like?", Combo.findMenuOption());
-    System.out.println("__________________________________________________");
     if (value == 1) {
       new AddEnbyOfAll();
     } else {

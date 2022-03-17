@@ -9,6 +9,7 @@ public class Vegetable extends Side {
   public Vegetable(String name, double cost) {
     super(name, cost);
   }
+
   public static List<Vegetable> VegetableList() {
     List<Vegetable> vegetables = new ArrayList<>();
     vegetables.add(new Vegetable("Carrots", 1.00));
@@ -22,7 +23,7 @@ public class Vegetable extends Side {
     HashMap<String, String> findVegetableType = new HashMap<>();
     DecimalFormat df = new DecimalFormat("#.00");
     for (int i = 0; i < VegetableList().size(); i++) {
-      findVegetableType.put(Integer.toString(i+1), VegetableList().get(i).getName() + " $" + df.format(VegetableList().get(i).getCost()));
+      findVegetableType.put(Integer.toString(i + 1), VegetableList().get(i).getName() + " $" + df.format(VegetableList().get(i).getCost()));
     }
     return findVegetableType;
   }

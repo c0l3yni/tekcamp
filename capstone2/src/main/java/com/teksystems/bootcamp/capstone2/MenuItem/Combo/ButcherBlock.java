@@ -18,6 +18,7 @@ import java.util.List;
 public class ButcherBlock extends Combo {
   private static final String name = "Butch-er Block Combo";
   private static final Double price = 45.00;
+  private int numOfCustomization = 0;
 
   private SoftCheese cheese6;
   private SoftCheese cheese5;
@@ -323,4 +324,18 @@ public class ButcherBlock extends Combo {
   public void setVeg2(Vegetable veg2) {
     this.veg2 = veg2;
   }
+
+  public int getNumOfCustomization() {
+    return numOfCustomization;
+  }
+
+  public void setNumOfCustomization(int i) {
+    numOfCustomization = i;
+  }
+
+  @Override
+  public String getName() {
+    return String.format("%s%n   - w/ %d customizations ", super.getName(), numOfCustomization);
+  }
 }
+

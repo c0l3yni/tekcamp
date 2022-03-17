@@ -25,8 +25,8 @@ public class Drink extends MenuItem {
   public static HashMap<String, String> findMenuOption() {
     HashMap<String, String> findDrinkType = new HashMap<>();
     DecimalFormat df = new DecimalFormat("#.00");
-    for (int i = 0; i < drinkList().size(); i++){
-      findDrinkType.put(Integer.toString(i+1), drinkList().get(i).getName() + " $" + df.format(drinkList().get(i).getCost()));
+    for (int i = 0; i < drinkList().size(); i++) {
+      findDrinkType.put(Integer.toString(i + 1), drinkList().get(i).getName() + " $" + df.format(drinkList().get(i).getCost()));
     }
     return findDrinkType;
   }

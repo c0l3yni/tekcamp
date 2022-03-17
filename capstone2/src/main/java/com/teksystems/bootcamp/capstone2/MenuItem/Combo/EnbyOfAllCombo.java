@@ -18,7 +18,7 @@ import java.util.List;
 public class EnbyOfAllCombo extends Combo {
   private static final String name = "Enby Of All Combo";
   private static final Double price = 20.00;
-
+  private int numOfCustomization = 0;
   private SoftCheese cheese1;
   private HardCheese cheese2;
   private HardCheese cheese3;
@@ -190,5 +190,17 @@ public class EnbyOfAllCombo extends Combo {
     this.veg1 = veg1;
   }
 
+  public int getNumOfCustomization() {
+    return numOfCustomization;
+  }
+
+  public void setNumOfCustomization(int numOfCustomization) {
+    this.numOfCustomization = numOfCustomization;
+  }
+
+  @Override
+  public String getName() {
+    return String.format("%s%n   - w/ %d customizations ", super.getName(), numOfCustomization);
+  }
 }
 

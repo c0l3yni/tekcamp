@@ -10,7 +10,7 @@ public class AddMeat {
     System.out.println("__________________________________________________");
     int order = getInput("Which meat would you like?", Meat.findMenuOption());
     System.out.println("__________________________________________________");
-    Meat choice = Meat.meatList().get(order-1);
+    Meat choice = Meat.meatList().get(order - 1);
     createReceipt(choice);
   }
 }

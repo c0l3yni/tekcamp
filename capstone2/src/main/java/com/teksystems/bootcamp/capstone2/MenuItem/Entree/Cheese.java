@@ -10,16 +10,17 @@ public abstract class Cheese extends Entree {
     super(name, cost);
   }
 
-  public static List<String> getCheeses(){
+  public static List<String> getCheeses() {
     List<String> cheeses = new ArrayList<>();
     cheeses.add("Hard cheese");
     cheeses.add("Soft cheese");
     return cheeses;
   }
+
   public static HashMap<String, String> findMenuOption() {
     HashMap<String, String> findCheeseType = new HashMap<>();
     for (int i = 0; i < getCheeses().size(); i++) {
-      findCheeseType.put(Integer.toString(i+1), getCheeses().get(i));
+      findCheeseType.put(Integer.toString(i + 1), getCheeses().get(i));
     }
     return findCheeseType;
   }

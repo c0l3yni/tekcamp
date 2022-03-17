@@ -31,7 +31,8 @@ public class Main {
       int userMode = 0;
 
       System.out.println("+=================================================+");
-      System.out.println("| Press 1 for NEW ORDER or 2 to SEARCH FOR ORDER  |");
+      System.out.println("|   Press 1 for NEW ORDER, 2 to SEARCH FOR ORDER  |");
+      System.out.println("|               Press 3 to SHUTDOWN               |");
       System.out.println("+=================================================+");
       while (!scanner.hasNextInt()) {
         System.out.println("That's not valid input. Try again:");
@@ -118,6 +119,9 @@ public class Main {
             System.out.println("This is not a valid Menu Option!");
           }
         }
+      } else if (userMode == 3) {
+        System.out.println("Shutting down...");
+        break;
       } else {
         System.out.println("This is not a valid Menu Option!");
       }

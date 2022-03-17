@@ -23,8 +23,8 @@ public class Meat extends Entree {
   public static HashMap<String, String> findMenuOption() {
     HashMap<String, String> findMeatType = new HashMap<>();
     DecimalFormat df = new DecimalFormat("#.00");
-    for (int i = 0; i < meatList().size(); i++){
-      findMeatType.put(Integer.toString(i+1), meatList().get(i).getName() + " $" + df.format(meatList().get(i).getCost()));
+    for (int i = 0; i < meatList().size(); i++) {
+      findMeatType.put(Integer.toString(i + 1), meatList().get(i).getName() + " $" + df.format(meatList().get(i).getCost()));
     }
     return findMeatType;
   }
