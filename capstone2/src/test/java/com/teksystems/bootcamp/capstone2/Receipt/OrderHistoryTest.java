@@ -21,14 +21,4 @@ public class OrderHistoryTest {
     int actual = history.receiptFinder(orderNo).getOrderNum();
     Assert.assertEquals(actual, orderNo);
   }
-
-
-
-/*  @Test
-  public void testReceiptFinder2() {
-    OrderHistory history = new OrderHistory();
-    Receipt receipt = new Receipt();
-    void actual = history.addReceipt(receipt);
-    Assert.assertEquals(actual, 0);
-  }*/
 }

@@ -34,6 +34,6 @@ public class ButcherBlockTest {
     ButcherBlock butcherBlock = new ButcherBlock();
     int actual = butcherBlock.findMenuOption2().size();
 
-    Assert.assertEquals(actual, 24);
+    Assert.assertEquals(actual, 25);
   }
 }

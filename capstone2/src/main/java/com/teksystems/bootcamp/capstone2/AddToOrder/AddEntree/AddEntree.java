@@ -4,7 +4,9 @@ import static com.teksystems.bootcamp.capstone2.AddToOrder.UserInput.getInput;
 
 public class AddEntree {
   public AddEntree() {
+    System.out.println("__________________________________________________");
     int value = getInput("Which kind of entree would you like?", Entree.findMenuOption());
+    System.out.println("__________________________________________________");
     switch (value) {
       case 1:
         new AddCheese();

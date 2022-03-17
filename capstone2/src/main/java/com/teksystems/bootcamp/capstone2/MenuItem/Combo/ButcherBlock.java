@@ -98,6 +98,7 @@ public class ButcherBlock extends Combo {
     options.add(cheese3.getName());
     options.add(cheese4.getName());
     options.add(cheese5.getName());
+    options.add(cheese6.getName());
     options.add(meat1.getName());
     options.add(meat2.getName());
     options.add(meat3.getName());

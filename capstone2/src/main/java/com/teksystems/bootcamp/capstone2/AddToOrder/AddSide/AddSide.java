@@ -4,7 +4,9 @@ import static com.teksystems.bootcamp.capstone2.AddToOrder.UserInput.getInput;
 
 public class AddSide {
   public AddSide() {
+    System.out.println("__________________________________________________");
     int value = getInput("Which kind of side would you like?", Side.findMenuOption());
+    System.out.println("__________________________________________________");
     switch (value) {
       case 1:
         new AddBriny();

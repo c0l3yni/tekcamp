@@ -17,17 +17,18 @@ public class UserInput {
     while(!validInput) {
       while (!scanner.hasNextInt()) {
         System.out.println("That's not valid input. Try again:");
+        System.out.println("__________________________________________________");
         scanner.next();
       }
       userInput = scanner.nextInt();
 
       if(userInput < 1 || userInput > options.size()) {
         System.out.println("This is not a valid Menu Option!");
+        System.out.println("__________________________________________________");
       } else {
         validInput = true;
       }
     }
-
     return userInput;
   }
 }

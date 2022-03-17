@@ -1,5 +1,6 @@
 package com.teksystems.bootcamp.capstone2.Receipt;
 
+import com.teksystems.bootcamp.capstone2.MenuItem.MenuItem;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
@@ -27,6 +28,22 @@ public class ReceiptTest {
     Receipt receipt = new Receipt();
     double actual = receipt.receiptTaxTotal(12);
     Assert.assertEquals(actual, 12.99);
+  }
+
+  @Test
+  public void testPrintReceiptEmpty() {
+    Receipt receipt = new Receipt();
+    boolean actual = receipt.printReceipt();
+    Assert.assertFalse(actual);
+  }
+
+  @Test
+  public void testPrintReceiptWithItems() {
+    Receipt receipt = new Receipt();
+    MenuItem newItem = new MenuItem("", 0);
+    receipt.addItem(newItem);
+    boolean actual = receipt.printReceipt();
+    Assert.assertTrue(actual);
   }
 
 }

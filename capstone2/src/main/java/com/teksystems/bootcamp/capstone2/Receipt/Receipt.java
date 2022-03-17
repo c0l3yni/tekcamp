@@ -1,5 +1,6 @@
 package com.teksystems.bootcamp.capstone2.Receipt;
 
+import com.teksystems.bootcamp.capstone2.MenuItem.Entree.SoftCheese;
 import com.teksystems.bootcamp.capstone2.MenuItem.MenuItem;
 
 import java.text.DecimalFormat;
@@ -19,7 +20,7 @@ public class Receipt {
     orderNum = (int) Math.floor(Math.random() * (max - min + 1) + min);
   }
 
-  public double receiptSubTotal(double number1){
+  public double receiptSubTotal(double number1) {
     subTotal = subTotal + number1;
     return subTotal;
   }
@@ -41,25 +42,39 @@ public class Receipt {
     return orderNum;
   }
 
-  public void printReceipt() {
-    Date currentDate = new Date();
-    System.out.println(" ");
-    System.out.println("=======================================");
-    System.out.println("             Char-Cuties");
-    System.out.println("      " + currentDate);
-    System.out.println("     Thank you for dining with us!     ");
-    System.out.println("=======================================");
-    List<String> createOrderList = new ArrayList<>();
-    for (int i = 0; i < items.size(); i++) {
-      MenuItem item = items.get(i);
-      DecimalFormat df = new DecimalFormat("#.00");
-      System.out.println(item.getName() + " $" + df.format(item.getCost()));
-    }
-    System.out.println("=======================================");
-    System.out.println("Order Number: " + orderNum);
-    DecimalFormat df = new DecimalFormat("#.00");
-    System.out.println("Subtotal is " + "$ " + df.format(subTotal));
-    System.out.println("Total due today is " + "$ " + df.format(taxTotal));
-    System.out.println("=======================================");
+  public boolean printReceipt() {
+    boolean recieptFlag = true;
+      if (!(items.size() == 0)) {
+        Date currentDate = new Date();
+        System.out.println(" ");
+        System.out.println("+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^+");
+        System.out.println("|             Char-Cuties             |");
+        System.out.println("|      " + currentDate + "   |");
+        System.out.println("|     Thank you for dining with us!   |");
+        System.out.println("+=====================================+");
+        System.out.println("|                                     |");
+        List<String> createOrderList = new ArrayList<>();
+        for (int i = 0; i < items.size(); i++) {
+          MenuItem item = items.get(i);
+          DecimalFormat df = new DecimalFormat("#.00");
+          System.out.println("   " + item.getName() + " $" + df.format(item.getCost()));
+        }
+        System.out.println("|                                     |");
+        System.out.println("+=====================================+");
+        System.out.println("| Order Number: " + orderNum + "                   |");
+        DecimalFormat df = new DecimalFormat("#.00");
+        System.out.println("  Subtotal is " + "$ " + df.format(subTotal));
+        System.out.println("  Total due today is " + "$ " + df.format(taxTotal));
+        System.out.println("+=====================================+");
+        System.out.println("|                                     |");
+        System.out.println("+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^+");
+      } else {
+        recieptFlag = false;
+        System.out.println("No items were added.");
+        System.out.println("Please add to your order before checking out.");
+      }
+
+    return recieptFlag;
+
   }
 }

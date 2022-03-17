@@ -6,7 +6,9 @@ import static com.teksystems.bootcamp.capstone2.Main.createReceipt;
 
 public class AddSoftCheese {
   public AddSoftCheese() {
+    System.out.println("__________________________________________________");
     int order = getInput("Which soft cheese would you like?", SoftCheese.findMenuOption());
+    System.out.println("__________________________________________________");
     SoftCheese choice = SoftCheese.softCheeseList().get(order-1);
     createReceipt(choice);
   }
