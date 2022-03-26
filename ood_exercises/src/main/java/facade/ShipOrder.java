@@ -1,7 +1,7 @@
 package facade;
 
 public class ShipOrder {
-  public void shipOrder(String orderNum) {
-    System.out.println("Order Shipped");
-  }
+ /* public void shipOrder(String address) {
+
+  }*/
 }
