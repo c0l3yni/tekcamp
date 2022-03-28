@@ -36,8 +36,7 @@ public class Main {
             String key = entry.getKey();
             String value = entry.getValue();
 
-            ElfAbstractFactory eaf = ElfMaker.make(value);
-            Elf elfType = eaf.createElf();
+            Elf elfType = AbstractElfFactory.make(value);
             System.out.println(ConsoleColors.RED + key + ConsoleColors.GREEN + " was " + value + " so they get a " + elfType.getClass().getSimpleName() + ConsoleColors.RESET);
             elfType.create();
             elfType.wrap();
