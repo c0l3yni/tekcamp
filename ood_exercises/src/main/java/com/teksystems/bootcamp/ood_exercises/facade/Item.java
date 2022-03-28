@@ -1,6 +1,6 @@
 package com.teksystems.bootcamp.ood_exercises.facade;
 
-public class Item {
+public class Item implements Orderable {
   private final int quantity;
   private final double cost;
   private final String name;
@@ -11,14 +11,18 @@ public class Item {
     this.quantity = quantity;
   }
 
+
+  @Override
   public String getName() {
     return name;
   }
 
+  @Override
   public int getQuantity() {
     return quantity;
   }
 
+  @Override
   public double getCost() {
     return cost;
   }
