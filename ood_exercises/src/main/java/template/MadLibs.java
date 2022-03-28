@@ -1,80 +1,80 @@
 package template;
 
 public abstract class MadLibs {
+  String reset = "\033[0m";
+  String purple = "\033[0;95m";
+
   public void play() {
     System.out.println("    Today, " + getDate() + ", is the day " +
-        consoleColors.purple + getName() + consoleColors.reset +
+        purple + getName() + reset +
         " would join their team of " +
-        consoleColors.purple + getJob() + consoleColors.reset +
+        purple + getJob() + reset +
         "'s. \n" + "The team " +
-        consoleColors.purple + getVerbED() + consoleColors.reset +
+        purple + getVerbED() + reset +
         " the morning with a cup of " +
-        consoleColors.purple + getDrink() + consoleColors.reset +
+        purple + getDrink() + reset +
         " and a bowl of " +
-        consoleColors.purple + getFood() + consoleColors.reset +
+        purple + getFood() + reset +
         ". While " +
-        consoleColors.purple + getVerbINGOne() + consoleColors.reset +
+        purple + getVerbINGOne() + reset +
         ", some team \n" + "members " +
-        consoleColors.purple + getVerbED() + consoleColors.reset +
+        purple + getVerbED() + reset +
         " by the TV; a news reporter began " +
-        consoleColors.purple + getVerbINGOne() + consoleColors.reset +
+        purple + getVerbINGOne() + reset +
         " about people " +
-        consoleColors.purple + getVerbING() + consoleColors.reset +
-        " in their TV’s! This \n" +
-        "made " +
-        consoleColors.purple + getName() + consoleColors.reset +
-        " walk toward the TV with curiosity. " +
-        "They " +
-        consoleColors.purple + getVerbED() + consoleColors.reset +
+        purple + getVerbING() + reset +
+        " in their TV’s! This \n" + "made " +
+        purple + getName() + reset +
+        " walk toward the TV with curiosity. They " +
+        purple + getVerbED() + reset +
         " a foot on the screen and ZAP! They were all \n" +
-        consoleColors.purple + getVerbING() + consoleColors.reset +
+        purple + getVerbING() + reset +
         ". They " +
-        consoleColors.purple + getVerbED() + consoleColors.reset +
+        purple + getVerbED() + reset +
         " in a " +
-        consoleColors.purple + getRoom() + consoleColors.reset +
+        purple + getRoom() + reset +
         " with walls " +
-        consoleColors.purple + getVerbED() + consoleColors.reset +
+        purple + getVerbED() + reset +
         " with git logs and commands. They ran to the nearest wall \n" + "and " +
-        consoleColors.purple + getVerbEDOne() + consoleColors.reset +
+        purple + getVerbEDOne() + reset +
         " the letter Q. This caused the floor to disappear and " +
-        consoleColors.purple + getName() + consoleColors.reset +
+        purple + getName() + reset +
         " began " +
-        consoleColors.purple + getVerbING() + consoleColors.reset +
+        purple + getVerbING() + reset +
         ". \n" + "    They landed on an accordion that would not open! They tried " +
-        consoleColors.purple + getVerbINGOne() + consoleColors.reset +
+        purple + getVerbINGOne() + reset +
         ", " +
-        consoleColors.purple + getVerbINGTwo() + consoleColors.reset +
+        purple + getVerbINGTwo() + reset +
         ", and " +
-        consoleColors.purple + getVerbINGThree() + consoleColors.reset +
+        purple + getVerbINGThree() + reset +
         " but it would \n" + "not work. That's when " +
-        consoleColors.purple + getName() + consoleColors.reset + " made a deal with the accordion," +
+        purple + getName() + reset + " made a deal with the accordion," +
         "\n       if I tap on you-- then open," +
         "\n       if I tap again-- close,\n" +
         "       otherwise stay as you were. " +
         "\nThis conditional worked! The accordion was so " +
-        consoleColors.purple + getFeeling() + consoleColors.reset +
+        purple + getFeeling() + reset +
         " it blew " +
-        consoleColors.purple + getName() + consoleColors.reset +
+        purple + getName() + reset +
         " away… " +
-        consoleColors.purple + getName() + consoleColors.reset +
+        purple + getName() + reset +
         " did not know how to react.\n" + "    Instead of react, they ran to the door labeled back end. " +
-        consoleColors.purple + getName() + consoleColors.reset +
+        purple + getName() + reset +
         " thought, “This must be the way out… \n" + "it’s only logical.” They " +
-        consoleColors.purple + getVerbED() + consoleColors.reset +
+        purple + getVerbED() + reset +
         "on the door and was met with java. When " + "they reached for the coffee \n" + "they were met with the properties that make up a coffee, " +
-        consoleColors.purple + getPropertyOne() + consoleColors.reset +
+        purple + getPropertyOne() + reset +
         ", " +
-        consoleColors.purple + getPropertyTwo() + consoleColors.reset +
+        purple + getPropertyTwo() + reset +
         ", \n" +
-        consoleColors.purple + getPropertyThree() + consoleColors.reset +
+        purple + getPropertyThree() + reset +
         "… but it was all private! Frustrated, they ran to the phone in the main room and called \n" + "the only number listed… constructor. Constructor gave them all the instructions for making a coffee, \n" + "but wouldn’t give them the coffee. Java was hard and this pattern had to stop. While they searched \n" + "for the exit the process kept " +
-        consoleColors.purple + getVerbINGThree() + consoleColors.reset +
+        purple + getVerbINGThree() + reset +
         ". " +
-        consoleColors.purple + getName() + consoleColors.reset +
+        purple + getName() + reset +
         " began " +
-        consoleColors.purple + getVerbINGTwo() + consoleColors.reset +
-        ", 'I just need a break!'. All of the sudden they \n" +
-        "were in a room looking at the TV… and running late... \n");
+        purple + getVerbINGTwo() + reset +
+        ", 'I just need a break!'. All of the sudden they \n" + "were in a room looking at the TV… and running late... \n");
   }
 
   abstract String getVerbINGThree();
@@ -93,9 +93,4 @@ public abstract class MadLibs {
   abstract String getFood();
   abstract String getDate();
   abstract String getName();
-
-  public static class consoleColors {
-    public static final String reset = "\033[0m";
-    public static final String purple = "\033[0;95m";
-  }
 }

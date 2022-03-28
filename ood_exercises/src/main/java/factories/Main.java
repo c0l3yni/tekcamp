@@ -6,23 +6,26 @@ import java.util.Scanner;
 
 public class Main {
   public static void main(String[] args) {
-
+    String reset = "\033[0m";
+    String red = "\033[0;31m";
+    String green = "\033[0;32m";
     Scanner scanner = new Scanner(System.in);
+
     boolean continueFlag = true;
     while (continueFlag) {
       int userMode = 0;
       System.out.println("___________________________________________________");
       System.out.println("      *            Press      *   *       *       * ");
-      System.out.println("   *   " + ConsoleColors.RED + " 1 for Naughty " + ConsoleColors.GREEN + "and Nice List" + ConsoleColors.RESET + "   *");
-      System.out.println(ConsoleColors.GREEN + " 2 for Generate Elves " + ConsoleColors.RED + "(WARNING: Christmas eve ONLY!)" + ConsoleColors.RESET);
+      System.out.println("   *   " + red + " 1 for Naughty " + green + "and Nice List" + reset + "   *");
+      System.out.println(green + " 2 for Generate Elves " + red + "(WARNING: Christmas eve ONLY!)" + reset);
       System.out.println("  *     *      3 to SHUTDOWN       *         *     ");
       System.out.println("*    *         *        *    *           *      * ");
 
       while (!scanner.hasNextInt()) {
-        System.out.println(ConsoleColors.GREEN + "Invalid input is naughty,");
-        System.out.println(ConsoleColors.RED + "you really should get coal,");
-        System.out.println(ConsoleColors.GREEN + "I'll let you try again,");
-        System.out.println(ConsoleColors.RED + "being nice is the goal!" + ConsoleColors.RESET);
+        System.out.println(green + "Invalid input is naughty,");
+        System.out.println(red + "you really should get coal,");
+        System.out.println(green + "I'll let you try again,");
+        System.out.println(red + "being nice is the goal!" + reset);
         scanner.next();
       }
       userMode = scanner.nextInt();
@@ -37,7 +40,7 @@ public class Main {
             String value = entry.getValue();
 
             Elf elfType = AbstractElfFactory.make(value);
-            System.out.println(ConsoleColors.RED + key + ConsoleColors.GREEN + " was " + value + " so they get a " + elfType.getClass().getSimpleName() + ConsoleColors.RESET);
+            System.out.println(red + key + green + " was " + value + " so they get a " + elfType.getClass().getSimpleName() + reset);
             elfType.create();
             elfType.wrap();
             elfType.give();
@@ -50,15 +53,9 @@ public class Main {
           continueFlag = false;
           break;
         default:
-          System.out.println(ConsoleColors.GREEN + "Please be nice, " + ConsoleColors.RED + "don't make this mistake twice! " + ConsoleColors.RESET + "Choose a number between 1-3");
+          System.out.println(green + "Please be nice, " + red + "don't make this mistake twice! " + reset + "Choose a number between 1-3");
       }
     }
-  }
-
-  public static class ConsoleColors {
-    public static final String RESET = "\033[0m";
-    public static final String RED = "\033[0;31m";
-    public static final String GREEN = "\033[0;32m";
   }
 
   public static HashMap<String, String> findChildList() {
