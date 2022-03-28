@@ -5,7 +5,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-public class CheckStock {
+public class CheckStock implements SystemFeedback{
   public static List<Item> stockList() {
     List<Item> items = new ArrayList<>();
     items.add(new Item("Octopus", 200.00, 3));
@@ -21,9 +21,12 @@ public class CheckStock {
     return findInventory;
   }
 
+  @Override
+  public void soutInfo(String name) {
+    System.out.println(name);
+  }
+
   public boolean checkStock(String name, int quantity) {
-    System.out.println("____________________");
-    System.out.println("Checking checkStock...");
     for (Map.Entry<Integer, Item> entry : findInventoryList().entrySet()) {
       Item item = entry.getValue();
       if (item.getName().equals(name)) {
@@ -34,4 +37,6 @@ public class CheckStock {
     }
     return  false;
   }
+
+
 }
