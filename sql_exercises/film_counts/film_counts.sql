@@ -1,7 +1,6 @@
 USE sakila;
 SHOW TABLES;
-SELECT film_id, title, (
-SELECT COUNT(*) FROM inventory
-WHERE film.film_id = inventory.film_id
-) AS 'Number of Copies'
-FROM film;
+SELECT COUNT(*) AS 'Inventory in stock', 
+store_id, film_id
+FROM inventory
+GROUP BY film_id;
