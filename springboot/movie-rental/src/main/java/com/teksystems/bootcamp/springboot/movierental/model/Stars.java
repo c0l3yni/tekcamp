@@ -3,35 +3,35 @@ package com.teksystems.bootcamp.springboot.movierental.model;
 import javax.persistence.*;
 
 @Entity
-@Table(name="movie_ratings")
+@Table(name="number_of_stars")
 public class Stars {
 
   @Id
   @GeneratedValue(strategy = GenerationType.IDENTITY)
   private long starId;
 
-  @Column(name = "movie_rating", nullable = false)
-  private String movieRating;
+  @Column(name = "star_rating", nullable = false)
+  private String star;
 
   @Column(name = "rating_description", nullable = false)
-  private String movieRatingDescription;
+  private String starDescription;
 
-  public void setMovieRatingDescription(String movieRatingDescription) {
-    this.movieRatingDescription = movieRatingDescription;
+  public void setStarDescription(String starDescription) {
+    this.starDescription = starDescription;
   }
 
   public Stars() {
   }
 
-  public String getMovieRating() {
-    return movieRating;
+  public String getStars() {
+    return star;
   }
 
-  public void setMovieRating(String movieRating) {
-    this.movieRating = movieRating;
+  public void setStars(String star) {
+    this.star = star;
   }
 
-  public String getMovieRatingDescription() {
-    return movieRatingDescription;
+  public String getStarsDescription() {
+    return starDescription;
   }
 }

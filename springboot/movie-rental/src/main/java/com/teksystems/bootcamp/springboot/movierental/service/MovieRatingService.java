@@ -1,17 +1,17 @@
 package com.teksystems.bootcamp.springboot.movierental.service;
 
-import com.teksystems.bootcamp.springboot.movierental.model.Stars;
+import com.teksystems.bootcamp.springboot.movierental.model.MovieRating;
 
 import java.util.List;
 
 public interface MovieRatingService {
-  Stars saveMovieRating(Stars stars);
+  MovieRating saveMovieRating(MovieRating movieRating);
 
-  List<Stars> getAllMovieRatings();
+  List<MovieRating> getAllMovieRatings();
 
-  Stars getMovieRatingById(long id);
+  MovieRating getMovieRatingById(long id);
 
-  Stars updateMovieRating(Stars stars, long id);
+  MovieRating updateMovieRating(MovieRating movieRating, long id);
 
   void deleteMovieRating(long id);
 }
