@@ -1,6 +1,6 @@
 package com.teksystems.bootcamp.springboot.movierental.controller;
 
-import com.teksystems.bootcamp.springboot.movierental.model.MovieRating;
+import com.teksystems.bootcamp.springboot.movierental.model.Stars;
 import com.teksystems.bootcamp.springboot.movierental.service.MovieRatingService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -21,13 +21,13 @@ public class MovieRatingController {
 
     //build create employee rest api
     @PostMapping()
-    public ResponseEntity<MovieRating> saveMovieRating(@RequestBody MovieRating movieRating) {
-      return new ResponseEntity<>(movieRatingService.saveMovieRating(movieRating), HttpStatus.CREATED);
+    public ResponseEntity<Stars> saveMovieRating(@RequestBody Stars stars) {
+      return new ResponseEntity<>(movieRatingService.saveMovieRating(stars), HttpStatus.CREATED);
     }
 
     // build get all employees for REST API
     @GetMapping
-    public List<MovieRating> getAllMovieRatings() {
+    public List<Stars> getAllMovieRatings() {
 
       return movieRatingService.getAllMovieRatings();
     }
@@ -35,15 +35,15 @@ public class MovieRatingController {
     //build get employee by id
     //https://localhost:8080/api/employees/1
     @GetMapping("{id}")
-    public ResponseEntity<MovieRating> getEmployeeById(@PathVariable("id") long employeeId) {
+    public ResponseEntity<Stars> getEmployeeById(@PathVariable("id") long employeeId) {
       return new ResponseEntity<>(movieRatingService.getMovieRatingById(employeeId), HttpStatus.OK);
     }
 
     //build update employee by id
     //https://localhost:8080/api/employees/1
     @PutMapping("{id}")
-    public ResponseEntity<MovieRating> UpdateEmployee(@PathVariable("id") long id, @RequestBody MovieRating movieRating) {
-      return new ResponseEntity<>(movieRatingService.updateMovieRating(movieRating, id), HttpStatus.OK);
+    public ResponseEntity<Stars> UpdateEmployee(@PathVariable("id") long id, @RequestBody Stars stars) {
+      return new ResponseEntity<>(movieRatingService.updateMovieRating(stars, id), HttpStatus.OK);
     }
 
     //build delete employee by id

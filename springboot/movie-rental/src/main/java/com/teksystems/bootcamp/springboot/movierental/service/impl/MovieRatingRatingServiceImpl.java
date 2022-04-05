@@ -1,7 +1,7 @@
 package com.teksystems.bootcamp.springboot.movierental.service.impl;
 
 import com.teksystems.bootcamp.springboot.movierental.exception.ResourceNotFoundException;
-import com.teksystems.bootcamp.springboot.movierental.model.MovieRating;
+import com.teksystems.bootcamp.springboot.movierental.model.Stars;
 import com.teksystems.bootcamp.springboot.movierental.repository.MovieRatingRepository;
 import com.teksystems.bootcamp.springboot.movierental.service.MovieRatingService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -21,28 +21,28 @@ public class MovieRatingRatingServiceImpl implements MovieRatingService {
   }
 
   @Override
-  public MovieRating saveMovieRating(MovieRating movieRating) {
-    return movieRatingRepository.save(movieRating);
+  public Stars saveMovieRating(Stars stars) {
+    return movieRatingRepository.save(stars);
   }
 
   @Override
-  public List<MovieRating> getAllMovieRatings() {
+  public List<Stars> getAllMovieRatings() {
     return movieRatingRepository.findAll();
   }
 
   @Override
-  public MovieRating getMovieRatingById(long id) {
+  public Stars getMovieRatingById(long id) {
     return movieRatingRepository.findById(id).orElseThrow(()
-    -> new ResourceNotFoundException("MovieRating", "MovieRatingDescription", id));
+    -> new ResourceNotFoundException("Stars", "MovieRatingDescription", id));
   }
 
   @Override
-  public MovieRating updateMovieRating(MovieRating movieRating, long id) {
-    MovieRating existingMovie = movieRatingRepository.findById(id).orElseThrow(()
-        -> new ResourceNotFoundException("MovieRating", "MovieRatingDescription", id));
+  public Stars updateMovieRating(Stars stars, long id) {
+    Stars existingMovie = movieRatingRepository.findById(id).orElseThrow(()
+        -> new ResourceNotFoundException("Stars", "MovieRatingDescription", id));
 
-    existingMovie.setMovieRating(movieRating.getMovieRating());
-    existingMovie.setMovieRating(movieRating.getMovieRatingDescription());
+    existingMovie.setMovieRating(stars.getMovieRating());
+    existingMovie.setMovieRating(stars.getMovieRatingDescription());
 
     movieRatingRepository.save(existingMovie);
     return existingMovie;
@@ -50,7 +50,7 @@ public class MovieRatingRatingServiceImpl implements MovieRatingService {
 
   @Override
   public void deleteMovieRating(long id) {
-    movieRatingRepository.findById(id).orElseThrow(() -> new ResourceNotFoundException("MovieRating", "MovieRatingDescription", id));
+    movieRatingRepository.findById(id).orElseThrow(() -> new ResourceNotFoundException("Stars", "MovieRatingDescription", id));
 
     movieRatingRepository.deleteById(id);
   }

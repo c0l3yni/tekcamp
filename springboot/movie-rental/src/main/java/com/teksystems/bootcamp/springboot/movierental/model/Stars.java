@@ -4,17 +4,24 @@ import javax.persistence.*;
 
 @Entity
 @Table(name="movie_ratings")
-public class MovieRating {
+public class Stars {
 
   @Id
   @GeneratedValue(strategy = GenerationType.IDENTITY)
-  private long id;
+  private long starId;
 
   @Column(name = "movie_rating", nullable = false)
   private String movieRating;
 
   @Column(name = "rating_description", nullable = false)
   private String movieRatingDescription;
+
+  public void setMovieRatingDescription(String movieRatingDescription) {
+    this.movieRatingDescription = movieRatingDescription;
+  }
+
+  public Stars() {
+  }
 
   public String getMovieRating() {
     return movieRating;
@@ -26,12 +33,5 @@ public class MovieRating {
 
   public String getMovieRatingDescription() {
     return movieRatingDescription;
-  }
-
-  public void setMovieRatingDescription(String movieRatingDescription) {
-    this.movieRatingDescription = movieRatingDescription;
-  }
-
-  public MovieRating() {
   }
 }
