@@ -10,33 +10,8 @@ import org.springframework.web.bind.annotation.ResponseStatus;
     private Object fieldValue;
 
     public ResourceNotFoundException(String message, String resourceName, Object fieldValue) {
-
       super(String.format("%s not found with %s : '%s", resourceName, " ", fieldValue));
       this.resourceName = resourceName;
-      this.fieldValue = fieldValue;
-    }
-
-    public String getResourceName() {
-      return resourceName;
-    }
-
-    public void setResourceName(String resourceName) {
-      this.resourceName = resourceName;
-    }
-
-    public String getFieldName() {
-      return fieldName;
-    }
-
-    public void setFieldName(String fieldName) {
-      this.fieldName = fieldName;
-    }
-
-    public Object getFieldValue() {
-      return fieldValue;
-    }
-
-    public void setFieldValue(Object fieldValue) {
       this.fieldValue = fieldValue;
     }
   }

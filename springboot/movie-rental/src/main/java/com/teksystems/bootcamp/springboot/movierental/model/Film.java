@@ -8,7 +8,8 @@ public class Film {
 
   @Id
   @GeneratedValue(strategy = GenerationType.IDENTITY)
-  private int filmId;
+  @Column(name = "film_id", columnDefinition="SMALLINT(3) UNSIGNED", nullable = false)
+  private long filmId;
 
   @Column(name = "title", nullable = false)
   private String title;
@@ -18,6 +19,14 @@ public class Film {
 
   public Film(String title) {
     this.title = title;
+  }
+
+  public long getFilmId() {
+    return filmId;
+  }
+
+  public void setFilmId(long filmId) {
+    this.filmId = filmId;
   }
 
   public String getTitle() {

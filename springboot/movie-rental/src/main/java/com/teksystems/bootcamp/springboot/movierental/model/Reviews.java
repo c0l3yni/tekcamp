@@ -3,11 +3,12 @@ package com.teksystems.bootcamp.springboot.movierental.model;
 import javax.persistence.*;
 
 @Entity
-@Table(name="movie_ratings")
-public class MovieRating {
-@Id
+@Table(name="movie_reviews")
+public class Reviews {
+    @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long movieRatingId;
+    @Column(name = "review_id", columnDefinition="SMALLINT(3) UNSIGNED")
+    private long reviewId;
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "customer_id", nullable = false)
@@ -19,7 +20,16 @@ public class MovieRating {
 
     @ManyToOne(fetch = FetchType.LAZY, optional = false)
     @JoinColumn(name = "rating_id")
-    private Stars stars;
+    private Ratings ratings;
+
+    public Reviews() {
+    }
+
+    public Reviews(Customer customer, Film film, Ratings ratings) {
+        this.customer = customer;
+        this.film = film;
+        this.ratings = ratings;
+    }
 
     public Customer getCustomer() {
         return customer;
@@ -37,11 +47,11 @@ public class MovieRating {
         this.film = film;
     }
 
-    public Stars getStars() {
-        return stars;
+    public Ratings getStars() {
+        return ratings;
     }
 
-    public void setStars(Stars stars) {
-        this.stars = stars;
+    public void setStars(Ratings ratings) {
+        this.ratings = ratings;
     }
 }

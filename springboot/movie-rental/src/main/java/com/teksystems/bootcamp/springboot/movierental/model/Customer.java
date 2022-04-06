@@ -8,6 +8,7 @@ public class Customer {
 
   @Id
   @GeneratedValue(strategy = GenerationType.IDENTITY)
+  @Column(name = "customer_id", columnDefinition="SMALLINT(3) UNSIGNED", nullable = false)
     private long customerId;
 
   @Column(name = "first_name", nullable = false)
@@ -22,6 +23,14 @@ public class Customer {
   public Customer(String firstName, String lastName) {
     this.firstName = firstName;
     this.lastName = lastName;
+  }
+
+  public long getCustomerId() {
+    return customerId;
+  }
+
+  public void setCustomerId(long customerId) {
+    this.customerId = customerId;
   }
 
   public String getFirstName() {
