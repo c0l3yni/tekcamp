@@ -33,8 +33,7 @@ public class ReviewServiceImpl implements ReviewService {
 
   @Override
   public Reviews getReviewsById(long id) {
-    return reviewRepository.findById(id).orElseThrow(()
-    -> new ResourceNotFoundException("Movie Review", "MovieReviewDescription", id));
+    return reviewRepository.findById(id).get();
   }
 
   @Override

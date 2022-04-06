@@ -10,15 +10,15 @@ public class Reviews {
     @Column(name = "review_id", columnDefinition="SMALLINT(3) UNSIGNED")
     private long reviewId;
 
-    @ManyToOne(fetch = FetchType.LAZY)
+    @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "customer_id", nullable = false)
     private Customer customer;
 
-    @ManyToOne(fetch = FetchType.LAZY)
+    @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "film_id", nullable = false)
     private Film film;
 
-    @ManyToOne(fetch = FetchType.LAZY, optional = false)
+    @ManyToOne(fetch = FetchType.EAGER, optional = false)
     @JoinColumn(name = "rating_id")
     private Ratings ratings;
 
