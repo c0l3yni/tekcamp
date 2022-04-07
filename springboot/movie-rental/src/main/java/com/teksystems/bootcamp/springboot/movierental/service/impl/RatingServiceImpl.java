@@ -4,9 +4,10 @@ import com.teksystems.bootcamp.springboot.movierental.exception.ResourceNotFound
 import com.teksystems.bootcamp.springboot.movierental.model.Ratings;
 import com.teksystems.bootcamp.springboot.movierental.repository.RatingsRepository;
 import com.teksystems.bootcamp.springboot.movierental.service.RatingService;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
-
-import java.util.List;
 
 @Service
 public class RatingServiceImpl implements RatingService {
@@ -25,9 +26,10 @@ public class RatingServiceImpl implements RatingService {
   }
 
   @Override
-  public List<Ratings> getAllRatings() {
-
-    return ratingsRepository.findAll();
+  public Page<Ratings> getAllRatings() {
+    Pageable firstPageReturnFiveElements = PageRequest.of(0, 5);
+    Page<Ratings> fiveElements = ratingsRepository.findAll(firstPageReturnFiveElements);
+    return fiveElements;
   }
 
   @Override

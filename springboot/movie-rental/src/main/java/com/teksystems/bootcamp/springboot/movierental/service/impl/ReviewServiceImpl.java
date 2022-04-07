@@ -5,9 +5,10 @@ import com.teksystems.bootcamp.springboot.movierental.model.Reviews;
 import com.teksystems.bootcamp.springboot.movierental.repository.ReviewRepository;
 import com.teksystems.bootcamp.springboot.movierental.service.ReviewService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
-
-import java.util.List;
 
 @Service
 public class ReviewServiceImpl implements ReviewService {
@@ -27,12 +28,15 @@ public class ReviewServiceImpl implements ReviewService {
   }
 
   @Override
-  public List<Reviews> getAllReviews() {
-    return reviewRepository.findAll();
+  public Page<Reviews> getAllReviews() {
+  Pageable firstPageReturnFiveElements = PageRequest.of(0, 5);
+  Page<Reviews> fiveElements = reviewRepository.findAll(firstPageReturnFiveElements);
+  return fiveElements;
   }
 
   @Override
   public Reviews getReviewsById(long id) {
+
     return reviewRepository.findById(id).get();
   }
 

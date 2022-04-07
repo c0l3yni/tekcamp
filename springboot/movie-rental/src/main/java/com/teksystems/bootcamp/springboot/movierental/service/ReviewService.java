@@ -1,13 +1,12 @@
 package com.teksystems.bootcamp.springboot.movierental.service;
 
 import com.teksystems.bootcamp.springboot.movierental.model.Reviews;
-
-import java.util.List;
+import org.springframework.data.domain.Page;
 
 public interface ReviewService {
   Reviews saveReview(Reviews reviews);
 
-  List<Reviews> getAllReviews();
+  Page<Reviews> getAllReviews();
 
   Reviews getReviewsById(long id);
 

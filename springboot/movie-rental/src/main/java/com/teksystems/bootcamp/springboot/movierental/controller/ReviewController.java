@@ -3,14 +3,10 @@ package com.teksystems.bootcamp.springboot.movierental.controller;
 import com.teksystems.bootcamp.springboot.movierental.model.Reviews;
 import com.teksystems.bootcamp.springboot.movierental.service.ReviewService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.domain.PageRequest;
-import org.springframework.data.domain.Pageable;
-import org.springframework.data.domain.Sort;
+import org.springframework.data.domain.Page;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-
-import java.util.List;
 
 @RestController
 @RequestMapping(value = "/Review")
@@ -24,15 +20,12 @@ public class ReviewController {
   }
 
   @PostMapping("/saveReview")
-  public ResponseEntity<Reviews> saveReview(@RequestBody Reviews reviews) {
+  public ResponseEntity<Reviews> savReview(@RequestBody Reviews reviews) {
     return new ResponseEntity<>(reviewService.saveReview(reviews), HttpStatus.CREATED);
   }
 
   @GetMapping("/GetAllReviews")
-  public List<Reviews> getAllReviews() {
-    Pageable pageable = PageRequest.of(0, 5, Sort.by(
-        Sort.Order.asc("name"),
-        Sort.Order.desc("id")));
+  public Page<Reviews> getAllReviews() {
     return reviewService.getAllReviews();
   }
 
